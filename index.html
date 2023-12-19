@@ -11,15 +11,76 @@
             margin: 0px;
             padding: 0px;
         }
-        .contentArea{
-            margin-left: 100px; margin-right: 100px;
+
+        .contentArea {
+            margin: 10px;
+        }
+
+        .partList {}
+
+        .treeArea {
+            margin: 10px;
+        }
+
+        .scienceNode {
+            position: absolute;
+            width: 150px;
+            height: 100px;
+            background: rgb(184, 190, 214);
+            border-radius: 20px;
+            padding: 2px;
+            padding-bottom: 5px;
+        }
+
+        .scienceNodeTitle {
+            height: 25px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background: rgb(74, 78, 90);
+        }
+
+        .scienceNodeContent {
+            font-size: 10px;
+            height: 70px;
+            padding: 10px;
+            background: rgb(93, 98, 112);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .scienceNodeValue {
+            margin-top: 4px;
+            border-radius: 5px;
+            position: absolute;
+            font-size: 11px;
+            width: 40px;
+            background-color: rgb(65, 68, 79);
+            padding-left: 5px;
+            color: aqua;
+            right: 20px;
+        }
+
+        .scienceNodeConnector {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .scienceNodeConnectordataHolder{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 1000px;
+        }
+        .scienceNodeConnectordata{
+            
         }
     </style>
     <script>
         var locations = {
             default: {
-                tree:"https://ttm.kerbal.wiki/ksp2/trees/default/tree.json",
-                location:"https://ttm.kerbal.wiki/ksp2/trees/default/"
+                tree: "https://ttm.kerbal.wiki/ksp2/trees/default/tree.json",
+                location: "https://ttm.kerbal.wiki/ksp2/trees/default/"
             }
         }
         window.onload = (event) => {
@@ -27,7 +88,7 @@
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.defaultTreeLocations = JSON.parse(this.responseText)
-                    globalThis.defaultTreeLocations.treeNodes.forEach((treeNode)=>{
+                    globalThis.defaultTreeLocations.treeNodes.forEach((treeNode) => {
                         globalThis.GetAndCreateTreeNode(treeNode)
                     })
                 }
@@ -36,17 +97,40 @@
             xhr.open("Get", locations.default.tree);
             xhr.send();
         };
-        globalThis.GetAndCreateTreeNode = function(treeNode=""){
+        globalThis.TreeNodes = {}
+        globalThis.GetAndCreateTreeNode = function (treeNode = "") {
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     var thisTree = JSON.parse(this.responseText)
                     var contentArea = document.getElementById("contentArea")
-                    contentArea.innerHTML = contentArea.innerHTML + "a"
+                    var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
+                    contentArea.innerHTML = ` ${contentArea.innerHTML}
+                    <div class="scienceNode" id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + (screen.height / 5.5)}px);">
+                        <div class="scienceNodeTitle">
+                            <div class="scienceNodeIcon"></div>
+                            <div class="scienceNodeValue">${thisTree.RequiredSciencePoints}</div>
+                        </div>
+                        <div class="scienceNodeContent">${thisTree.ID}</div>
+                    </div>
+                    `
+                    globalThis.TreeNodes[thisTree.ID] = thisTree
+                    if (thisTree.RequiredTechNodeIDs.length > 0) {
+                        thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
+                            try {
+                                var treeNodePd = globalThis.TreeNodes[treeNodeP]
+                                
+                            } catch (e) {
+
+                            }
+
+                        })
+
+                    }
                 }
             });
 
-            xhr.open("Get", `${locations.default.location}${treeNode}` );
+            xhr.open("Get", `${locations.default.location}${treeNode}`);
             xhr.send();
         }
     </script>
@@ -58,8 +142,12 @@
             <a class="navbar-brand" href="/">Tech Tree Manager Editor<br>v0.0.1</a>
         </div>
     </nav>
-    <div class="contentArea">
+    
+    <div class="contentArea" id="contentArea">
         
+    </div>
+    <div class="scienceNodeConnectordataHolder" id="scienceNodeConnectordataHolder">
+            
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
