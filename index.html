@@ -1,0 +1,72 @@
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Tree Manager Editor 0.0.1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .contentArea{
+            margin-left: 100px; margin-right: 100px;
+        }
+    </style>
+    <script>
+        var locations = {
+            default: {
+                tree:"https://ttm.kerbal.wiki/ksp2/trees/default/tree.json",
+                location:"https://ttm.kerbal.wiki/ksp2/trees/default/"
+            }
+        }
+        window.onload = (event) => {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    globalThis.defaultTreeLocations = JSON.parse(this.responseText)
+                    globalThis.defaultTreeLocations.treeNodes.forEach((treeNode)=>{
+                        globalThis.GetAndCreateTreeNode(treeNode)
+                    })
+                }
+            });
+
+            xhr.open("Get", locations.default.tree);
+            xhr.send();
+        };
+        globalThis.GetAndCreateTreeNode = function(treeNode=""){
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    var thisTree = JSON.parse(this.responseText)
+                    var contentArea = document.getElementById("contentArea")
+                    contentArea.innerHTML = contentArea.innerHTML + "a"
+                }
+            });
+
+            xhr.open("Get", `${locations.default.location}${treeNode}` );
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Tech Tree Manager Editor<br>v0.0.1</a>
+        </div>
+    </nav>
+    <div class="contentArea">
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
