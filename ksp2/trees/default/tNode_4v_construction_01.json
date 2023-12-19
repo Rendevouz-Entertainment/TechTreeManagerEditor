@@ -1,0 +1,22 @@
+{
+  "Version": 12,
+  "ID": "tNode_4v_construction_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_4v_construction_01",
+  "IconID": "ICO-RDCenter-Construction-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_4v_construction_01",
+  "RequiredSciencePoints": 5000,
+  "UnlockedPartsIDs": [
+    "adapter_4v_3v-4v",
+    "tube_4v_procedural",
+    "nosecone_4v"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_4v_rockets_01"
+  ],
+  "TechTreePosition": {
+    "x": 4860.0,
+    "y": 420.0
+  }
+}

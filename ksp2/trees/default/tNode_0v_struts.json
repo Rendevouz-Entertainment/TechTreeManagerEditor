@@ -1,0 +1,21 @@
+{
+  "Version": 5,
+  "ID": "tNode_0v_struts",
+  "NameLocKey": "Science/TechNodes/Names/tNode_0v_struts",
+  "IconID": "ICO-RDCenter-Fuel-Line-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_0v_struts",
+  "RequiredSciencePoints": 35,
+  "UnlockedPartsIDs": [
+    "strut_1v_extensible"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_rockets_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 540.0,
+    "y": 640.0
+  }
+}

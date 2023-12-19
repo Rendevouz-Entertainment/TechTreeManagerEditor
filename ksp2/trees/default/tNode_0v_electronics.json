@@ -1,0 +1,24 @@
+{
+  "Version": 5,
+  "ID": "tNode_0v_electronics",
+  "NameLocKey": "Science/TechNodes/Names/tNode_0v_electronics",
+  "IconID": "ICO-RDCenter-Probe-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_0v_electronics",
+  "RequiredSciencePoints": 10,
+  "UnlockedPartsIDs": [
+    "probe_0v_spherical_electricity",
+    "solararray_0v_flat",
+    "storage_0v_battery_electricity_radial",
+    "antenna_0v_16",
+    "antenna_0v_16s"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_rockets_01"
+  ],
+  "TechTreePosition": {
+    "x": 360.0,
+    "y": 530.0
+  }
+}

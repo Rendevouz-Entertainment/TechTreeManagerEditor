@@ -1,0 +1,29 @@
+{
+  "Version": 11,
+  "ID": "tNode_4v_trusses_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_4v_trusses_02",
+  "IconID": "ICO-RDCenter-Trusses-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_4v_trusses_02",
+  "RequiredSciencePoints": 7000,
+  "UnlockedPartsIDs": [
+    "resizer_4v_circular_4v-2v",
+    "resizer_4v_circular_4v-3v",
+    "resizer_4v_square_4v-2v",
+    "resizer_4v_square_4v-3v",
+    "resizer_4v_triangular_4v-2v",
+    "resizer_4v_triangular_4v-3v",
+    "junction_4v_circular",
+    "junction_4v_square",
+    "adapter_4v_cir-sqr",
+    "adapter_4v_cir-tri"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_4v_trusses_01"
+  ],
+  "TechTreePosition": {
+    "x": 5220.0,
+    "y": 420.0
+  }
+}

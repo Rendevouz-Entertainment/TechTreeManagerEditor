@@ -1,0 +1,28 @@
+{
+  "Version": 4,
+  "ID": "tNode_2v_aero_03",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_aero_03",
+  "IconID": "ICO-RDCenter-Plane-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_aero_03",
+  "RequiredSciencePoints": 500,
+  "UnlockedPartsIDs": [
+    "adapter_2v_m2_1x1_methalox_1v-m2",
+    "adapter_2v_m2_1x2_methalox_1v-m2",
+    "adapter_2v_m2_methalox_2v-m2",
+    "adapter_3v_m3_methalox_m2-m3",
+    "adapter_2v_m2_2point_methalox_1v-m2",
+    "cabin_1v_m1_crew",
+    "cabin_2v_m2_crew",
+    "cargobay_2v_m2_1x1",
+    "cargobay_2v_m2_1x2"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_aero_02"
+  ],
+  "TechTreePosition": {
+    "x": 2340.0,
+    "y": 90.0
+  }
+}

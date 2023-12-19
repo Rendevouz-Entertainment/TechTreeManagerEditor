@@ -1,0 +1,29 @@
+{
+  "Version": 13,
+  "ID": "tNode_1v_aero_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_aero_02",
+  "IconID": "ICO-RDCenter-Plane-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_aero_02",
+  "RequiredSciencePoints": 50,
+  "UnlockedPartsIDs": [
+    "cockpit_1v_m1_crew",
+    "cockpit_1v_m1_inline_crew",
+    "fueltank_1v_m1_inline_methane",
+    "engine_1v_turbofan_methane_wheesley",
+    "landinggear_1v",
+    "landinggear_1v_fixed",
+    "intake_1v_circular",
+    "wing_1v_procedural_light",
+    "stabilizer_2v_procedural_heavy"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_utility_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 720.0,
+    "y": 90.0
+  }
+}

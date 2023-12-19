@@ -1,0 +1,23 @@
+{
+  "Version": 10,
+  "ID": "tNode_3v_electronics_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_electronics_02",
+  "IconID": "ICO-RDCenter-Atomic-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_electronics_02",
+  "RequiredSciencePoints": 2900,
+  "UnlockedPartsIDs": [
+    "storage_3v_battery_electricity",
+    "solararray_3v_large",
+    "generator_1v_fission_reactor"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_electronics_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 3780.0,
+    "y": 530.0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Version": 8,
+  "ID": "tNode_4v_monoprop_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_4v_monoprop_01",
+  "IconID": "ICO-RDCenter-Tier3Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_4v_monoprop_01",
+  "RequiredSciencePoints": 1800,
+  "UnlockedPartsIDs": [
+    "fueltank_3v_inline_monoprop",
+    "fueltank_4v_radial_monoprop"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_rockets_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 3240.0,
+    "y": 640.0
+  }
+}

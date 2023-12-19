@@ -1,0 +1,24 @@
+{
+  "Version": 15,
+  "ID": "tNode_3v_aero_04",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_aero_04",
+  "IconID": "ICO-RDCenter-BigPlane-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_aero_04",
+  "RequiredSciencePoints": 5000,
+  "UnlockedPartsIDs": [
+    "engine_1v_methane-methalox_rapier",
+    "wing_3v_procedural_spaceplane",
+    "stabilizer_3v_procedural_spaceplane",
+    "controlsurface_3v_procedural_spaceplane"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_4v_rockets_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 4860.0,
+    "y": 90.0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "Version": 4,
+  "ID": "tNode_2v_trusses_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_trusses_01",
+  "IconID": "ICO-RDCenter-Trusses-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_trusses_01",
+  "RequiredSciencePoints": 500,
+  "UnlockedPartsIDs": [
+    "truss_2v_circular_1x1",
+    "truss_2v_circular_1x4",
+    "truss_2v_square_1x1",
+    "truss_2v_square_1x4",
+    "truss_2v_triangular_1x1",
+    "truss_2v_triangular_1x4"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_payload"
+  ],
+  "TechTreePosition": {
+    "x": 2340.0,
+    "y": 310.0
+  }
+}

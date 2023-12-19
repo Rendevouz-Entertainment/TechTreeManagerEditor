@@ -1,0 +1,25 @@
+{
+  "Version": 6,
+  "ID": "tNode_1v_xenon",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_xenon",
+  "IconID": "ICO-RDCenter-Tier1Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_xenon",
+  "RequiredSciencePoints": 850,
+  "UnlockedPartsIDs": [
+    "engine_0v_xenon_dawn",
+    "fueltank_0v_inline_xenon",
+    "fueltank_0v_radial_xenon",
+    "fueltank_1v_inline_xenon_1x1",
+    "fueltank_1v_inline_xenon_1x4"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_hydrogen"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 2520.0,
+    "y": 640.0
+  }
+}

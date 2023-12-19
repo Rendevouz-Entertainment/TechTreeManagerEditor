@@ -1,0 +1,21 @@
+{
+  "Version": 4,
+  "ID": "tNode_2v_docking",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_docking",
+  "IconID": "ICO-RDCenter-Docking-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_docking",
+  "RequiredSciencePoints": 400,
+  "UnlockedPartsIDs": [
+    "dockingport_0v_inline",
+    "dockingport_2v_inline"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_decouplers_01"
+  ],
+  "TechTreePosition": {
+    "x": 2160.0,
+    "y": 200.0
+  }
+}

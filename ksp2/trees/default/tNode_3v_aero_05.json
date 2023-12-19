@@ -1,0 +1,28 @@
+{
+  "Version": 16,
+  "ID": "tNode_3v_aero_05",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_aero_05",
+  "IconID": "ICO-RDCenter-BigPlane-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_aero_05",
+  "RequiredSciencePoints": 6000,
+  "UnlockedPartsIDs": [
+    "fueltank_3v_m3_inline_methalox_1x1",
+    "fueltank_3v_m3_inline_methalox_1x2",
+    "fueltank_3v_m3_inline_methalox_1x4",
+    "fueltank_3v_m3_inline_monoprop",
+    "adapter_3v_m3_conical_methalox_2v-m3",
+    "adapter_3v_m3_methalox_3v-m3",
+    "adapter_3v_m3_rightcone_methalox_2v-m3",
+    "enginemount_3v_m3"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_aero_04"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 5040.0,
+    "y": 90.0
+  }
+}

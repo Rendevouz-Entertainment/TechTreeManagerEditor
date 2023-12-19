@@ -1,0 +1,30 @@
+{
+  "Version": 5,
+  "ID": "tNode_2v_construction_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_construction_01",
+  "IconID": "ICO-RDCenter-Construction-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_construction_01",
+  "RequiredSciencePoints": 230,
+  "UnlockedPartsIDs": [
+    "adapter_2v_conical_methalox_1v-2v",
+    "adapter_2v_rightcone_methalox_1v-2v",
+    "coupler_1v_inline_3point",
+    "coupler_1v_inline_4point",
+    "ibeam_2v_1x10",
+    "ibeam_2v_2x3",
+    "panel_2v_square",
+    "panel_2v_triangle_equilateral",
+    "panel_2v_triangle_right",
+    "panel_2v_square_crossbrace",
+    "attachpoint_1v_radial"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_rockets_02"
+  ],
+  "TechTreePosition": {
+    "x": 1800.0,
+    "y": 310.0
+  }
+}

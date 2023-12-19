@@ -1,0 +1,22 @@
+{
+  "Version": 6,
+  "ID": "tNode_1v_rockets_03",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_rockets_03",
+  "IconID": "ICO-RDCenter-Tier1Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_rockets_03",
+  "RequiredSciencePoints": 25,
+  "UnlockedPartsIDs": [
+    "engine_1v_methalox_terrier",
+    "booster_1v_solid_thumper"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_rockets_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 540.0,
+    "y": 750.0
+  }
+}

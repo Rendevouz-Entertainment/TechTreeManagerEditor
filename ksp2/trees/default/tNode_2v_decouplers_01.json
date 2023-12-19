@@ -1,0 +1,24 @@
+{
+  "Version": 5,
+  "ID": "tNode_2v_decouplers_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_decouplers_01",
+  "IconID": "ICO-RDCenter-Coupling-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_decouplers_01",
+  "RequiredSciencePoints": 300,
+  "UnlockedPartsIDs": [
+    "decoupler_0v_inline",
+    "separator_0v_inline",
+    "decoupler_1v_aerodynamic",
+    "decoupler_2v_aerodynamic",
+    "separator_2v_inline"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_construction_01"
+  ],
+  "TechTreePosition": {
+    "x": 1980.0,
+    "y": 200.0
+  }
+}

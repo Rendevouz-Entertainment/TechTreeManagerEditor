@@ -1,0 +1,22 @@
+{
+  "Version": 6,
+  "ID": "tNode_3v_docking_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_docking_01",
+  "IconID": "ICO-RDCenter-Docking-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_docking_01",
+  "RequiredSciencePoints": 2300,
+  "UnlockedPartsIDs": [
+    "dockingport_1v_inline_shielded",
+    "dockingport_1v_inline_sideport",
+    "dockingport_2v_m2_inline_sideport"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_decouplers_01"
+  ],
+  "TechTreePosition": {
+    "x": 3600.0,
+    "y": 200.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Version": 11,
+  "ID": "tNode_4v_payload_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_4v_payload_01",
+  "IconID": "ICO-RDCenter-Payload-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_4v_payload_01",
+  "RequiredSciencePoints": 8000,
+  "UnlockedPartsIDs": [
+    "truss_4v_saddle_1x1",
+    "truss_4v_saddle_1x4",
+    "cargobay_4v_nose",
+    "cargobay_4v_1x1",
+    "cargobay_4v_1x4",
+    "fairing_4v_procedural",
+    "enginemount_4v_procedural"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_4v_trusses_02"
+  ],
+  "TechTreePosition": {
+    "x": 5400.0,
+    "y": 420.0
+  }
+}

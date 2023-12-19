@@ -1,0 +1,23 @@
+{
+  "Version": 5,
+  "ID": "tNode_1v_rover",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_rover",
+  "IconID": "ICO-RDCenter-Rover-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_rover",
+  "RequiredSciencePoints": 400,
+  "UnlockedPartsIDs": [
+    "seat_0v_external_crew",
+    "probe_1v_rover_electricity",
+    "wheel_0v_rover",
+    "wheel_1v_rover"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_electronics_04"
+  ],
+  "TechTreePosition": {
+    "x": 2160.0,
+    "y": 530.0
+  }
+}

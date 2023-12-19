@@ -1,0 +1,22 @@
+{
+  "Version": 7,
+  "ID": "tNode_1v_electronics_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_electronics_01",
+  "IconID": "ICO-RDCenter-SolarPanel-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_electronics_01",
+  "RequiredSciencePoints": 35,
+  "UnlockedPartsIDs": [
+    "solararray_1v_flat",
+    "storage_0v_battery_electricity"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_0v_utility"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 720.0,
+    "y": 530.0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "Version": 12,
+  "ID": "tNode_1v_start",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_start",
+  "IconID": "ICO-RDCenter-Kerbal-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_start",
+  "RequiredSciencePoints": 0,
+  "UnlockedPartsIDs": [
+    "pod_1v_conical_crew",
+    "engine_1v_methalox_swivel",
+    "fueltank_1v_inline_methalox_1x1",
+    "fueltank_1v_inline_methalox_1x2",
+    "decoupler_1v_inline",
+    "fin_0v_procedural",
+    "parachute_0v"
+  ],
+  "RequiredTechNodeIDs": [],
+  "TechTreePosition": {
+    "x": 0.0,
+    "y": 750.0
+  }
+}

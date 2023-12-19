@@ -1,0 +1,25 @@
+{
+  "Version": 10,
+  "ID": "tNode_0v_utility",
+  "NameLocKey": "Science/TechNodes/Names/tNode_0v_utility",
+  "IconID": "ICO-RDCenter-Chute-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_0v_utility",
+  "RequiredSciencePoints": 15,
+  "UnlockedPartsIDs": [
+    "landingleg_0v",
+    "ladder_0v_fixed_pegasus",
+    "light_0v_bulb",
+    "light_0v_broad",
+    "light_0v_dome"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_0v_electronics"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 540.0,
+    "y": 530.0
+  }
+}

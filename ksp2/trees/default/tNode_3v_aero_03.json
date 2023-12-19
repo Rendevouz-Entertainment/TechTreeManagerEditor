@@ -1,0 +1,27 @@
+{
+  "Version": 9,
+  "ID": "tNode_3v_aero_03",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_aero_03",
+  "IconID": "ICO-RDCenter-BigPlane-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_aero_03",
+  "RequiredSciencePoints": 2300,
+  "UnlockedPartsIDs": [
+    "cockpit_3v_m3_crew",
+    "landinggear_4v",
+    "intake_1v_m1_precooler_methane",
+    "fueltank_3v_m3_inline_methane_1x4",
+    "wing_3v_procedural_heavy",
+    "stabilizer_3v_procedural_heavy",
+    "engine_2v_turbofan_methane_goliath"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_aero_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 3600.0,
+    "y": 90.0
+  }
+}

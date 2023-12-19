@@ -1,0 +1,25 @@
+{
+  "Version": 7,
+  "ID": "tNode_3v_electronics_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_electronics_01",
+  "IconID": "ICO-RDCenter-RadarDish-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_electronics_01",
+  "RequiredSciencePoints": 1400,
+  "UnlockedPartsIDs": [
+    "probe_1v_disk_electricity",
+    "probe_2v_disk_electricity",
+    "probe_3v_disk_electricity",
+    "probe_2v_m2_electricity",
+    "antenna_1v_dish_hg55"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_rockets_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 3240.0,
+    "y": 530.0
+  }
+}

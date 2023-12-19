@@ -1,0 +1,28 @@
+{
+  "Version": 7,
+  "ID": "tNode_3v_construction_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_construction_01",
+  "IconID": "ICO-RDCenter-Construction-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_construction_01",
+  "RequiredSciencePoints": 1400,
+  "UnlockedPartsIDs": [
+    "tube_3v_procedural",
+    "truss_3v_circular_1x1",
+    "truss_3v_circular_1x4",
+    "truss_3v_square_1x1",
+    "truss_3v_square_1x4",
+    "truss_3v_triangular_1x1",
+    "truss_3v_triangular_1x4",
+    "adapter_3v_conical_2v-3v"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_rockets_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 3240.0,
+    "y": 310.0
+  }
+}

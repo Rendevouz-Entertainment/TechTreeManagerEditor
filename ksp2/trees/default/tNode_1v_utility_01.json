@@ -1,0 +1,22 @@
+{
+  "Version": 7,
+  "ID": "tNode_1v_utility_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_utility_01",
+  "IconID": "ICO-RDCenter-Chute-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_utility_01",
+  "RequiredSciencePoints": 15,
+  "UnlockedPartsIDs": [
+    "heatshield_1v",
+    "parachute_0v_radial_drogue",
+    "parachute_1v_radial"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_aero_01"
+  ],
+  "TechTreePosition": {
+    "x": 540.0,
+    "y": 90.0
+  }
+}

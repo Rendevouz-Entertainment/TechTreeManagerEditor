@@ -1,0 +1,20 @@
+{
+  "Version": 10,
+  "ID": "tNode_0v_science_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_0v_science_02",
+  "IconID": "ICO-RDCenter-Science-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_0v_science_02",
+  "RequiredSciencePoints": 1800,
+  "UnlockedPartsIDs": [
+    "collector_0v_science_radiation"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_electronics_01"
+  ],
+  "TechTreePosition": {
+    "x": 3420.0,
+    "y": 420.0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "Version": 12,
+  "ID": "tNode_4v_utility_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_4v_utility_01",
+  "IconID": "ICO-RDCenter-MoonLander-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_4v_utility_01",
+  "RequiredSciencePoints": 5000,
+  "UnlockedPartsIDs": [
+    "landingleg_3v",
+    "ladder_3v_telescoping_verylong",
+    "heatshield_4v",
+    "heatshield_2v_inflatable"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_4v_rockets_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 4860.0,
+    "y": 530.0
+  }
+}

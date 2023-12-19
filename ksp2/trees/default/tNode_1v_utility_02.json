@@ -1,0 +1,27 @@
+{
+  "Version": 6,
+  "ID": "tNode_1v_utility_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_utility_02",
+  "IconID": "ICO-RDCenter-Chute-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_utility_02",
+  "RequiredSciencePoints": 400,
+  "UnlockedPartsIDs": [
+    "escapesystem_1v_launch",
+    "ladder_1v_telescoping_kelus",
+    "light_0v_navigation",
+    "light_0v_strip",
+    "parachute_1v_drogue",
+    "light_0v_spot_narrow",
+    "light_0v_spot"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_construction_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 2160.0,
+    "y": 420.0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "Version": 15,
+  "ID": "tNode_3v_payload_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_payload_02",
+  "IconID": "ICO-RDCenter-BigPlane-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_payload_02",
+  "RequiredSciencePoints": 6000,
+  "UnlockedPartsIDs": [
+    "cabin_3v_m3_crew",
+    "cargobay_3v_m3_1x1",
+    "cargobay_3v_m3_1x2",
+    "cargobay_3v_m3_1x4",
+    "cargobay_3v_m3_ramp_1x3"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_aero_04"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 5040.0,
+    "y": 200.0
+  }
+}

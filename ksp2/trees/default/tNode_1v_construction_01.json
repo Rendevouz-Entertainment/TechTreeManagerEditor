@@ -1,0 +1,29 @@
+{
+  "Version": 9,
+  "ID": "tNode_1v_construction_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_construction_01",
+  "IconID": "ICO-RDCenter-Construction-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_construction_01",
+  "RequiredSciencePoints": 10,
+  "UnlockedPartsIDs": [
+    "coupler_1v_inline_2point",
+    "ibeam_1v_1x5",
+    "panel_1v_square",
+    "panel_1v_triangle_equilateral",
+    "panel_1v_triangle_right",
+    "tube_0v_procedural",
+    "tube_1v_procedural",
+    "fuselage_1v_m1_structural",
+    "launchclamp_3v_ground"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_rockets_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 360.0,
+    "y": 310.0
+  }
+}

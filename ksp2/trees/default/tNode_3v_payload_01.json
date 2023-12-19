@@ -1,0 +1,27 @@
+{
+  "Version": 6,
+  "ID": "tNode_3v_payload_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_payload_01",
+  "IconID": "ICO-RDCenter-Payload-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_payload_01",
+  "RequiredSciencePoints": 2300,
+  "UnlockedPartsIDs": [
+    "truss_3v_saddle_1x1",
+    "truss_3v_saddle_1x4",
+    "cabin_3v_crew",
+    "cargobay_3v_nose",
+    "cargobay_3v_1x1",
+    "cargobay_3v_1x8",
+    "fairing_3v_procedural",
+    "enginemount_3v_procedural"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_trusses_01"
+  ],
+  "TechTreePosition": {
+    "x": 3600.0,
+    "y": 310.0
+  }
+}

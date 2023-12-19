@@ -1,0 +1,23 @@
+{
+  "Version": 5,
+  "ID": "tNode_0v_rcs",
+  "NameLocKey": "Science/TechNodes/Names/tNode_0v_rcs",
+  "IconID": "ICO-RDCenter-Tier1Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_0v_rcs",
+  "RequiredSciencePoints": 50,
+  "UnlockedPartsIDs": [
+    "rcs_0v_block_monoprop",
+    "rcs_0v_linear_monoprop",
+    "fueltank_1v_inline_monoprop"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_rockets_03"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 720.0,
+    "y": 640.0
+  }
+}

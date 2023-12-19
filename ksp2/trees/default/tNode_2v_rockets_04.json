@@ -1,0 +1,22 @@
+{
+  "Version": 5,
+  "ID": "tNode_2v_rockets_04",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_rockets_04",
+  "IconID": "ICO-RDCenter-Tier2Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_rockets_04",
+  "RequiredSciencePoints": 1100,
+  "UnlockedPartsIDs": [
+    "engine_1v_methalox_vector",
+    "booster_2v_solid_clydesdale"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_hydrogen"
+  ],
+  "TierToUnlock": 3,
+  "TechTreePosition": {
+    "x": 2700.0,
+    "y": 750.0
+  }
+}

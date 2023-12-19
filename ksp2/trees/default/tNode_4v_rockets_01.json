@@ -1,0 +1,25 @@
+{
+  "Version": 10,
+  "ID": "tNode_4v_rockets_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_4v_rockets_01",
+  "IconID": "ICO-RDCenter-Tier4Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_4v_rockets_01",
+  "RequiredSciencePoints": 5000,
+  "UnlockedPartsIDs": [
+    "fueltank_4v_inline_methalox_s1",
+    "fueltank_4v_inline_methalox_s2",
+    "fueltank_4v_inline_methalox_s3",
+    "fueltank_4v_inline_methalox_s4",
+    "adapter_4v_methalox_3v-4v"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_hydrogen_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 4680.0,
+    "y": 750.0
+  }
+}

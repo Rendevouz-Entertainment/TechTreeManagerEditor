@@ -1,0 +1,24 @@
+{
+  "Version": 7,
+  "ID": "tNode_3v_rockets_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_rockets_01",
+  "IconID": "ICO-RDCenter-Tier3Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_rockets_01",
+  "RequiredSciencePoints": 1400,
+  "UnlockedPartsIDs": [
+    "engine_3v_methalox_rhino",
+    "fueltank_3v_inline_methalox_1x2",
+    "adapter_3v_methalox_2v-3v",
+    "decoupler_3v_inline"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_rockets_04"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 3060.0,
+    "y": 750.0
+  }
+}

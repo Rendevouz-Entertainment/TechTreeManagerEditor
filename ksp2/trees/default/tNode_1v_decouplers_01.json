@@ -1,0 +1,22 @@
+{
+  "Version": 7,
+  "ID": "tNode_1v_decouplers_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_decouplers_01",
+  "IconID": "ICO-RDCenter-Coupling-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_decouplers_01",
+  "RequiredSciencePoints": 15,
+  "UnlockedPartsIDs": [
+    "decoupler_2v_radial",
+    "separator_1v_inline",
+    "booster_0v_solid_sepratron"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_construction_01"
+  ],
+  "TechTreePosition": {
+    "x": 540.0,
+    "y": 310.0
+  }
+}

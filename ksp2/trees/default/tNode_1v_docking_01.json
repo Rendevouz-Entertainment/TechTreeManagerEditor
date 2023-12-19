@@ -1,0 +1,20 @@
+{
+  "Version": 5,
+  "ID": "tNode_1v_docking_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_docking_01",
+  "IconID": "ICO-RDCenter-Docking-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_docking_01",
+  "RequiredSciencePoints": 50,
+  "UnlockedPartsIDs": [
+    "dockingport_1v_inline"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_decouplers_01"
+  ],
+  "TechTreePosition": {
+    "x": 900.0,
+    "y": 310.0
+  }
+}

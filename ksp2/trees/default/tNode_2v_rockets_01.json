@@ -1,0 +1,25 @@
+{
+  "Version": 5,
+  "ID": "tNode_2v_rockets_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_rockets_01",
+  "IconID": "ICO-RDCenter-Tier2Rocket-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_rockets_01",
+  "RequiredSciencePoints": 180,
+  "UnlockedPartsIDs": [
+    "engine_2v_methalox_skipper",
+    "fueltank_2v_inline_methalox_1x1",
+    "fueltank_2v_inline_methalox_1x2",
+    "adapter_2v_conical_1v-2v",
+    "booster_1v_solid_kickback"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_1v_rockets_04"
+  ],
+  "TierToUnlock": 2,
+  "TechTreePosition": {
+    "x": 1260.0,
+    "y": 750.0
+  }
+}

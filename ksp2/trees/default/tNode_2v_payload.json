@@ -1,0 +1,28 @@
+{
+  "Version": 5,
+  "ID": "tNode_2v_payload",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_payload",
+  "IconID": "ICO-RDCenter-Payload-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_payload",
+  "RequiredSciencePoints": 400,
+  "UnlockedPartsIDs": [
+    "truss_2v_saddle_1x1",
+    "truss_2v_saddle_1x4",
+    "cabin_2v_crew_hitchhiker",
+    "cargobay_2v_1x1",
+    "cargobay_2v_1x8",
+    "cargobay_2v_nose",
+    "fairing_2v_procedural",
+    "enginemount_2v_procedural"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_construction_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 2160.0,
+    "y": 310.0
+  }
+}

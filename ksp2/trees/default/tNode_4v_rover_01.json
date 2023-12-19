@@ -1,0 +1,23 @@
+{
+  "Version": 13,
+  "ID": "tNode_4v_rover_01",
+  "NameLocKey": "Science/TechNodes/Names/tNode_4v_rover_01",
+  "IconID": "ICO-RDCenter-Rover-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_4v_rover_01",
+  "RequiredSciencePoints": 7000,
+  "UnlockedPartsIDs": [
+    "cockpit_3v_truck_crew",
+    "chassis_3v_truck",
+    "wheel_2v_truck",
+    "wheel_3v_rover"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_4v_trusses_01"
+  ],
+  "TechTreePosition": {
+    "x": 5220.0,
+    "y": 530.0
+  }
+}

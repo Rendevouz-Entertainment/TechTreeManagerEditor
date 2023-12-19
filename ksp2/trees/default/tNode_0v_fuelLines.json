@@ -1,0 +1,20 @@
+{
+  "Version": 6,
+  "ID": "tNode_0v_fuelLines",
+  "NameLocKey": "Science/TechNodes/Names/tNode_0v_fuelLines",
+  "IconID": "ICO-RDCenter-Fuel-Line-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_0v_fuelLines",
+  "RequiredSciencePoints": 300,
+  "UnlockedPartsIDs": [
+    "fuelline_0v_external"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_rockets_02"
+  ],
+  "TechTreePosition": {
+    "x": 1800.0,
+    "y": 640.0
+  }
+}

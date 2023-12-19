@@ -1,0 +1,24 @@
+{
+  "Version": 6,
+  "ID": "tNode_2v_hydrogen",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_hydrogen",
+  "IconID": "ICO-RDCenter-Atomic-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_hydrogen",
+  "RequiredSciencePoints": 650,
+  "UnlockedPartsIDs": [
+    "fueltank_1v_inline_hydrogen_long",
+    "fueltank_2v_inline_hydrogen_short",
+    "fueltank_2v_inline_hydrogen_long",
+    "engine_1v_hydrogen_nerv"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_rockets_03"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 2340.0,
+    "y": 750.0
+  }
+}

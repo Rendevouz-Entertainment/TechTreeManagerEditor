@@ -1,0 +1,27 @@
+{
+  "Version": 6,
+  "ID": "tNode_1v_aero_03",
+  "NameLocKey": "Science/TechNodes/Names/tNode_1v_aero_03",
+  "IconID": "ICO-RDCenter-Aero-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_1v_aero_03",
+  "RequiredSciencePoints": 230,
+  "UnlockedPartsIDs": [
+    "nosecone_1v_advanced_conical",
+    "nosecone_1v_advanced_rightcone",
+    "stabilizer_0v_flybywire_aircraft",
+    "nosecone_0v",
+    "stabilizer_0v_reactionwheel",
+    "gridfin_1v_radial",
+    "controlsurface_2v_procedural_heavy"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_rockets_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 1800.0,
+    "y": 90.0
+  }
+}

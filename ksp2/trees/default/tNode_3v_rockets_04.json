@@ -1,0 +1,25 @@
+{
+  "Version": 8,
+  "ID": "tNode_3v_rockets_04",
+  "NameLocKey": "Science/TechNodes/Names/tNode_3v_rockets_04",
+  "IconID": "ICO-RDCenter-MoonLander-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_3v_rockets_04",
+  "RequiredSciencePoints": 2300,
+  "UnlockedPartsIDs": [
+    "engine_3v_methalox_labradoodle",
+    "fueltank_3v_inline_methalox_1x1",
+    "pod_3v_conical_crew",
+    "pod_3v_lander_crew",
+    "heatshield_3v"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_3v_rockets_02"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 3420.0,
+    "y": 640.0
+  }
+}

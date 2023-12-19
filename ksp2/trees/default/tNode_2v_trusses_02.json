@@ -1,0 +1,26 @@
+{
+  "Version": 4,
+  "ID": "tNode_2v_trusses_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_trusses_02",
+  "IconID": "ICO-RDCenter-Trusses-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_trusses_02",
+  "RequiredSciencePoints": 650,
+  "UnlockedPartsIDs": [
+    "junction_2v_circular",
+    "junction_2v_square",
+    "adapter_2v_cir-sqr",
+    "adapter_2v_cir-tri",
+    "resizer_2v_circular_2v-1v",
+    "resizer_2v_square_2v-1v",
+    "resizer_2v_triangular_2v-1v"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_trusses_01"
+  ],
+  "TechTreePosition": {
+    "x": 2520.0,
+    "y": 310.0
+  }
+}

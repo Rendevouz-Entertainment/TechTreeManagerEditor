@@ -1,0 +1,27 @@
+{
+  "Version": 5,
+  "ID": "tNode_2v_aero_02",
+  "NameLocKey": "Science/TechNodes/Names/tNode_2v_aero_02",
+  "IconID": "ICO-RDCenter-Plane-24x",
+  "CategoryID": "",
+  "HiddenByNodeID": "",
+  "DescriptionLocKey": "Science/TechNodes/Descriptions/tNode_2v_aero_02",
+  "RequiredSciencePoints": 400,
+  "UnlockedPartsIDs": [
+    "fueltank_2v_m2_inline_methalox_1x1",
+    "fueltank_2v_m2_inline_methalox_1x2",
+    "fueltank_2v_m2_inline_monoprop",
+    "intake_1v_m1_adjustable",
+    "intake_1v_ramp_radial_adjustable",
+    "intake_1v_radial",
+    "nosecone_2v_mk2"
+  ],
+  "RequiredTechNodeIDs": [
+    "tNode_2v_aero_01"
+  ],
+  "TierToUnlock": 0,
+  "TechTreePosition": {
+    "x": 2160.0,
+    "y": 90.0
+  }
+}
