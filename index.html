@@ -22,6 +22,13 @@
             margin: 10px;
         }
 
+        svg {
+            overflow: visible;
+            position: absolute;
+            width: 200%;
+            height: 100%;
+        }
+
         .scienceNode {
             position: absolute;
             width: 150px;
@@ -109,22 +116,25 @@
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
-                    globalThis.default = {loc: JSON.parse(csvJSON(this.responseText))}
+                    globalThis.default = { loc: JSON.parse(csvJSON(this.responseText)) }
                     globalThis.GetDefaultTree()
                 }
             });
 
             xhr.open("Get", locations.default.location + "local.csv");
             xhr.send();
-            
+
         };
-        globalThis.GetDefaultTree = function(){
+        globalThis.GetDefaultTree = function () {
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.defaultTreeLocations = JSON.parse(this.responseText)
                     globalThis.defaultTreeLocations.treeNodes.forEach((treeNode) => {
                         globalThis.GetAndCreateTreeNode(treeNode)
+                        setTimeout(() => {
+                            globalThis.CreateLines(treeNode)
+                        },500)
                     })
                 }
             });
@@ -132,7 +142,51 @@
             xhr.open("Get", locations.default.tree);
             xhr.send();
         }
+        globalThis.tID = 0;
         globalThis.TreeNodes = {}
+        globalThis.CreateLines = function (treeNode = "") {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    var thisTree = JSON.parse(this.responseText)
+                    var contentArea = document.getElementById("contentArea")
+                    var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
+                    var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
+                    if (thisTree.RequiredTechNodeIDs.length > 0) {
+
+                        thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
+                            try {
+                                var treeNodePd = globalThis.TreeNodes[treeNodeP]
+                                contentArea.innerHTML = `${contentArea.innerHTML}
+                        <svg>
+  <line
+    id="${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID}"
+    style="stroke: rgb(255, 255, 255); stroke-width: 3"
+  />
+</svg>
+                        `
+
+                                var line = document.getElementById(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID}`)
+                                console.log(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID} ${treeNodePd.TechTreePosition.x}`)
+                                line.setAttribute('x1', thisTree.TechTreePosition.x);
+                                line.setAttribute('y1', -thisTree.TechTreePosition.y + (screen.height / 5.5) + 50);
+                                line.setAttribute('x2', treeNodePd.TechTreePosition.x + 150);
+                                line.setAttribute('y2', -treeNodePd.TechTreePosition.y + (screen.height / 5.5) + 50);
+                                globalThis.tID++
+                            } catch (e) {
+
+                            }
+
+                        })
+
+                    }
+                }
+            });
+
+            xhr.open("Get", `${locations.default.location}${treeNode}`);
+            xhr.send();
+
+        }
         globalThis.GetAndCreateTreeNode = function (treeNode = "") {
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
@@ -140,7 +194,7 @@
                     var thisTree = JSON.parse(this.responseText)
                     var contentArea = document.getElementById("contentArea")
                     var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
-                    var localData = globalThis.default.loc.filter(obj => {return obj.Key === thisTree.NameLocKey})[0]
+                    var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
 
                     contentArea.innerHTML = ` ${contentArea.innerHTML}
                     <div class="scienceNode" id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + (screen.height / 5.5)}px);">
@@ -152,18 +206,7 @@
                     </div>
                     `
                     globalThis.TreeNodes[thisTree.ID] = thisTree
-                    if (thisTree.RequiredTechNodeIDs.length > 0) {
-                        thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
-                            try {
-                                var treeNodePd = globalThis.TreeNodes[treeNodeP]
 
-                            } catch (e) {
-
-                            }
-
-                        })
-
-                    }
                 }
             });
 
