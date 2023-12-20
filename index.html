@@ -65,18 +65,40 @@
             width: 100%;
             height: 100%;
         }
-        .scienceNodeConnectordataHolder{
+
+        .scienceNodeConnectordataHolder {
             position: absolute;
             display: flex;
             flex-direction: column;
             width: 400px;
             height: 1000px;
         }
-        .scienceNodeConnectordata{
-            
-        }
+
+        .scienceNodeConnectordata {}
     </style>
     <script>
+        function csvJSON(csv) {
+
+            var lines = csv.split("\n");
+
+            var result = [];
+            var headers = lines[0].split(",");
+
+            for (var i = 1; i < lines.length; i++) {
+
+                var obj = {};
+                var currentline = lines[i].split(",");
+
+                for (var j = 0; j < headers.length; j++) {
+                    obj[headers[j]] = currentline[j];
+                }
+
+                result.push(obj);
+
+            }
+
+            return JSON.stringify(result);
+        }
         var locations = {
             default: {
                 tree: "https://ttm.kerbal.wiki/ksp2/trees/default/tree.json",
@@ -84,6 +106,19 @@
             }
         }
         window.onload = (event) => {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    globalThis.default = {loc: JSON.parse(csvJSON(this.responseText))}
+                    globalThis.GetDefaultTree()
+                }
+            });
+
+            xhr.open("Get", locations.default.location + "local.csv");
+            xhr.send();
+            
+        };
+        globalThis.GetDefaultTree = function(){
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
@@ -96,7 +131,7 @@
 
             xhr.open("Get", locations.default.tree);
             xhr.send();
-        };
+        }
         globalThis.TreeNodes = {}
         globalThis.GetAndCreateTreeNode = function (treeNode = "") {
             var xhr = new XMLHttpRequest();
@@ -105,13 +140,15 @@
                     var thisTree = JSON.parse(this.responseText)
                     var contentArea = document.getElementById("contentArea")
                     var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
+                    var localData = globalThis.default.loc.filter(obj => {return obj.Key === thisTree.NameLocKey})[0]
+
                     contentArea.innerHTML = ` ${contentArea.innerHTML}
                     <div class="scienceNode" id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + (screen.height / 5.5)}px);">
                         <div class="scienceNodeTitle">
                             <div class="scienceNodeIcon"></div>
                             <div class="scienceNodeValue">${thisTree.RequiredSciencePoints}</div>
                         </div>
-                        <div class="scienceNodeContent">${thisTree.ID}</div>
+                        <div class="scienceNodeContent">${localData.English}</div>
                     </div>
                     `
                     globalThis.TreeNodes[thisTree.ID] = thisTree
@@ -119,7 +156,7 @@
                         thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
                             try {
                                 var treeNodePd = globalThis.TreeNodes[treeNodeP]
-                                
+
                             } catch (e) {
 
                             }
@@ -142,12 +179,12 @@
             <a class="navbar-brand" href="/">Tech Tree Manager Editor<br>v0.0.1</a>
         </div>
     </nav>
-    
+
     <div class="contentArea" id="contentArea">
-        
+
     </div>
     <div class="scienceNodeConnectordataHolder" id="scienceNodeConnectordataHolder">
-            
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
