@@ -21,7 +21,10 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         .contentArea {
             margin: 10px;
         }
-
+        .dropdown-menu {
+    max-height: 280px;
+    overflow-y: auto;
+}
         .partList {}
 
         .treeArea {
@@ -179,7 +182,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         var locations = {
             default: {
                 tree: "https://ttm.kerbal.wiki/ksp2/trees/default/tree.json",
-                location: "https://ttm.kerbal.wiki/ksp2/trees/default/"
+                location: "https://ttm.kerbal.wiki/ksp2/trees/default/",
+                parts: "https://ttm.kerbal.wiki/ksp2/trees/default/parts.csv"
             }
         }
         window.onload = (event) => {
@@ -187,7 +191,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.default = { loc: JSON.parse(csvJSON(this.responseText)) }
-                    globalThis.GetDefaultTree()
+                    globalThis.GetDefaultParts()
                 }
             });
 
@@ -208,6 +212,23 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             });
 
             xhr.open("Get", locations.default.tree);
+            xhr.send();
+        }
+        globalThis.GetDefaultParts = function () {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    globalThis.parts = JSON.parse(csvJSON(this.responseText))
+                    var PartsListAdd = document.getElementById("PartsListAdd")
+                    globalThis.parts.forEach((part)=>{
+                        PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
+                        <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
+                    })
+                    globalThis.GetDefaultTree()
+                }
+            });
+
+            xhr.open("Get", locations.default.parts);
             xhr.send();
         }
         globalThis.tID = 0;
@@ -484,6 +505,18 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             })
             globalThis.SetSelectedNode(globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]])
         }
+
+        globalThis.AddPartToNode = function(PartID){
+            globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs.push(PartID)
+            var NodeParts = document.getElementById("NodeParts")
+            if (NodeParts.value.length < 1) {
+                    NodeParts.value = `${PartID}`;
+                } else {
+                    NodeParts.value = `${NodeParts.value},
+${PartID}`;
+                }
+            globalThis.UpdateNodes()
+        }
         //patch manager stuff
 
         function hex_pad(num) {
@@ -728,6 +761,15 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
                     <li class="nav-item">
                         <button type="button" class="btn btn-success" id="NodeNew" style="margin-left: 10px;"
                             onclick="globalThis.NewTechTree()">New Tech Tree</button>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown" style="margin: 0px; padding: 0px;">
+                            <button type="button" style="margin-left: 10px;" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                              Add Part to node
+                            </button>
+                            <div class="dropdown-menu p-4" id="PartsListAdd" style="margin: 0px; padding: 0px !important;">
+                            </div>
+                          </div>
                     </li>
                 </ul>
             </div>
