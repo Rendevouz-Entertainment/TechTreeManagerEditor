@@ -294,13 +294,13 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             })
             NodeParts.value = "";
             globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs.forEach((treeNodePart) => {
-                if(NodeParts.value.length < 1){
+                if (NodeParts.value.length < 1) {
                     NodeParts.value = `${treeNodePart}`;
-                }else{
+                } else {
                     NodeParts.value = `${NodeParts.value},
 ${treeNodePart}`;
                 }
-                
+
             })
             NodePosition.value = `${globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.x}, ${globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.y}`
             NodeCost.value = globalThis.TreeNodes[globalThis.selectedNode].RequiredSciencePoints
@@ -349,9 +349,200 @@ ${treeNodePart}`;
         globalThis.ImportParts = function () {
 
         }
+        globalThis.ExportTreePM = function() {
+            var zip = new JSZip();
+            var pm = ""
+            Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                pm = `${pm}
+${json_to_pm(globalThis.TreeNodes[treeNodeP],"science",globalThis.TreeNodes[treeNodeP].ID)}`
+                
+            })
+            zip.file(`patches/tech_tree.patch`, pm);
+            zip.generateAsync({ type: "blob" }).then(function (content) {
+                // see FileSaver.js
+                saveAs(content, "PM_techtree.zip");
+            });
+        }
 
+        //patch manager stuff
 
-       
+        function hex_pad(num) {
+            var hex = num.toString(16);
+            while (hex.length < 4) {
+                hex = "0" + hex;
+            }
+            return hex;
+        }
+
+        function to_literal(input) {
+            var literal = "\"";
+            for (let i = 0; i < input.length; i++) {
+                char = input[i];
+                switch (char) {
+                    case '\"':
+                        literal += "\\\"";
+                        break;
+                    case '\\':
+                        literal += "\\\\";
+                        break;
+                    case '\0':
+                        literal += "\\0";
+                        break;
+                    case '\n':
+                        literal += "\\n";
+                        break;
+                    case '\r':
+                        literal += "\\r";
+                        break;
+                    case '\t':
+                        literal += "\\t";
+                        break;
+                    case '\v':
+                        literal += "\\v";
+                        break;
+                    default:
+                        {
+                            let char_code = char.charCodeAt(0);
+                            if (char_code >= 0x20 && char_code <= 0x7e) {
+                                literal += char;
+                            } else {
+                                literal += "\\u";
+                                literal += hex_pad(char_code);
+                            }
+                        }
+                }
+            }
+            return literal + "\"";
+        }
+
+        function toFixed(x) {
+            if (Math.abs(x) < 1.0) {
+                var e = parseInt(x.toString().split('e-')[1]);
+                if (e) {
+                    x *= Math.pow(10, e - 1);
+                    x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+                }
+            } else {
+                var e = parseInt(x.toString().split('+')[1]);
+                if (e > 20) {
+                    e -= 20;
+                    x /= Math.pow(10, e);
+                    x += (new Array(e + 1)).join('0');
+                }
+            }
+            return x;
+        }
+
+        const ident_regex = /[a-zA-Z_]([a-zA-Z_.0-9]|[\-][a-zA-Z])*/
+
+        function json_value_to_dv(json_value, indentation = -1, wrap_negatives = false) {
+            if (json_value == null) return "null";
+            else if (typeof json_value === "number") {
+                let str = "";
+                if (Number.isInteger(json_value)) {
+                    str = json_value.toString();
+                } else {
+                    str = toFixed(json_value);
+                }
+                if (wrap_negatives && json_value < 0) {
+                    str = "(" + str + ")";
+                }
+                return str;
+            } else if (typeof json_value === "boolean") {
+                return json_value.toString();
+            } else if (typeof json_value === "string") {
+                return to_literal(json_value);
+            } else if (json_value.constructor.name === "Array") {
+                var result = "[";
+                if (indentation != -1 && JSON.stringify(json_value) !== '[]') {
+                    result += "\n";
+                    result += "    ".repeat(indentation + 1);
+                }
+                first = true;
+                for (const value of json_value) {
+                    if (first) {
+                        first = false;
+                    } else {
+                        if (indentation != -1) {
+                            result += ",\n";
+                            result += "    ".repeat(indentation + 1);
+                        } else {
+                            result += ", ";
+                        }
+                    }
+                    result += json_value_to_dv(value, indentation);
+                }
+                if (!first && indentation != -1) {
+                    result += "\n";
+                    result += "    ".repeat(indentation);
+                }
+                result += "]";
+                return result;
+            } else if (json_value instanceof Object) {
+                var result = "{";
+                if (indentation != -1 && JSON.stringify(json_value) !== '{}') {
+                    result += "\n";
+                    result += "    ".repeat(indentation + 1);
+                }
+                first = true;
+                for (const [key, value] of Object.entries(json_value)) {
+                    if (first) {
+                        first = false;
+                    } else {
+                        if (indentation != -1) {
+                            result += ",\n";
+                            result += "    ".repeat(indentation + 1);
+                        } else {
+                            result += ", ";
+                        }
+                    }
+                    let cur_key = key;
+                    if (!ident_regex.test(cur_key)) cur_key = to_literal(cur_key);
+                    result += cur_key + ": ";
+                    result += json_value_to_dv(value, indentation >= 0 ? indentation + 1 : indentation);
+                }
+                if (!first && indentation != -1) {
+                    result += "\n";
+                    result += "    ".repeat(indentation);
+                }
+                result += "}";
+                return result;
+            } else {
+                return "null";
+            }
+        }
+        function json_to_pm(json, ruleset, name, is_new = false, constructor_args = []) {
+            var pm = "";
+            if (is_new) {
+                pm += "@new(";
+                first = true;
+                for (const arg of constructor_args) {
+                    if (!first) {
+                        pm += ", ";
+                    } else {
+                        first = false;
+                    }
+                    pm += json_value_to_dv(arg);
+                }
+                pm += ")\n";
+            }
+            pm += ":" + ruleset;
+            if (!is_new) {
+                pm += " #" + name;
+            }
+            pm += " {\n";
+            var indentation = 1;
+            for (const [key, value] of Object.entries(json)) {
+                pm += "    ".repeat(indentation);
+                let cur_key = key;
+                if (!ident_regex.test(cur_key)) cur_key = to_literal(cur_key);
+                pm += cur_key + ": ";
+                pm += json_value_to_dv(value, indentation, true);
+                pm += ";\n";
+            }
+            pm += "}";
+            return pm;
+        }
     </script>
 </head>
 
@@ -363,7 +554,7 @@ ${treeNodePart}`;
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/docs">Docs</a>
-                      </li>
+                    </li>
                     <li class="nav-item">
                         <button type="button" class="btn btn-success" id="ImportTree" style="margin-left: 10px;"
                             onclick="globalThis.ImportTree()">Import tree</button>
@@ -371,6 +562,10 @@ ${treeNodePart}`;
                     <li class="nav-item">
                         <button type="button" class="btn btn-success" id="ExportTree" style="margin-left: 10px;"
                             onclick="globalThis.ExportTree()">Export tree</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success" id="ExportTree" style="margin-left: 10px;"
+                            onclick="globalThis.ExportTreePM()">Export to Patch Manager</button>
                     </li>
                     <li class="nav-item">
                         <button type="button" class="btn btn-success" id="ImportParts" style="margin-left: 10px;"
