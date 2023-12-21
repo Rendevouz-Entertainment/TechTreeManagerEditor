@@ -99,6 +99,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
     </style>
     <script>
+        //this converts CSV files to json 
         function csvJSON(csv) {
 
             var lines = csv.split("\n");
@@ -235,12 +236,17 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var NodeRequrements = document.getElementById("NodeRequrements")
             var NodePosition = document.getElementById("NodePosition")
             var NodeCost = document.getElementById("NodeCost")
+            var NodeParts = document.getElementById("NodeParts")
             if (globalThis.selectedNode == null || globalThis.selectedNode == undefined) {
                 globalThis.selectedNode = globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]].ID
             }
             globalThis.TreeNodes[globalThis.selectedNode].RequiredTechNodeIDs = []
             for (var item of NodeRequrements.selectedOptions) {
                 globalThis.TreeNodes[globalThis.selectedNode].RequiredTechNodeIDs.push(item.value)
+            }
+            globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs = []
+            for (var item of NodeParts.value.split(",")) {
+                globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs.push(item.value)
             }
             globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.x = parseInt(NodePosition.value.split(", ")[0])
             globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.y = parseInt(NodePosition.value.split(", ")[1])
@@ -260,6 +266,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var NodeRequrements = document.getElementById("NodeRequrements")
             var NodePosition = document.getElementById("NodePosition")
             var NodeCost = document.getElementById("NodeCost")
+            var NodeParts = document.getElementById("NodeParts")
             var NameLocKey = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
             var DescriptionLocKey = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.DescriptionLocKey })[0]
             console.log(DescriptionLocKey)
@@ -284,6 +291,16 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                     opt.selected = false;
                 }
                 NodeRequrements.add(opt)
+            })
+            NodeParts.value = "";
+            globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs.forEach((treeNodePart) => {
+                if(NodeParts.value.length < 1){
+                    NodeParts.value = `${treeNodePart}`;
+                }else{
+                    NodeParts.value = `${NodeParts.value},
+${treeNodePart}`;
+                }
+                
             })
             NodePosition.value = `${globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.x}, ${globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.y}`
             NodeCost.value = globalThis.TreeNodes[globalThis.selectedNode].RequiredSciencePoints
@@ -381,6 +398,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             <input type="text" class="form-control" id="NodePosition" onchange="globalThis.UpdateNodes()">
             <label>Cost</label>
             <input type="text" class="form-control" id="NodeCost" onchange="globalThis.UpdateNodes()">
+            <label>Tech node Parts</label>
+            <textarea class="form-control" id="NodeParts" rows="4"></textarea>
             <div class="PartsList">
 
             </div>
