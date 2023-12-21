@@ -245,8 +245,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 globalThis.TreeNodes[globalThis.selectedNode].RequiredTechNodeIDs.push(item.value)
             }
             globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs = []
-            for (var item of NodeParts.value.split(",")) {
-                globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs.push(item.value)
+            for (var item of NodeParts.value.split(",\n")) {
+                globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs.push(item)
             }
             globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.x = parseInt(NodePosition.value.split(", ")[0])
             globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.y = parseInt(NodePosition.value.split(", ")[1])
@@ -594,7 +594,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP],"science",globalThis.TreeNodes[tree
             <label>Cost</label>
             <input type="text" class="form-control" id="NodeCost" onchange="globalThis.UpdateNodes()">
             <label>Tech node Parts</label>
-            <textarea class="form-control" id="NodeParts" rows="4"></textarea>
+            <textarea class="form-control" id="NodeParts" rows="4" onchange="globalThis.UpdateNodes()"></textarea>
             <div class="PartsList">
 
             </div>
