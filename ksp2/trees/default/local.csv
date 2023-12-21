@@ -103,7 +103,7 @@ Science/TechNodes/Names/tNode_0v_trusses,Text,,Micro-Construction,Microconstruct
 Science/TechNodes/Names/tNode_0v_utility,Text,,Lights & Utilities,Lumières et services,Luci e utilità,Licht & Betriebsmittel,Luces y herramientas,ライトとユーティリティ,조명 및 유틸리티,Światła i takie tam,Освещение и жизнеобеспечение,照明与水电,Luzes e Utilidades,照明與工具,Tech Node Name,Ready to Test
 Science/TechNodes/Names/tNode_1v_aero_01,Text,,Aerodynamics & Stability,Aérodynamique et stabilité,Aerodinamica e stabilità,Aerodynamik & Stabilität,Aerodinámica y estabilidad,エアロダイナミクスとスタビリティ,공기역학 및 안정성,Aerodynamika i stabilność,Аэродинамика и устойчивость,空气动力学与稳定性,Aerodinâmica e Estabilidade,空氣動力學與穩定性,Tech Node Name,Ready to Test
 Science/TechNodes/Names/tNode_1v_aero_02,Text,,Light Aviation,Aviation légère,Aviazione leggera,Einfache Luftfahrt,Aviación ligera,軽飛行機,경량 비행,Oświetlenie lotnicze,Легкая авиация,轻型航空学,Aviação Leve,輕型航空,Tech Node Name,Ready to Test
-Science/TechNodes/Names/tNode_1v_aero_03,Text,,Precision Aerodynamics,Aérodynamique de précision,Aerodinamica di precisione,"Präzision-
+Science/TechNodes/Names/tNode_1v_aero_03,Text,,Precision Aerody namics,Aérodynamique de précision,Aerodinamica di precisione,"Präzision-
  
  saerodynamik",Aerodinámica de precisión,精密エアロダイナミクス,정밀 공기역학,Aerodynamika precyzyjna,Высокоточная аэродинамика,精准空气动力学,Aerodinâmica de Precisão,精密空氣動力學,Tech Node Name,Ready to Test
 Science/TechNodes/Names/tNode_1v_construction_01,Text,,Introductory Construction,Construction basique,Costruzione introduttiva,Bauen für Einsteiger,Construcción introductoria,ロケット建造入門,기초 건설,Konstrukcje podstawowe,Предварительное строительство,初级建造,Construção Introdutória,建造入門,Tech Node Name,Ready to Test

@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tech Tree Manager Editor 0.0.1</title>
+    <script src="
+https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js
+"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
+"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
@@ -81,7 +87,16 @@
             height: 1000px;
         }
 
-        .scienceNodeConnectordata {}
+        .InfoPanel {
+            width: 500px;
+            height: 2000px;
+            background-color: rgba(43, 43, 43, 0.308);
+        }
+
+        .holder {
+            display: flex;
+            flex-direction: row;
+        }
     </style>
     <script>
         function csvJSON(csv) {
@@ -131,10 +146,8 @@
                 if (this.readyState === 4) {
                     globalThis.defaultTreeLocations = JSON.parse(this.responseText)
                     globalThis.defaultTreeLocations.treeNodes.forEach((treeNode) => {
-                        globalThis.GetAndCreateTreeNode(treeNode)
-                        setTimeout(() => {
-                            globalThis.CreateLines(treeNode)
-                        },500)
+                        globalThis.GetAndCreateTreeNodeHTTP(treeNode)
+
                     })
                 }
             });
@@ -144,60 +157,65 @@
         }
         globalThis.tID = 0;
         globalThis.TreeNodes = {}
-        globalThis.CreateLines = function (treeNode = "") {
-            var xhr = new XMLHttpRequest();
-            xhr.addEventListener("readystatechange", function () {
-                if (this.readyState === 4) {
-                    var thisTree = JSON.parse(this.responseText)
-                    var contentArea = document.getElementById("contentArea")
-                    var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
-                    var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
-                    if (thisTree.RequiredTechNodeIDs.length > 0) {
+        globalThis.CreateLines = function (ID) {
+            var thisTree = globalThis.TreeNodes[ID]
+            var contentArea = document.getElementById("contentArea")
+            var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
+            var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
+            if (thisTree.RequiredTechNodeIDs.length > 0) {
 
-                        thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
-                            try {
-                                var treeNodePd = globalThis.TreeNodes[treeNodeP]
-                                contentArea.innerHTML = `${contentArea.innerHTML}
-                        <svg>
+                thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
+                    try {
+                        var treeNodePd = globalThis.TreeNodes[treeNodeP]
+                        contentArea.innerHTML = `${contentArea.innerHTML}
+                        <svg style="pointer-events: none;z-index : -999;">
   <line
     id="${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID}"
-    style="stroke: rgb(255, 255, 255); stroke-width: 3"
+    style="stroke: rgb(255, 255, 255); stroke-width: 3; "
   />
 </svg>
                         `
 
-                                var line = document.getElementById(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID}`)
-                                console.log(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID} ${treeNodePd.TechTreePosition.x}`)
-                                line.setAttribute('x1', thisTree.TechTreePosition.x);
-                                line.setAttribute('y1', -thisTree.TechTreePosition.y + (screen.height / 5.5) + 50);
-                                line.setAttribute('x2', treeNodePd.TechTreePosition.x + 150);
-                                line.setAttribute('y2', -treeNodePd.TechTreePosition.y + (screen.height / 5.5) + 50);
-                                globalThis.tID++
-                            } catch (e) {
-
-                            }
-
-                        })
+                        var line = document.getElementById(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID}`)
+                        console.log(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID} ${treeNodePd.TechTreePosition.x}`)
+                        line.setAttribute('x1', thisTree.TechTreePosition.x);
+                        line.setAttribute('y1', -thisTree.TechTreePosition.y + (screen.height / 5.5) + 50);
+                        line.setAttribute('x2', treeNodePd.TechTreePosition.x + 150);
+                        line.setAttribute('y2', -treeNodePd.TechTreePosition.y + (screen.height / 5.5) + 50);
+                        globalThis.tID++
+                    } catch (e) {
 
                     }
+
+                })
+
+            }
+
+        }
+        globalThis.GetAndCreateTreeNodeHTTP = function (treeNode = "") {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    var thisTree = JSON.parse(this.responseText)
+                    globalThis.TreeNodes[thisTree.ID] = thisTree
+                    globalThis.GetAndCreateTreeNode(thisTree.ID)
+
                 }
             });
 
             xhr.open("Get", `${locations.default.location}${treeNode}`);
             xhr.send();
-
         }
-        globalThis.GetAndCreateTreeNode = function (treeNode = "") {
-            var xhr = new XMLHttpRequest();
-            xhr.addEventListener("readystatechange", function () {
-                if (this.readyState === 4) {
-                    var thisTree = JSON.parse(this.responseText)
-                    var contentArea = document.getElementById("contentArea")
-                    var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
-                    var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
+        globalThis.GetAndCreateTreeNode = function (ID) {
+            var thisTree = globalThis.TreeNodes[ID]
+            var contentArea = document.getElementById("contentArea")
+            var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
+            var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
 
-                    contentArea.innerHTML = ` ${contentArea.innerHTML}
-                    <div class="scienceNode" id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + (screen.height / 5.5)}px);">
+
+
+            contentArea.innerHTML = ` ${contentArea.innerHTML}
+                    <div class="scienceNode" onclick='globalThis.SetSelectedNode("${thisTree.ID}")' id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + (screen.height / 5.5)}px);">
                         <div class="scienceNodeTitle">
                             <div class="scienceNodeIcon"></div>
                             <div class="scienceNodeValue">${thisTree.RequiredSciencePoints}</div>
@@ -205,14 +223,118 @@
                         <div class="scienceNodeContent">${localData.English}</div>
                     </div>
                     `
-                    globalThis.TreeNodes[thisTree.ID] = thisTree
+            setTimeout(() => {
+                globalThis.CreateLines(ID)
+            }, 500)
+            if (globalThis.selectedNode == null || globalThis.selectedNode == undefined) {
+                globalThis.SetSelectedNode(thisTree.ID)
+            }
 
-                }
-            });
-
-            xhr.open("Get", `${locations.default.location}${treeNode}`);
-            xhr.send();
         }
+        globalThis.UpdateNodes = function () {
+            var NodeRequrements = document.getElementById("NodeRequrements")
+            var NodePosition = document.getElementById("NodePosition")
+            var NodeCost = document.getElementById("NodeCost")
+            if (globalThis.selectedNode == null || globalThis.selectedNode == undefined) {
+                globalThis.selectedNode = globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]].ID
+            }
+            globalThis.TreeNodes[globalThis.selectedNode].RequiredTechNodeIDs = []
+            for (var item of NodeRequrements.selectedOptions) {
+                globalThis.TreeNodes[globalThis.selectedNode].RequiredTechNodeIDs.push(item.value)
+            }
+            globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.x = parseInt(NodePosition.value.split(", ")[0])
+            globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.y = parseInt(NodePosition.value.split(", ")[1])
+            globalThis.TreeNodes[globalThis.selectedNode].RequiredSciencePoints = parseInt(NodeCost.value)
+            contentArea.innerHTML = ""
+            Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                GetAndCreateTreeNode(treeNodeP)
+
+            })
+
+        }
+
+        globalThis.SetSelectedNode = function (id = "") {
+            var thisTree = globalThis.TreeNodes[id]
+            var NodeName = document.getElementById("NodeName")
+            var NodeDescription = document.getElementById("NodeDescription")
+            var NodeRequrements = document.getElementById("NodeRequrements")
+            var NodePosition = document.getElementById("NodePosition")
+            var NodeCost = document.getElementById("NodeCost")
+            var NameLocKey = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
+            var DescriptionLocKey = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.DescriptionLocKey })[0]
+            console.log(DescriptionLocKey)
+            globalThis.selectedNode = id
+            NodeDescription.value = DescriptionLocKey.English.replace('"', "")
+            NodeName.value = NameLocKey.English
+            NodeRequrements.innerHTML = ""
+            var selectedsubnodes = []
+            thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
+                selectedsubnodes.push(treeNodeP)
+            })
+            Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                var subtreenode = globalThis.TreeNodes[treeNodeP]
+                var SubnodeNameLocKey = globalThis.default.loc.filter(obj => { return obj.Key === subtreenode.NameLocKey })[0]
+                var SubnodeDescriptionLocKey = globalThis.default.loc.filter(obj => { return obj.Key === subtreenode.DescriptionLocKey })[0]
+                var opt = document.createElement('option');
+                opt.value = subtreenode.ID;
+                opt.innerHTML = SubnodeNameLocKey.English;
+                if (selectedsubnodes.includes(treeNodeP)) {
+                    opt.selected = true;
+                } else {
+                    opt.selected = false;
+                }
+                NodeRequrements.add(opt)
+            })
+            NodePosition.value = `${globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.x}, ${globalThis.TreeNodes[globalThis.selectedNode].TechTreePosition.y}`
+            NodeCost.value = globalThis.TreeNodes[globalThis.selectedNode].RequiredSciencePoints
+        }
+        globalThis.ImportTree = function () {
+            document.getElementById('TreeImportFile').click();
+        }
+        globalThis.ImportTreeFNC = function (event) {
+            globalThis.TreeNodes = {}
+            globalThis.selectedNode = null
+            contentArea.innerHTML = ""
+            console.log(event.target.files[0])
+            JSZip.loadAsync(event.target.files[0]).then(function (zip) {
+                zip.forEach(function (relativePath, zipEntry) {
+                    zipEntry.async("string")
+                        .then(function success(content) {
+                            console.log(content)
+                            var thisNode = JSON.parse(content)
+                            globalThis.TreeNodes[thisNode.ID] = thisNode
+                        }, function error(e) {
+                            console.log(e)
+                        });
+
+                });
+            })
+            setTimeout(() => {
+                Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                    GetAndCreateTreeNode(treeNodeP)
+
+                })
+            }, 1000)
+        }
+        globalThis.ExportTree = function () {
+            var zip = new JSZip();
+            Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                var TreeNode = globalThis.TreeNodes[treeNodeP]
+                zip.file(`assets/techtree/${TreeNode.ID}.json`, JSON.stringify(TreeNode));
+            })
+
+
+            zip.generateAsync({ type: "blob" }).then(function (content) {
+                // see FileSaver.js
+                saveAs(content, "techtree.zip");
+            });
+        }
+        globalThis.ImportParts = function () {
+
+        }
+
+
+       
     </script>
 </head>
 
@@ -220,15 +342,52 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Tech Tree Manager Editor<br>v0.0.1</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success" id="ImportTree" style="margin-left: 10px;"
+                            onclick="globalThis.ImportTree()">Import tree</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success" id="ExportTree" style="margin-left: 10px;"
+                            onclick="globalThis.ExportTree()">Export tree</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success" id="ImportParts" style="margin-left: 10px;"
+                            onclick="globalThis.ImportParts()">Import parts</button>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </nav>
+    <div class="holder">
+        <div class="InfoPanel">
+            <label>Tech node Name</label>
+            <input type="text" class="form-control" id="NodeName">
+            <label>Tech node Description</label>
+            <textarea class="form-control" id="NodeDescription" rows="4"></textarea>
+            <label>Tech node Required nodes (Multi select)</label>
+            <select class="form-select" id="NodeRequrements" size="8" multiple aria-label="Multiple select"
+                onchange="globalThis.UpdateNodes()">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <label>Position</label>
+            <input type="text" class="form-control" id="NodePosition" onchange="globalThis.UpdateNodes()">
+            <label>Cost</label>
+            <input type="text" class="form-control" id="NodeCost" onchange="globalThis.UpdateNodes()">
+            <div class="PartsList">
 
-    <div class="contentArea" id="contentArea">
+            </div>
+        </div>
+        <div class="contentArea" id="contentArea">
 
+        </div>
     </div>
-    <div class="scienceNodeConnectordataHolder" id="scienceNodeConnectordataHolder">
-
-    </div>
+    <input id="TreeImportFile" type="file" accept=".zip" name="name" style="display: none;"
+        onchange="globalThis.ImportTreeFNC(event)" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
