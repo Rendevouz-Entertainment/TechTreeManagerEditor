@@ -453,6 +453,22 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             globalThis.default.loc.push(localname)
             globalThis.UpdateNodes()
         }
+        globalThis.DeleteNode = function(){
+            var NameLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].NameLocKey })
+            globalThis.default.loc.splice(NameLocKeyID, 1);
+            var DescriptionLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].DescriptionLocKey })
+            globalThis.default.loc.splice(DescriptionLocKeyID, 1)
+
+            delete globalThis.TreeNodes[globalThis.selectedNode]
+
+            
+            contentArea.innerHTML = ""
+            Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                GetAndCreateTreeNode(treeNodeP)
+
+            })
+            globalThis.SetSelectedNode(globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]])
+        }
         //patch manager stuff
 
         function hex_pad(num) {
@@ -721,6 +737,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             <div class="PartsList">
 
             </div>
+            <button type="button" class="btn btn-danger" onclick="globalThis.DeleteNode()">Delete Node</button>
         </div>
         <div class="contentArea" id="contentArea">
 
