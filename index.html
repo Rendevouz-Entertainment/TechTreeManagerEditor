@@ -112,8 +112,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             UnlockedPartsIDs = []
             RequiredTechNodeIDs = []
             TechTreePosition = {
-                x: 0,
-                y: 0
+                x: 50,
+                y: 500
             }
             constructor(ID) {
                 this.ID = ID;
@@ -429,7 +429,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             });
         }
 
-        globalThis.NewNode = function () {
+        globalThis.NewNode = function (updateNodesForced = true) {
             var nodeID = globalThis.RandomID(10)
             var localdescription = {
                 "Key": `Science/TechNodes/Descriptions/${nodeID}`,
@@ -451,7 +451,10 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             globalThis.TreeNodes[node.ID] = node
             globalThis.default.loc.push(localdescription)
             globalThis.default.loc.push(localname)
-            globalThis.UpdateNodes()
+            if(updateNodesForced){
+                globalThis.UpdateNodes()
+            }
+            
         }
         globalThis.DeleteNode = function(){
             var NameLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].NameLocKey })
@@ -463,6 +466,18 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
 
             
             contentArea.innerHTML = ""
+            
+            Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                GetAndCreateTreeNode(treeNodeP)
+
+            })
+            globalThis.SetSelectedNode(globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]])
+        }
+        globalThis.NewTechTree = function(){
+            globalThis.default.loc = []
+            globalThis.TreeNodes = {}
+            contentArea.innerHTML = ""
+            globalThis.NewNode(false)
             Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
                 GetAndCreateTreeNode(treeNodeP)
 
@@ -709,6 +724,10 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
                     <li class="nav-item">
                         <button type="button" class="btn btn-success" id="NodeNew" style="margin-left: 10px;"
                             onclick="globalThis.NewNode()">New Node</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success" id="NodeNew" style="margin-left: 10px;"
+                            onclick="globalThis.NewTechTree()">New Tech Tree</button>
                     </li>
                 </ul>
             </div>

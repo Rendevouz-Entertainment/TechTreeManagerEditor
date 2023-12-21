@@ -1,0 +1,414 @@
+Key,English,French,Italian,German,Spanish,Japanese,Korean,Polish,Russian,Chinese-Simplified [zh-CN],Portuguese-Brazil [pt-BR],Chinese-Traditional [zh-TW],$Context,$Status
+adapter_1v_bullet_methalox_0v-1v,NCS 200,NCS 200,SOA 200,BNS-200,NCS 200,NCS200,NCS 200,NCS 200,NCS 200,NCS200,NCS 200,NCS 200,,Ready to Test
+adapter_1v_cir-sqr,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,CSTA-125,,Ready to Test
+adapter_1v_conical_0v-1v,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,FL-A10,,Ready to Test
+adapter_1v_flat_0v-1v,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,FL-A5,,Ready to Test
+adapter_2v_2point_1v-2v,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,TVR-200L,,Ready to Test
+adapter_2v_3point_1v-2v,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,TVR-300L,,Ready to Test
+adapter_2v_4point_1v-2v,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,TVR-400L,,Ready to test
+adapter_2v_cir-sqr,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,CSTA-250,,Ready to Test
+adapter_2v_conical_1v-2v,RM Adapter,Adaptateur RM,Adattatore RM,Adapter RM,Adaptador RM,RM変換アダプター,RM 어댑터,Przejściówka RM,Адаптер RM,RM转接器,Adaptador RM,RM適配器,,Ready to Test
+adapter_2v_conical_methalox_1v-2v,RS-AD 800,RS-AD 800,RS-AD 800,RS-AD 800,RS-AD 800,RF-AD 800,RS-AD 800,RF-AD 800,RF-AD 800,RS-AD 800,RS-AD 800,RS-AD 800,,Ready to Test
+adapter_2v_flat_1v-2v,RM Adapter Plate,Plaque d'adaptateur RM,Piastra adattatore RM,Adapterplatte RM,Placa adaptadora RM,RM変換アダプタープレート,RM 어댑터 플레이트,Przejściówka płytowa RM,Пластина-адаптер RM,RM转接板,Placa do Adaptador RM,RM適配板,,Ready to Test
+adapter_2v_m2_1x1_methalox_1v-m2,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,RF-AD 400,,Ready to Test
+adapter_2v_m2_1x2_methalox_1v-m2,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,RF-AD 800,,Ready to Test
+adapter_2v_m2_2point_methalox_1v-m2,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,RF-AD-B 400,,Ready to Test
+adapter_2v_m2_methalox_2v-m2,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,RF-AD-L 800,,Ready to Test
+adapter_2v_rightcone_methalox_1v-2v,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,RS-AD-SL 800,,Ready to Test
+adapter_3v_cir-sqr,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,CSTA-375,,Ready to Test
+adapter_3v_conical_2v-3v,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,ADP-ML-C,,Ready To Test
+adapter_3v_m3_conical_methalox_2v-m3,RF-AD 2500,RF-AD 2500,RF-AD 2500,RF-AD 2500,RF-AD 2500,RF-AD 2500,RF-AD 2500,RF-AD 2500,RF-AD 2500,RF-AD2500,RF-AD 2500,RF-AD 2500,,Ready to Test
+adapter_3v_m3_methalox_3v-m3,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,RF-AD-XL 2500,,Ready to Test
+adapter_3v_m3_methalox_m2-m3,RF-AD 2000,RF-AD 2000,RF-AD 2000,RF-AD 2000,RF-AD 2000,RF-AD 2000,RF-AD 2000,RF-AD 2000,RF-AD 2000,RF-AD2000,RF-AD 2000,RF-AD 2000,,Ready to Test
+adapter_3v_m3_rightcone_methalox_2v-m3,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,RF-AD-SL 2500,,Ready to Test
+adapter_3v_methalox_2v-3v,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,ADTP-2-3,,Ready to Test
+adapter_4v_3v-4v,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,ADP-LXL,,Ready to Test
+adapter_4v_cir-sqr,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,CSTA-500,,Ready to Test
+adapter_4v_methalox_3v-4v,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,ADTP-3-4,,Ready to Test
+airbrake_1v,A.I.R.B.R.A.K.E.S.,A.E.R.O.F.R.E.I.N.S,F.R.E.N.A.,A.I.R.B.R.A.K.E.S.,A.E.R.O.F.R.E.N.O,A.I.R.B.R.A.K.E.S.,에.어.브.레.이.크.,Hamulec aerodymaniczny,А.Э.Р.О.Т.О.Р.М.О.З.,空气制动系统,A.E.R.O.F.R.E.I.O.S.,A.I.R.B.R.A.K.E.S.,A.I.R.B.R.A.K.E.S.,Ready to Test
+antenna_0v_16,Communotron 16,Communitron 16,Communotron 16,Communotron 16,Communotron 16,コミュノトロン 16,커뮤노트론 16,Komunikatron 16,Коммунотрон 16,通信者16,Communotron 16,通信家16,,Ready to Test
+antenna_0v_16s,Communotron 16-S,Communitron 16-S,Communotron 16-S,Communotron 16-S,Communotron 16-S,コミュノトロン 16-S,커뮤노트론 16-S,Komunikatron 16-S,Коммунотрон 16-S,通信者16-S,Communotron 16-S,通信家16-S,,Ready to Test
+antenna_0v_dish_ra-15,RA-15,RA-15,RA-15,RA-15,RA-15,RA-15,RA-15,RA-15,RA-15,RA-15,RA-15,RA-15,,Ready to Test
+antenna_0v_dish_ra-2,RA-2,RA-2,RA-2,RA-2,RA-2,RA-2,RA-2,RA-2,RA-2,RA-2,RA-2,RA-2,,Ready to Test
+antenna_1v_dish_88-88,Communotron 88-88,Communitron 88-88,Communotron 88-88,Communotron 88-88,Communotron 88-88,コミュノトロン 88-88,커뮤노트론 88-88,Komunikatron 88-88,Коммунотрон 88-88,通信者88-88,Communotron 88-88,通信家88-88,,Ready to Test
+antenna_1v_dish_hg5,Communotron HG-5,Communitron HG-5,Communotron HG-5,Communotron HG-5,Communotron HG-5,コミュノトロン HG-5,커뮤노트론 HG-5,Komunikatron HG-5,Коммунотрон HG-5,通信者HG-5,Communotron HG-5,通信家HG-5,,Ready to Test
+antenna_1v_dish_hg55,Communotron HG-55,Communitron HG-55,Communotron HG-55,Communotron HG-55,Communotron HG-55,コミュノトロン HG-55,커뮤노트론 HG-55,Komunikatron HG-55,Коммунотрон HG-55,通信者HG-55,Communotron HG-55,通信家HG-55,,Ready to Test
+antenna_1v_dish_ra-100,RA-100,RA-100,RA-100,RA-100,RA-100,RA-100,RA-100,RA-100,RA-100,RA-100,RA-100,RA-100,,Ready to Test
+antenna_1v_parabolic_dts-m1,Communotron DTS-M1,Communitron DTS-M1,Communotron DTS-M1,Communotron DTS-M1,Communotron DTS-M1,コミュノトロン DTS-M1,커뮤노트론 DTS-M1,Komunikatron DTS-M1,Коммунотрон DTS-M1,通信者DTS-M1,Communotron DTS-M1,通信家DTS-M1,,Ready to Test
+attachpoint_1v_radial,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,BZ-52,,Ready to Test
+booster_0v_solid_sepratron,Sepratron-1,Sépatron-1,Sepratron-1,Sepratron-1,Sepratrón-1,セプラトロン-1,세퍼레트론-1,Sepratron-1,«Мелкотрон I»,分离者1号,Sepratron-1,分離者一號,,Ready to Test
+booster_1v_solid_flea,"RT-5 ""Flea""","RT-5 ""Puceron”","RT-5 ""Pulce""",Festtreibstoff-Booster RT-5 „Flea“,"RT-5 ""Pulga""","RT-5 ""フリー""","RT-5 ""플리""",RT-5 „Pchełka”,RT-5 «Блоха»,RT-5“跳蚤”,"RT-5 ""Flea""",RT-5「跳蚤」,,Ready to Test
+booster_1v_solid_hammer,"RT-10 ""Hammer""",RT-10 “Pilon”,"RT-10 ""Martello""",RT-10 „Hammer“,"RT-10 ""Martillo""","RT-10 ""ハマー""","RT-10 ""해머""",RT-10 „Młotek”,RT-10 «Молот»,RT-10“巨锤”,"RT-10 ""Hammer""",RT-10「鐵鎚」,,Ready to Test
+booster_1v_solid_kickback,"SRB-KD25k ""Kickback""",SRB-KD25k “Recul”,"BCS-KD25k ""Rinculo""",SRB-KD25k „Kickback“,"SRB-KD25k ""Sacudida""","SRB-KD25k ""キックバック""","SRB-KD25k ""킥백""",SRB-KD25k „Wykop”,SRB-KD25k «Булава»,SRB-KD25k“反冲”,"SRB-KD25k ""Kickback""",SRB-KD25k「反擊」,,Ready to Test
+booster_1v_solid_thumper,"BACC ""Thumper""",BACC “Cogneur”,"BACC ""Maglio""",BACC „Thumper“,"BACC ""Castañazo""","BACC ""サンパー""","BACC ""섬퍼""",BACC „Dudnik”,Твердотопливный ускоритель «Кувалда»,BACC“强击”,"BACC ""Thumper""",BACC「狂擊者」,,Ready to Test
+booster_2v_solid_clydesdale,"S2-33 ""Clydesdale""",S2-33 “Clydesdale”,"S2-33 ""Clydesdale""",S2-33 „Clydesdale“,"S2-33 ""Clydesdale""","S2-33 ""クライズデール""","S2-33 ""클라이즈데일""",S2-33 „Clydesdale”,S2-33 «Тяжеловоз»,S2-33“克莱兹代尔马”,"S2-33 ""Clydesdale""",S2-33「種馬」,,Ready to Test
+cabin_1v_m1_crew,"Mk1 ""Stowaway""",“Passager clandestin” Mk1,"""Clandestino"" Mk1",Mk1 „Stowaway“,"Mk1 ""Polizón""","Mk1 ""密航""","Mk1 ""스토와웨이""",Mk1 „Gapowicz”,«Безбилетник» Mk1,Mk1“偷渡者”,"Mk1 ""Stowaway""",Mk1「偷渡客」,,Ready to Test
+cabin_2v_crew_hitchhiker,"PPD-10 ""Hitchhiker""",PPD-10 “Voyageur galactique”,"PPD-10 ""Autostoppisti""",PPD-10 „Hitchhiker“,"PPD-10 ""Mochilera""","PPD-10 ""ヒッチハイカー""","PPD-10 ""히치하이커""",PPD-10 „Autostopowicz”,«ППД-10 Хитчхайкер»,PPD-10“乘员贮存容器”,"PPD-10 ""Mochileiro""",PPD-10「銀河便車」,,Ready to Test
+cabin_2v_m2_crew,"Mk2 ""Tag Along""",“Tous à bord” Mk2,"""Stammi dietro"" Mk2",Mk2 „Tag Along“,"Mk2 ""Acóplate""","Mk2 ""いつも一緒""","Mk2 ""태그얼롱""",Mk2 „Landara”,«Хвост» Mk2,Mk2“尾尾”,"Mk2 ""Acompanhante""",Mk2「跟屁蟲」,,Ready to Test
+cabin_3v_crew,"PPD-20 ""Wayfarer""",PPD-20 “Explorateur”,"PPD-20 ""Viandante""",PPD-20 „Wayfarer“,"PPD-20 ""Caminante""","PPD-20 ""ウェイフェラー""","PPD-20 ""웨이페러""",PPD-20 „Włóczęga”,"PPD-20 «Путник""",PPD-20“旅人”,"PPD-20 ""Viajante""",PPD-20「旅行者」,,Ready to Test
+cabin_3v_m3_crew,"Mk3 ""Skybus""",“Bus céleste” Mk3,"""Cielobus"" Mk3",Mk3 „Skybus“,"Mk3 ""Vuelabus""","Mk3 ""スカイバス""","Mk3 ""스카이버스""",Mk3 „Kosmobus”,«Небесный автобус» Mk3,Mk3“空中巴士”,"Mk3 ""Skybus""",Mk3「空中巴士」,,Ready to Test
+cargobay_1v_1x1,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,CBS-125,,Ready to Test
+cargobay_1v_1x8,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,CBL-125,,Ready to Test
+cargobay_2v_1x1,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,CBS-250,,Ready to Test
+cargobay_2v_1x8,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,CBL-250,,Ready to Test
+cargobay_2v_m2_1x1,Mk2 CRG-S,CRG-S Mk2,CRG-S Mk2,CRG-S Mk2,CRG-S Mk2,Mk2 CRG-S,Mk2 CRG-S,Mk2 CRG-S,Mk2 CRG-S,Mk2 CRG-S,Mk2 CRG-S,Mk2 CRG-S,,Ready to Test
+cargobay_2v_m2_1x2,Mk2 CRG,CRG Mk2,CRG Mk2,CRG Mk2,CRG Mk2,Mk2 CRG,Mk2 CRG,Mk2 CRG,Mk2 CRG,Mk2 CRG,Mk2 CRG,Mk2 CRG,,Ready to Test
+cargobay_2v_nose,CN-250,CN-250,CN-250,CN-250,CN-250,CN-250,CN-250,CN-250,CN-250,CN-250,CN-250,CN-250,,Ready to Test
+cargobay_3v_1x1,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,CBS-375,,Ready to Test
+cargobay_3v_1x8,CBL-375,CBL-375,CBL-375,CBL-375,CBL-375,CBL-375,CBL-375,CBL-375,CBN-375,CBL-375,CBL-375,CBL-375,,Ready to Test
+cargobay_3v_m3_1x1,Mk3 CRG-S,CRG-S Mk3,CRG-S Mk3,CRG-S Mk3,CRG-S Mk3,Mk3 CRG-S,Mk3 CRG-S,Mk3 CRG-S,Mk3 CRG-S,Mk3 CRG-S,Mk3 CRG-S,Mk3 CRG-S,,Ready to Test
+cargobay_3v_m3_1x2,Mk3 CRG,CRG Mk3,CRG Mk3,CRG Mk3,CRG Mk3,Mk3 CRG,Mk3 CRG,Mk3 CRG,Mk3 CRG,Mk3 CRG,Mk3 CRG,Mk3 CRG,,Ready to Test
+cargobay_3v_m3_1x4,Mk3 CRG-L,CRG-L Mk3,CRG-L Mk3,CRG-L Mk3,CRG-L Mk3,Mk3 CRG-L,Mk3 CRG-L,Mk3 CRG-L,Mk3 CRG-L,Mk3 CRG-L,Mk3 CRG-L,Mk3 CRG-L,,Ready to Test
+cargobay_3v_m3_ramp_1x3,Mk3 CRG-R,CRG-R Mk3,CRG-R Mk3,CRG-R Mk3,CRG-R Mk3,Mk3 CRG-R,Mk3 CRG-R,Mk3 CRG-R,Mk3 CRG-R,Mk3 CRG-R,Mk3 CRG-R,Mk3 CRG-R,,Ready to Test
+cargobay_3v_nose,CN-375,CN-375,CN-375,CN-375,CN-375,CN-375,CN-375,CN-375,CN-375,CN-375,CN-375,CN-375,,Ready to Test
+cargobay_4v_1x1,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,CBS-500,,Ready to Test
+cargobay_4v_1x4,CBL-500,CBL-500,CBL-500,CBL-500,CBL-500,CBL-500,CBL-500,CBL-500,CBN-500,CBL-500,CBL-500,CBL-500,,Ready to Test
+cargobay_4v_nose,CN-500,CN-500,CN-500,CN-500,CN-500,CN-500,CN-500,CN-500,CN-500,CN-500,CN-500,CN-500,,Ready to Test
+chassis_3v_truck,RTC “Rottweiler”,RTC “Rottweiler”,"RTC ""Rottweiler""",RTC „Rottweiler“,"RTC ""Rottweiler""","RTC ""ロットワイラー""","RTC ""로트와일러""",RTC „Rottweiler”,RTC «Ротвейлер»,RTC“罗威纳犬”,"RTC ""Rottweiler""",RTC「羅威那犬」,,Ready to Test
+cockpit_1v_m1_crew,"Mk1 ""Raven""","""Corbeau"" Mk1","""Corvo"" Mk1","Mk1 ""Rabe""","""Cuervo"" Mk1",Mk1「レイヴン」,"Mk1 ""레이븐""",Mk1 „Kruk”,«Ворон» Mk1,Mk1“渡鸦”,"""Corvo"" Mk1",MK1「渡鴉」,,Ready to Test
+cockpit_1v_m1_inline_crew,"Mk1 ""Peregrine""","""Pèlerin"" Mk1","""Falco pellegrino"" Mk1","Mk1 ""Peregrin""","""Peregrina"" Mk1",Mk1「ペレグリン」,"Mk1 ""페어그린""",Mk1 „Sokół”,«Сокол» Mk1,Mk1“游隼”,"""Peregrina"" Mk1",MK1「遊隼」,,Ready to Test
+cockpit_2v_m2_crew,"Mk2 ""Phoenix""","""Phénix"" Mk2","""Fenice"" Mk2","Mk2 ""Phönix""","""Fénix"" Mk2",Mk2「フェニックス」,"Mk2 ""피닉스""",Mk2 „Feniks”,«Феникс» Mk2,Mk2“凤凰”,"""Fênix"" Mk2",MK2「鳳凰」,,Ready to Test
+cockpit_2v_m2_inline_crew,"Mk2 ""Osprey""","""Balbuzard"" Mk2","""Falco pescatore"" Mk2","Mk2 ""Fischadler""","""Halieto"" Mk2",Mk2「オスプレイ」,"Mk2 ""오스프리""",Mk2 „Rybołów”,«Скопа» Mk2,Mk2“鱼鹰”,"""Águia-Marinha"" Mk2",MK2「魚鷹」,,Ready to Test
+cockpit_3v_m3_aircraft_crew,Mk3 “Pelican”,“Pélican” Mk3,"""Pellicano"" Mk3",Mk3 „Pelican“,"Mk3 ""Pelícano""","Mk3 ""ペリカン""","Mk3 ""펠리컨""",Mk3 „Pelikan”,Mk3 «Пеликан»,Mk3“鹈鹕”,"Mk3 ""Pelicano""",Mk3「鵜鶘」,,Ready to Test
+cockpit_3v_m3_crew,"Mk3 ""Condor""","""Condor"" Mk3","""Condor"" Mk3","Mk3 ""Kondor""","""Cóndor"" Mk3",Mk3「コンドル」,"Mk3 ""콘도르""",Mk3 „Kondor”,«Кондор» Mk3,Mk3“秃鹰”,"""Condor"" Mk3",MK3「禿鷹」,,Ready to Test
+cockpit_3v_truck_crew,"TR-3 ""Bulldog""",TR-3 “Bulldog”,"TR-3 ""Bulldog""",TR-3 „Bulldog“,"TR-3 ""Bulldog""","TR-3 ""ブルドッグ""","TR-3 ""불독""",TR-3 „Buldog”,TR-3 «Бульдог»,TR-3“斗牛犬”,"TR-3 ""Bulldog""",TR-3「鬥牛犬」,,Ready to Test
+collector_0v_radial_science_atmospheric,"ASCM-B ""Little Sniffer""",ASCM-B “Petit renifleur”,"ASCM-B ""Piccolo annusatore""",ASCM-B „Little Sniffer“,"ASCM-B ""Rastreadorcillo""","ASCM-B ""リトルスニッファー""","ASCM-B ""리틀 스니퍼""",ASCM-B „Niuchacz”,ASCM-B «Маленький нюхач»,ASCM-B “小嗅探器”,"ASCM-B ""Pequeno farejador""",ASCM-B「小型嗅探器」,,Ready to Test
+collector_0v_radial_science_general,"RGSCM-01 ""Science Jr. Jr.""","RGSCM-01 ""Science Junior Junior""","RGSCM-01 ""Scienza Jr. Jr.""",RGSCM-01 „Science Jr. Jr.“,"RGSCM-01 ""Ciencia Jr. Jr.""","RGSCM-01 ""サイエンスJr.Jr.""","RGSCM-01 ""사이언스 주니어 주니어""",RGSCM-01 „Licencjat”,RGSCM-01 «Крошка-ученый»,RGSCM-01“小小科学家迷你版”,"RGSCM-01 ""Ciência Jr. Jr.""",RGSCM-01「科學小子」,,Ready to Test
+collector_0v_radial_science_sampler,"RSCM-01 ""Sample Grabber""","RSCM-01 ""Attrapeur d'échantillons""","RSCM-01 ""Raccatta-campioni""",RSCM-01 „Sample Grabber“,"RSCM-01 ""Recogemuestras""","RSCM-01 ""サンプルグラバー""","RSCM-01 ""샘플 그래버""",RSCM-01 „Próbkochwytak”,RSCM-01 «Собиратель проб»,RSCM-01“样本抓取工具”,"RSCM-01 ""Coletor de amostras""",RSCM-01「樣本抓取器」,,Ready to Test
+collector_0v_science_atmospheric,"ASCM-A ""Air Sniffer""","ASCM-A ""Renifleur d'air""","ASCM-B ""Annusatore d'aria""",ASCM-A „Air Sniffer“,"ASCM-A ""Rastreador de aire""","ASCM-A ""エアスニッファー""","ASCM-A ""에어 스니퍼""",ASCM-A „Wąchacz”,ASCM-B «Нюхач»,ASCM-A “空气嗅探器”,"ASCM-A ""Fareja ar""",ASCM-A「空氣嗅探器」,,Relocalize
+collector_0v_science_radiation,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,WSRL-01,,Ready to Test
+collector_1v_radial_science_orbital,"OSCM-01 ""Mini-Lab""","OSCM-01 ""Mini labo""","OSCM-01 ""Mini-laboratorio""",OSCM-01 „Mini-Lab“,"OSCM-01 ""Minilaboratorio""","OSCM-01 ""ミニラボ""","OSCM-01 ""미니-랩""",OSCM-01 „Minilab”,OSCM-01 «Мини-лаба»,OSCM-01 “迷你实验室”,"OSCM-01 ""Mini-laboratório""",OSCM-01「迷你實驗室」,,Ready to Test
+collector_1v_science_general,"GSCM-01 ""Science Jr.""","GSCM-01 ""Science Junior""","GSCM-01 ""Scienza Jr.""",GSCM-01 „Science Jr.“,"GSCM-01 ""Ciencia Jr.""","GSCM-01 ""サイエンスJr.""","GSCM-01 ""사이언스 주니어""",GSCM-01 „Magistrant”,GSCM-01 «Маленький ученый»,GSCM-01“小小科学家”,"GSCM-01 ""Ciência Jr.""",GSCM-01「科學小子」,,Ready to Test
+connector_0v_6point,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,TMP-XS,,Ready to Test
+connector_1v_6point,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,MPC-250,,Ready to Test
+controlsurface_1v_procedural_light,LPCS-250 “Conversion”,LPCS-250 “Conversion”,"LPCS-250 ""Conversione""",LPCS-250 „Conversion“,"LPCS-250 ""Conversión""","LPCS-250 ""コンバージョン""","LPCS-250 ""컨버젼""",LPCS-250 „Konwersja”,LPCS-250 «Преобразование»,LPCS-250“转化”,"LPCS-250 ""Conversão""",LPCS-250「轉換者」,,Ready to Test
+controlsurface_2v_procedural_heavy,MPCS-500 “Variance”,MPCS-500 “Variance”,"MPCS-500 ""Variazione""",MPCS-500 „Variance“,"MPCS-500 ""Variación""","MPCS-500 ""バリアンス""","MPCS-500 ""베리언스""",MPCS-500 „Wariancja”,MPCS-500 «Вариативность»,MPCS-500“方差”,"MPCS-500 ""Variação""",MPCS-500「變異者」,,Ready to Test
+controlsurface_2v_procedural_light,LPCS-250 “Conversion”,LPCS-250 “Conversion”,"LPCS-250 ""Conversione""",LPCS-250 „Conversion“,"LPCS-250 ""Conversión""","LPCS-250 ""コンバージョン""","LPCS-250 ""컨버젼""",LPCS-250 „Konwersja”,LPCS-250 «Преобразование»,LPCS-250“转化”,"LPCS-250 ""Conversão""",LPCS-250「轉換者」,,Ready to Test
+controlsurface_3v_procedural_heavy,MPCS-500 “Variance”,MPCS-500 “Variance”,"MPCS-500 ""Variazione""",MPCS-500 „Variance“,"MPCS-500 ""Variación""","MPCS-500 ""バリアンス""","MPCS-500 ""베리언스""",MPCS-500 „Wariancja”,MPCS-500 «Вариативность»,MPCS-500“方差”,"MPCS-500 ""Variação""",MPCS-500「變異者」,,Ready to Test
+controlsurface_3v_procedural_spaceplane,HPCS-1000 “Renaissance”,HPCS-1000 “Renaissance”,"HPCS-1000 ""Rinascimento""",HPCS-1000 „Renaissance“,"HPCS-1000 ""Renacimiento""","HPCS-1000 ""ルネサンス""","HPCS-1000 ""르네상스""",HPCS-1000 „Renesans”,HPCS-1000 «Возрождение»,HPCS-1000“复兴”,"HPCS-1000 ""Renascimento""",HPCS-1000「復興者」,,Ready to Test
+coupler_1v_inline_2point,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,TVR-200,,Ready to Test
+coupler_1v_inline_3point,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,TVR-1180C,,Ready to Test
+coupler_1v_inline_4point,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,TVR-2160C,,Ready to Test
+decoupler_0v_inline,TD-06,TD-06,TD-06,TD-06,TD-06,TD-06,TD-06,TD-06,TD-06,TD-06,TD-06,TD-06,TD-18,Ready to Test
+decoupler_1v_aerodynamic,AD-12,AD-12,AD-12,AD-12,AD-12,AD-12,AD-12,AD-12,AD-12,AD-12,AD-12,AD-12,AD-24,Ready to Test
+decoupler_1v_inline,TD-12,TD-12,TD-12,TD-12,TD-12,TD-12,TD-12,TD-12,TD-12,TD-12,TD-12,TD-12,,Ready to Test
+decoupler_1v_radial,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,TT-38K,,Ready to Test
+decoupler_2v_aerodynamic,AD-25,AD-25,AD-25,AD-25,AD-25,AD-25,AD-25,AD-25,AD-25,AD-25,AD-25,AD-25,,Ready to Test
+decoupler_2v_inline,TD-25,TD-25,TD-25,TD-25,TD-25,TD-25,TD-25,TD-25,TD-25,TD-25,TD-25,TD-25,,Ready to Test
+decoupler_2v_radial,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,TT-38X,,Ready to Test
+decoupler_3v_inline,TD-37,TD-37,TD-37,TD-37,TD-37,TD-37,TD-37,TD-37,TD-37,TD-37,TD-37,TD-37,,Ready to Test
+decoupler_3v_radial,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,TT-140A,,Ready to Test
+decoupler_4v_inline,TD-50,TD-50,TD-50,TD-50,TD-50,TD-50,TD-50,TD-50,TD-50,TD-50,TD-50,TD-50,,Ready to Test
+decoupler_4v_radial,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,TT-440XL,,Ready to Test
+dockingport_0v_inline,Clamp-O-Tron Jr.,Chop-O-Tron Jr,Clamp-O-Tron Jr.,Klemm-O-Tron Jr.,Clamp-O-Tron Jr.,クランプオートロン Jr.,클램프-오-트론 주니어,Sczepotron Jr,«Хват-О-Трон-младший»,小型夹具装置,Clamp-O-Tron Jr.,小型夾鉗機,,Ready to Test
+dockingport_1v_inline,Clamp-O-Tron,Chop-O-Tron,Clamp-O-Tron,Klemm-O-Tron,Clamp-O-Tron,クランプオートロン,클램프-오-트론,Sczepotron,«Хват-О-Трон»,夹具装置,Clamp-O-Tron,夾鉗機,,Ready to Test
+dockingport_1v_inline_shielded,Clamp-O-Tron Shielded,Chop-O-Tron à bouclier,Clamp-O-Tron schermato,Abgeschirmte Klemm-O-Tron,Clamp-O-Tron blindado,シールド付クランプオートロン,클램프-오-트론 덮개형,Sczepotron obudowany,Экранированный «Хват-О-Трон»,带外壳夹具装置,Clamp-O-Tron Protegida,護罩夾鉗機,,Ready to Test
+dockingport_1v_inline_sideport,Clamp-O-Tron Inline,Chop-O-Tron linéaire,Clamp-O-Tron in linea,Lineare Klemm-O-Tron,Clamp-O-Tron en línea,クランプオートロンインライン,클램프-오-트론 내장형,Sczepotron osiowy,Встраиваемый «Хват-О-Трон»,轴向夹具装置,Clamp-O-Tron Embutida,並排夾鉗機,,Ready to Test
+dockingport_2v_inline,Clamp-O-Tron Sr.,Chop-O-Tron Sr,Clamp-O-Tron Sr.,Klemm-O-Tron Sr.,Clamp-O-Tron Sr.,クランプオートロン Sr.,클램프-오-트론 시니어,Sczepotron Sr,«Хват-О-Трон-старший»,大型夹具装置,Clamp-O-Tron Sr.,大型夾鉗機,,Ready to Test
+dockingport_2v_m2_inline_sideport,Mk2 Clamp-O-Tron,Chop-O-Tron Mk2,Clamp-O-Tron Mk2,Klemm-O-Tron Mk2,Clamp-O-Tron Mk2,Mk2 クランプオートロン,Mk2 클램프-오-트론,Sczepotron Mk2,Стыковочный узел «Хват-О-Трон» Mk2,Mk2夹具装置,Clamp-O-Tron Mk2,MK2夾鉗機,,Ready to Test
+dockingport_3v_inline,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,CC375-D,,Ready To Test
+dockingring_4v_inline,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,CC5-D,Ready to Test
+engine_0v_methalox_ant,"LV-1 ""Ant""",LV-1 “Fourmi”,"LV-1 ""Formica""",LV-1 „Ant“,"LV-1 ""Hormiga""","LV-1 ""アント""","LV-1 ""앤트""",LV-1 „Mrówka”,LV-1 «Муравей»,LV-1“蚂蚁”,"LV-1 ""Ant""",LV-1「螞蟻」,,Ready to Test
+engine_0v_methalox_spark,"48-7S ""Spark""",48-7S “Étincelle”,"48-7S ""Scintilla""",48-7S „Spark“,"48-7S ""Chispa""","48-7S ""スパーク""","48-7S ""스파크""",48-7S „Skra”,48-7S «Искра»,48-7S“火花”,"48-7S ""Spark""",48-7S「火花」,,Ready to Test
+engine_0v_methalox_spider,"LV-1R ""Spider""",LV-1R “Araignée”,"LV-1R ""Ragno""",LV-1R „Spider“,"LV-1R ""Araña""","LV-1R ""スパイダー""","LV-1R ""스파이더""",LV-1R „Pająk”,LV-1R «Паук»,LV-1R“蜘蛛”,"LV-1R ""Spider""",LV-1R「蜘蛛」,,Ready to Test
+engine_0v_methalox_twitch,"24-77 ""Twitch""",24-77 “Tic”,"24-77 ""Scossa""",24-77 „Twitch“,"24-77 ""Tirón""","24-77 ""ツイッチ""","24-77 ""트위치""",24-77 „Tik”,24-77 «Свеча»,24-77“开关”,"24-77 ""Twitch""",24-77「特奇」,,Ready to Test
+engine_0v_methane_whittle,"J-20 ""Whittle""",J-20 “Grignotin”,"J-20 ""Scricciolo""",J-20 „Whittle“,"J-20 ""Cincel""","J-20 ""ウィットル""","J-20 ""휘슬""",J-20 „Bzyk”,J-20 «Брусок»,J-20“屠刀”,"J-20 ""Whittle""",J-20「滑頭」,,Ready to Test
+engine_0v_monoprop_puff,"O-10 ""Puff""",O-10 “Pouet”,"O-10 ""Sbuffo""",O-10 „Puff“,"O-10 ""Soplo""","O-10 ""パフ""","O-10 ""퍼프""",O-10 „Puff”,O-10 «Пыхтун»,O-10“烟雾”,"O-10 ""Puff""",O-10「泡芙」,,Ready to Test
+engine_0v_xenon_dawn,"IX-6315 ""Dawn""",IX-6315 “Aube”,"IX-6315 ""Alba""",IX-6315 „Dawn“,"IX-6315 ""Albor""","IX-6315 ""ドーン""","IX-6315 ""던""",IX-6315 „Świt”,IX-6315 «Заря»,IX-6315“黎明”,"IX-6315 ""Dawn""",IX-6315「黎明」,,Ready to Test
+engine_1v_hydrogen_nerv,"LV-N ""Nerv""",LV-N “Nerv”,"LV-N ""Nerv""",LV-N „Nerv“,"LV-N ""Nervi""","LV-N ""ナーブ""","LV-N ""너브""",LV-N „Nerw”,LV-N «Нерв»,LV-N“神经元”,"LV-N ""Nerv""",LV-N「神經毒」,,Ready to Test
+engine_1v_methalox_cornet,LV-1000 “Cornet”,LV-1000 “Cornet”,"LV-1000 ""Cornetta""",LV-1000 „Cornet”,"LV-1000 ""Corneta""",LV-1000 “コルネ”,LV-1000 “코넷”,LV-1000 „Kornet”,LV-1000 «Корнет»,LV-1000“短号”,"LV-1000 ""Corneta""",LV-1000「短號」,,Ready To Test
+engine_1v_methalox_dart,"T-1 ""Dart""",T-1 “Fléchette”,"T-1 ""Dardo""",T-1 „Dart“,"T-1 ""Dardo""","T-1 ""ダート""","T-1 ""다트""",T-1 „Strzałka”,T-1 «Дротик»,T-1“飞镖”,"T-1 ""Dart""",T-1「飛鏢」,,Ready to Test
+engine_1v_methalox_reliant,"LV-T30 ""Reliant""",LV-T30 “Débrouillard”,"LV-T30 ""Affidabile""",LV-T30 „Reliant“,"LV-T30 ""Dependiente""","LV-T30 ""リライアント""","LV-T30 ""릴라이언트""",LV-T30 „Ufność”,LV-T30 «Факел»,LV-T30“信赖”,"LV-T30 ""Reliant""",LV-T30「信心家」,,Ready to Test
+engine_1v_methalox_swivel,"LV-T45 ""Swivel""",LV-T45 “Gyronimo”,"LV-T45 ""Girello""",LV-T45 „Swivel“,"LV-T45 ""Pivote""","LV-T45 ""スウィーベル""","LV-T45 ""스위블""",LV-T45 „Krętlik”,LV-T45 «Вертлявый»,LV-T45“转轮”,"LV-T45 ""Swivel""",LV-T45「天旋者」,,Ready to Test
+engine_1v_methalox_terrier,"LV-909 ""Terrier""",LV-909 “Terrier”,"LV-909 ""Terrier""",LV-909 „Terrier“,"LV-909 ""Terrier""","LV-909 ""テリア""","LV-909 ""테리어""",LV-909 „Terier”,LV-909 «Терьер»,LV-909“猎犬”,"LV-909 ""Terrier""",LV-909「獵犬」,,Ready to Test
+engine_1v_methalox_thud,"Mk-55 ""Thud""",Mk-55 “Blonk”,"Mk-55 ""Tonfo""",Mk-55 „Thud“,"Mk-55 ""Batacazo""","Mk-55 ""サッド""","Mk-55 ""터드""",Mk-55 „Gruch”,Mk-55 «Стукач»,Mk-55“砰砰”,"Mk-55 ""Thud""",Mk-55「火球」,,Ready to Test
+engine_1v_methalox_vector,"S3 KS-25 ""Vector""",S3 KS-25 “Vecteur”,"S3 KS-25 ""Vector""",S3 KS-25 „Vector“,"S3 KS-25 ""Vector""","S3 KS-25 ""ベクター""","S3 KS-25 ""벡터""",S3 KS-25 „Wektor”,S3 KS-25 «Вектор»,S3KS-25“矢量”,"S3 KS-25 ""Vector""",SKS-25「帶原者」,,Ready to Test
+engine_1v_methane-methalox_rapier,CR-7 R.A.P.I.E.R.,CR-7 R.A.P.I.E.R.,CR-7 M.I.R.P.A.,CR-7 R.A.P.I.E.R.,CR-7 R.A.P.I.E.R.,CR-7 レイピア R.A.P.I.E.R.,CR-7 R.A.P.I.E.R.,CR-7 R.A.P.I.E.R.,CR-7 Р.А.П.И.Р.А.,CR-7 R.A.P.I.E.R.,CR-7 M.I.P.A.R.F.,CR-7 R.A.P.I.E.R.,,Ready to Test
+engine_1v_turbofan_methane_panther,"J-404 ""Panther""",J-404 “Panthère”,"J-404 ""Pantera""",J-404 „Panther“,"J-404 ""Pantera""","J-404 ""パンサー""","J-404 ""팬서""",J-404 „Pantera”,J-404 «Пантера»,J-404“黑豹”,"J-404 ""Panther""",J-404「黑豹」,,Ready to Test
+engine_1v_turbofan_methane_wheesley,"J-33 ""Wheesley""",J-33 “Petit bolide”,"J-33 ""Davide""",J-33 „Wheesley“,"J-33 ""Wheesley""","J-33 ""ウィーズリー""","J-33 ""위즐리""",J-33 „Żwigura”,J-33 «Кряхтун»,J-33“韦斯理”,"J-33 ""Wheesley""",J-33「飛天輪」,,Ready to Test
+engine_1v_turboramjet_methane_whiplash,"J-X4 ""Whiplash""",J-X4 “Coup de fouet”,"J-X4 ""Frustata""",J-X4 „Whiplash“,"J-X4 ""Latigazo""","J-X4 ""ウィップラッシュ""","J-X4 ""위플래시""",J-X4 „Plask”,J-X4 «Бич»,J-X4“鞭梢”,"J-X4 ""Whiplash""",J-X4「呼嘯」,,Ready to Test
+engine_1v_xenon_twilight,IXP-1 “Twilight”,IXP-1 “Crépuscule”,"IXP-1 ""Crepuscolo""",IXP-1 „Twilight“,"IXP-1 ""Crepúsculo""","IXP-1 ""トワイライト""","IXP-1 ""트와일라잇""",IXP-1 „Zmierzch”,IXP-1 «Сумерки»,IXP-1“暮光”,IXP-1 “Twilight”,IXP-1「曙光」,,Ready to Test
+engine_2v_methalox_mainsail,"RE-M3 ""Mainsail""",RE-M3 “Grand-voile”,"RE-M3 ""Vela maestra""",RE-M3 „Mainsail“,"RE-M3 ""Vela Mayor""","RE-M3 ""メインセイル""","RE-M3 ""메인세일""",RE-M3 „Grotżagiel”,RE-M3 «Грохот»,RE-M3“主帆”,"RE-M3 ""Mainsail""",RE-M3「揚帆」,,Ready to test
+engine_2v_methalox_poodle,"RE-L10 ""Poodle""",RE-L10 “Jean-Yves”,"RE-L10 ""Barboncino""",RE-L10 „Poodle“,"RE-L10 ""Caniche""","RE-L10 ""プードル""","RE-L10 ""푸들""",RE-L10 „Pudel”,RE-L10 «Пудель»,RE-L10“贵宾犬”,"RE-L10 ""Poodle""",RE-L10「貴賓犬」,,Ready to Test
+engine_2v_methalox_skipper,"RE-I5 ""Skipper""",RE-I5 “Skipper”,"RE-I5 ""Skipper""",RE-I5 „Skipper“,"RE-I5 ""Patrón""","RE-I5 ""スキッパー""","RE-I5 ""스키퍼""",RE-I5 „Szyper”,RE-I5 «Шкипер»,RE-I5“船长”,"RE-I5 ""Skipper""",RE-I5「船長」,,Ready to Test
+engine_2v_methalox_trumpet,LV-2000 “Trumpet”,LV-2000 “Trompette”,"LV-2000 ""Tromba""",LV-2000 „Trumpet“,"LV-2000 ""Trompeta""",LV-2000 “トランペット”,LV-2000 “트럼펫”,LV-2000 „Trąbka”,LV-2000 «Труба»,LV-2000“小号”,"LV-2000 ""Trompete""",LV-2000「小號」,,Ready To Test
+engine_2v_turbofan_methane_goliath,"J-90 ""Goliath""",J-90 “Goliath”,"J-90 ""Golia""",J-90 „Goliath“,"J-90 ""Goliat""","J-90 ""ゴライアス""","J-90 ""골리앗""",J-90 „Goliat”,J-90 «Голиаф»,J-90“歌利亚”,"J-90 ""Goliath""",J-90「歌利亞」,,Ready to Test
+engine_3v_hydrogen_swerv,LV-SW “SWERV”,LV-SW “SWERV”,"LV-SW ""MUCAR""",LV-SW „SWERV“,"LV-SW ""VIRAJE""","LV-SW ""スワーヴ""","LV-SW ""스워브""",LV-SW „SSAK”,LV-SW «SWERV»,LV-SW “SWERV”,LV-SW “MSVL”,LV-SW「急轉彎」,,Ready to Test
+engine_3v_methalox_labradoodle,"SC-TT ""Labradoodle""",SC-TT “Yves-Jean”,"SC-TT ""Labradoodle""",SC-TT „Labradoodle“,"SC-TT ""Labradoodle""","SC-TT ""ラブラドゥードル""","SC-TT ""래브라두들""",SC-TT „Rablador”,SC-TT «Лабрадудель»,SC-TT“拉布拉多”,"SC-TT ""Labradoodle""",SC-TT「拉布拉多」,,Ready to Test
+engine_3v_methalox_mammoth,"S3 KS-100 ""Mammoth-II""",S3 KS-100 “Mammouth II”,"S3 KS-100 ""Mammut-II""",S3 KS-100 „Mammoth-II“,"S3 KS-100 ""Mamut-II""","S3 KS-100 ""マンモス-II""","S3 KS-100 ""맘모스-II""",S3 KS-100 „Mamut-II”,"S3 KS-100 «Мамонт-II""",S3 KS-100“猛犸II”,"S3 KS-100 ""Mammoth-II""",S3 KS-100「猛獁象二代」,,Ready to Test
+engine_3v_methalox_rhino,"KR-2XL ""Rhino""",KR-2XL “Rhino”,"KR-2XL ""Rinoceronte""",KR-2XL „Rhino“,"KR-2XL ""Rinoceronte""","KR-2XL ""ライノ""","KR-2XL ""라이노""",KR-2XL „Nosorożec”,KR-2XL «Носорог»,KR-2XL“犀牛”,"KR-2XL ""Rhino""",KR-2XL「犀牛」,,Ready to Test
+engine_3v_methalox_tuba,LV-3000 “Tuba”,LV-3000 “Tuba”,"LV-3000 ""Tuba""",LV-3000 „Tuba“,"LV-3000 ""Tuba""",LV-3000 “チューバ”,LV-3000 “튜바”,LV-3000 „Tuba”,LV-3000 «Туба»,LV-3000“大号”,"LV-3000 ""Trombone""",LV-3000「低音號」,,Ready To Test
+enginemount_1v_procedural,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-125,MEM-137,Ready to Test
+enginemount_2v_procedural,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-250,MEM-262,Ready to Test
+enginemount_3v_m3,EM-500 “Hotplate”,EM-500 “Patate chaude”,"EM-500 ""Piastra""",EM-500 „Hotplate“,"EM-500 ""Hornillo""","EM-500 ""ホットプレート""",EM-500 “핫플레이트”,EM-500 „Podgrzewacz”,EM-500 «Конфорка»,EM-500“电炉”,"EM-500 ""Chapa Quente""",EM-500「電子爐」,,Ready to Test
+enginemount_3v_procedural,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-375,MEM-387,Ready to Test
+enginemount_4v_procedural,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-500,MEM-512,Ready to Test
+escapesystem_1v_launch,"LES ""Bottle-Rocket""",LES “Fusée en bouteille”,"LES ""Razzo fai da te""",LES „Bottle-Rocket“,"LES ""Cohete-botella""","LES ""ボトル・ロケット""","LES ""보틀-로켓""",LES „Rakieta Butelkowa”,LES «Ракета из бутылки»,LES“瓶装火箭”,"LES ""Bottle-Rocket""",LES「瓶式火箭」,,Ready to Test
+eva_kerbal,EVA,AEV,EVA,EVA,EVA,EVA,EVA,SK,ВКД,舱外活动,AEV,載具外活動,,Ready to Test
+fairing_0v_procedural,AE-FF000 “Littleneck”,AE-FF000 “Palourde”,"AE-FF000 ""Vongola""",AE-FF000 „Littleneck“,"AE-FF000 ""Cuellín""","AE-FF000 ""アサリ""",AE-FF000 “리틀넥”,AE-FF000 „Okładniczka”,AE-FF000 «Ракушка»,AE-FF000“小帘蛤”,"AE-FF000 ""Littleneck""",AE-FF000「九孔」,,Ready to Test
+fairing_1v_procedural,AE-FF125 “Cockleshell”,AE-FF125 “Coquille”,"AE-FF125 ""Conchiglia""",AE-FF125 „Cockleshell“,"AE-FF125 ""Berberecho""","AE-FF125 ""ザルガイ""",AE-FF125 “카클쉘”,AE-FF125 „Małgiew”,AE-FF125 «Моллюск»,AE-FF125“海扇”,"AE-FF125 ""Conchinha""",AE-FF125「蛤蜊殼」,,Ready to Test
+fairing_2v_procedural,AE-FF250 “Scallop”,AE-FF250 “Saint-Jacques”,"AE-FF250 ""Capasanta""",AE-FF250 „Scallop“,"AE-FF250 ""Vieira""","AE-FF250 ""ホタテガイ""",AE-FF250 “스켈롭”,AE-FF250 „Muszelka”,AE-FF250 «Гребешок»,AE-FF250“扇贝”,"AE-FF250 ""Scallop""",AE-FF250「扇貝」,,Ready to Test
+fairing_3v_procedural,AE-FF375 “Mussel”,AE-FF375 “Moule”,"AE-FF375 ""Mitilo""",AE-FF375 „Mussel“,"AE-FF375 ""Mejillón""","AE-FF375 ""イシガイ""",AE-FF375 “머슬”,AE-FF375 „Małż”,AE-FF375 «Мидия»,AE-FF375“贻贝”,"AE-FF375 ""Mussel""",AE-FF375「紫殼貝」,,Ready to Test
+fairing_4v_procedural,AE-FF500 “Quahog”,AE-FF500 “Quahog”,"AE-FF500 ""Cozza""",AE-FF500 „Quahog“,"AE-FF500 ""Almejón""","AE-FF500 ""ハマグリ""",AE-FF500 “콰호그”,AE-FF500 „Racicznica”,AE-FF500 «Венус»,AE-FF500“圆蛤”,"AE-FF500 ""Quahog""",AE-FF500「蚌殼」,,Ready to Test
+fin_0v_procedural,LAF-125 “Changeling”,LAF-125 “Changelin”,"LAF-125 ""Mutaforma""",LAF-125 „Changeling“,"LAF-125 ""Cambiazo""","LAF-125 ""取り替えっ子""",LAF-125 “체인지링”,LAF-125 „Odmieniec”,LAF-125 «Подменыш»,LAF-125“百变”,"LAF-125 ""A Troca""",LAF-125「化身精靈」,,Ready to Test
+fuelcell_0v,FC-01,FC-01,FC-01,FC-01,FC-01,FC-01,FC-01,FC-01,FC-01,FC-01,FC-01,FC-01,,Ready to Test
+fuelcell_1v_array,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,FCA-06,,Ready to Test
+fuelline_0v_external,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,FTX-2,,Ready to Test
+fueltank_0v_inline_methalox,"""Oscar-B""",“Oscar-B”,"""Oscar-B""",„Oscar-B“,"""Oscar-B""","""オスカーB""","""오스카-B""",„Oscar-B”,«Оскар-B»,“奥斯卡B型”,"""Oscar-B""",「奧斯卡」,,Ready to Test
+fueltank_0v_inline_methalox_doughnut,"R-12 ""Doughnut""",R-12 “Donut”,"R-12 ""Ciambella""",R-12 „Doughnut“,"R-12 ""Dónut""","R-12 ""ドーナツ""","R-12 ""도우넛""",R-12 „Donut”,R-12 «Пончик»,R-12“甜甜圈”,"R-12 ""Rosquinha""",R-12「甜甜圈」,,Ready to Test
+fueltank_0v_inline_monoprop,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,FL-R10,,Ready to Test
+fueltank_0v_inline_xenon,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,PB-X150,,Ready to Test
+fueltank_0v_m0_inline_methane,JF-50,JF-50,JF-50,JF-50,JF-50,JF-50,JF-50,JF-50,JF-50,JF-50,JF-50,JF-50,,Ready to Test
+fueltank_0v_radial_methalox_spherical,"R-4 ""Dumpling""",R-4 “Ravioli”,"R-4 ""Raviolo""",R-4 „Dumpling“,"R-4 ""Dumpling""","R-4 ""ダンプリング""","R-4 ""덤플링""",R-4 „Pierożek”,R-4 «Пельмень»,R-4“小团子”,"R-4 ""Bolinho""",R-4「餃子」,,Ready to Test
+fueltank_0v_radial_monoprop_1x1,Stratus-V Roundified,Stratus-V rondifié,Stratus-V rotondizzato,Abgerundeter Stratus-V,Stratus-V Redondificado,ストラタスV 球形,스트라투스-V 라운디파이드,Stratus-V Zaokrąglony,«Космобол»,层云-V球形,Stratus-V Arredondado,層雲圓形五號,,Ready to Test
+fueltank_0v_radial_monoprop_sphere,Stratus-V Minified,Stratus-V minifié,Stratus-V miniaturizzato,Mini-Stratus-V,Stratus-V Minimificado,ストラタスV ミニフィード,스트라투스-V 미니파이드,Stratus-V Zminiaturyzowany,«Малыш»,层云-V缩小版,Stratus-V Minificado,層雲迷你五號,,Ready to Test
+fueltank_0v_radial_xenon,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,PB-X50R,,Ready to Test
+fueltank_1v_inline_hydrogen_long,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,HFT-T-125,,Ready to test
+fueltank_1v_inline_methalox_1x1,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,FL-T100,,Ready to Test
+fueltank_1v_inline_methalox_1x2,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,FL-T200,,Ready to Test
+fueltank_1v_inline_methalox_1x4,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,FL-T400,,Ready to Test
+fueltank_1v_inline_methalox_1x8,FL-T800,FL-T800,FL-T802,FL-T800,FL-T800,FL-T800,FL-T800,FL-T800,FL-T808,FL-T800,FL-T800,FL-T800,,Ready to Test
+fueltank_1v_inline_monoprop,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,FL-R25,,Ready to Test
+fueltank_1v_inline_xenon_1x1,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,PB-X750,,Ready to Test
+fueltank_1v_inline_xenon_1x4,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,PB-X3000,,Ready to Test
+fueltank_1v_m1_inline_methane,JF-200,JF-200,JF-200,JF-200,JF-200,JF-200,JF-200,JF-200,JF-200,JF-200,JF-200,JF-200,,Ready to Test
+fueltank_1v_radial_methalox_capsular,"R-11 ""Baguette""",R-11 “Baguette”,"R-11 ""Baguette""","R-11 ""Baguette""","R-11 ""Baguette""",R-11「バゲット」,"R-11 ""바게트""",R-11 „Bagietka”,R-11 «Багет»,R-11“法棍”,"R-11 ""Baguete""",R-11「長棍麵包」,,Ready to Test
+fueltank_1v_radial_monoprop_1x3,Stratus-V Cylindrified,Stratus-V cylindrifié,Stratus-V cilindrizzato,Zylindrischer Stratus-V,Stratus-V Cilindrificado,ストラタスV 円筒形,스트라투스-V 실린드리파이드,Stratus-V Zwalcowany,«Пилюля»,层云-V柱状,Stratus-V Cilindrificado,層雲圓柱五號,,Ready to Test
+fueltank_2v_inline_hydrogen_long,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,HFT-T-250,,Ready to test
+fueltank_2v_inline_hydrogen_short,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,HFT-S-250,,Ready to test
+fueltank_2v_inline_methalox_1x1,X200-8,X200-8,X200-8,X200-8,X200-8,X200-8,X200-8,X200-8,X200-8,X200-8,X200-8,X200-8,,Ready to Test
+fueltank_2v_inline_methalox_1x2,X200-16,X200-16,X200-16,X200-16,X200-16,X200-16,X200-16,X200-16,X200-16,X200-16,X200-16,X200-16,,Ready to Test
+fueltank_2v_inline_methalox_1x4,X200-32,X200-32,X200-32,X200-32,X200-32,X200-32,X200-32,X200-32,X200-32,X200-32,X200-32,X200-32,,Ready to Test
+fueltank_2v_inline_methalox_1x8,X200-64,X200-64,X200-64,X200-64,X200-64,X200-64,X200-64,X200-64,X200-64,X200-64,X200-64,X200-64,,Ready to test
+fueltank_2v_inline_monoprop,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,FL-R1,,Ready to Test
+fueltank_2v_m2_inline_methalox_1x1,Mk2 RFT-400,RFT-400 Mk2,RFT-400 Mk2,RFT-400 Mk2,RFT-400 Mk2,Mk2 RFT-400,Mk2 RFT-400,Mk2 RFT-400,Mk2 RFT-400,Mk2RFT-400,Mk2 RFT-400,Mk2 RFT-400,,Ready to Test
+fueltank_2v_m2_inline_methalox_1x2,Mk2 RFT-800,RFT-800 Mk2,RFT-800 Mk2,RFT-800 Mk2,RFT-800 Mk2,Mk2 RFT-800,Mk2 RFT-800,Mk2 RFT-800,Mk2 RFT-800,Mk2RFT-800,Mk2 RFT-800,Mk2 RFT-800,,Ready to Test
+fueltank_2v_m2_inline_methane_1x1,Mk2 JFT-400,JFT-400 Mk2,JFT-400 Mk2,JFT-400 Mk2,JFT-400 Mk2,Mk2 JFT-400,Mk2 JFT-400,Mk2 JFT-400,Mk2 JFT-400,Mk2JFT-400,Mk2 JFT-400,Mk2 JFT-400,,Ready to Test
+fueltank_2v_m2_inline_methane_1x2,Mk2 JFT-800,JFT-800 Mk2,JFT-800 Mk2,JFT-800 Mk2,JFT-800 Mk2,Mk2 JFT-800,Mk2 JFT-800,Mk2 JFT-800,Mk2 JFT-800,Mk2JFT-800,Mk2 JFT-800,Mk2 JFT-800,,Ready to Test
+fueltank_2v_m2_inline_monoprop,Mk2 MFT-400,MFT-400 Mk2,MFT-400 Mk2,MFT-400 Mk2,MFT-400 Mk2,Mk2 MFT-400,Mk2 MFT-400,Mk2 MFT-400,Mk2 MFT-400,Mk2MFT-400,Mk2 MFT-400,Mk2 MFT-400,,Ready to Test
+fueltank_3v_inline_hydrogen_long,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,HFT-T-375,,Ready to test
+fueltank_3v_inline_hydrogen_short,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,HFT-S-375,,Ready to test
+fueltank_3v_inline_methalox_1x1,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,S3-3600,,Ready to Test
+fueltank_3v_inline_methalox_1x2,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,S3-7200,,Ready to Test
+fueltank_3v_inline_methalox_1x4,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,S3-14400,,Ready to Test
+fueltank_3v_inline_methalox_1x8,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,S3-28800,,Ready To Test
+fueltank_3v_inline_monoprop,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,FL-R100,,Ready to Test
+fueltank_3v_m3_inline_methalox_1x1,Mk3 RFT-2500,RFT-2500 Mk3,RFT-2500 Mk3,RFT-2500 Mk3,RFT-2500 Mk3,Mk3 RFT-2500,Mk3 RFT-2500,Mk3 RFT-2500,Mk3 RFT-2500,Mk3RFT-2500,Mk3 RFT-2500,Mk3 RFT-2500,,Ready to Test
+fueltank_3v_m3_inline_methalox_1x2,Mk3 RFT-5000,RFT-5000 Mk3,RFT-5000 Mk3,RFT-5000 Mk3,RFT-5000 Mk3,Mk3 RFT-5000,Mk3 RFT-5000,Mk3 RFT-5000,Mk3 RFT-5000,Mk3 RFT-5000,Mk3 RFT-5000,Mk3 RFT-5000,,Ready to Test
+fueltank_3v_m3_inline_methalox_1x4,Mk3 RFT-10000,RFT-10000 Mk3,RFT-10000 Mk3,RFT-10000 Mk3,RFT-10000 Mk3,Mk3 RFT-10000,Mk3 RFT-10000,Mk3 RFT-10000,Mk3 RFT-10000,Mk3RFT-10000,Mk3 RFT-10000,Mk3 RFT-10000,,Ready to Test
+fueltank_3v_m3_inline_methane_1x1,Mk3 JFT-2500,JFT-2500 Mk3,JFT-2500 Mk3,JFT-2500 Mk3,JFT-2500 Mk3,Mk3 JFT-2500,Mk3 JFT-2500,Mk3 JFT-2500,Mk3 JFT-2500,Mk3JFT-2500,Mk3 JFT-2500,Mk3 JFT-2500,,Ready to Test
+fueltank_3v_m3_inline_methane_1x2,Mk3 JFT-5000,JFT-5000 Mk3,JFT-5000 Mk3,JFT-5000 Mk3,JFT-5000 Mk3,Mk3 JFT-5000,Mk3 JFT-5000,Mk3 JFT-5000,Mk3 JFT-5000,Mk3JFT-5000,Mk3 JFT-5000,Mk3 JFT-5000,,Ready to Test
+fueltank_3v_m3_inline_methane_1x4,Mk3 JFT-10000,JFT-10000 Mk3,JFT-10000 Mk3,JFT-10000 Mk3,JFT-10000 Mk3,Mk3 JFT-10000,Mk3 JFT-10000,Mk3 JFT-10000,Mk3 JFT-10000,Mk3JFT-10000,Mk3 JFT-10000,Mk3 JFT-10000,,Ready to Test
+fueltank_3v_m3_inline_monoprop,Mk3 MFT-1000,MFT-1000 Mk3,MFT-1000 Mk3,MFT-1000 Mk3,MFT-1000 Mk3,Mk3 MFT-1000,Mk3 MFT-1000,Mk3 MFT-1000,Mk3 MFT-1000,Mk3MFT-1000,Mk3 MFT-1000,Mk3 MFT-1000,,Ready to Test
+fueltank_4v_inline_hydrogen_long,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,HFT-T-500,,Ready to test
+fueltank_4v_inline_hydrogen_short,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,HFT-S-500,,Ready to test
+fueltank_4v_inline_methalox_s1,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,S4-6400,,Ready to Test
+fueltank_4v_inline_methalox_s2,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,S4-12800,,Ready to Test
+fueltank_4v_inline_methalox_s3,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,S4-25600,,Ready to Test
+fueltank_4v_inline_methalox_s4,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,S4-51200,,Ready to Test
+fueltank_4v_radial_monoprop,Stratus-V Embiggened,Stratus-V agrandifié,Stratus-V ingigantito,Vergrößerter Stratus-V,Stratus-V Ensanchificado,ストラタスV エンビゲンド,스트라투스-V 엠비겐드,Stratus-V Zwiększony,«Огромадина»,层云-V庞然大物,Engigantecido Stratus-V,層雲五號驚奇放大版,,Ready to Test
+fueltank_5v_inline_hydrogen_sphere,HFT “Spherotron”,HFT “Sphérotron”,"HFT ""Sferotrone""",HFT „Spherotron“,"HFT ""Esferotrón""","HFT ""スフィロトロン""",HFT “스피로트론”,HFT „Sferotron”,HFT «Сферотрон»,HFT“球球”,"HFT ""Esferotron""",HFT「滾球體」,,Colonies
+fuselage_1v_m1_structural,SF-125,SF-125,SF-125,SF-125,SF-125,SF-125,SF-125,SF-125,SF-125,SF-125,SF-125,SF-125,,Ready to Test
+generator_0v_thermoelectric_radioisotope,PB-NUK,PB-NUK,PB-NUK,PB-NUK,PB-NUK,PB-NUK,PB-NUK,PB-NUK,«Нейтроник»,PB-NUK,PB-NUK,PB-NUK,,Ready to Test
+generator_1v_fission_reactor,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,KR4-P3,,Ready to Test
+generator_3v_thermoelectric_radioisotope,RTG-500,RTG-500,GTR-500,RTG-500,RTG-500,RTG-500,RTG-500,RTG-500,RTG-500,RTG-500,RTG-500,RTG-500,,Ready to Test
+gridfin_1v_radial,GRFN-125,GRFN-125,GRFN-125,GRFN-125,GRFN-125,GRFN-125,GRFN-125,SKRT-125,GRFN-125,GRFN-125,GRFN-125,GRFN-125,,Ready to Test
+gridfin_2v_radial,GRFN-250,GRFN-250,GRFN-250,GRFN-250,GRFN-250,GRFN-250,GRFN-250,SKRT-250,GRFN-250,GRFN-250,GRFN-250,GRFN-250,,Ready to Test
+heatshield_0v,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,HS-01T,,Ready to Test
+heatshield_1v,HS-125,HS-125,HS-125,HS-125,HS-125,HS-125,HS-125,HS-125,HS-125,HS-125,HS-125,HS-125,,Ready to Test
+heatshield_2v,HS-250,HS-250,HS-250,HS-250,HS-250,HS-250,HS-250,HS-250,HS-250,HS-250,HS-250,HS-250,,Ready to Test
+heatshield_2v_inflatable,HS-I Deluxe,HS-I Deluxe,HS-I Deluxe,HS-I Deluxe,HS-I Deluxe,HS-I デラックス,HS-I 디럭스,HS-I Deluks,HS-I «Люкс»,HS-I豪华型,HS-I Deluxe,HS-I豪華版,,Ready to Test
+heatshield_3v,HS-375,HS-375,HS-375,HS-375,HS-375,HS-375,HS-375,HS-375,HS-375,HS-375,HS-375,HS-375,,Ready to Test
+heatshield_4v,HS-500,HS-500,HS-500,HS-500,HS-500,HS-500,HS-500,HS-500,HS-500,HS-500,HS-500,HS-500,,Ready to Test
+heatshield_4v_inflatable,HS-I Deluxe,HS-I Deluxe,HS-I Deluxe,HS-I Deluxe,HS-I Deluxe,HS-I デラックス,HS-I 디럭스,HS-I Deluks,HS-I «Люкс»,HS-I豪华型,HS-I Deluxe,HS-I豪華版,,Ready to Test
+ibeam_1v_1x5,M-Beam 200 Pocket Edition,Poutr-L 200 de poche,M-Beam 200 edizione tascabile,"M-Beam 200, kurze Variante","M-Beam 200, Edición de Bolsillo",Mビーム 200 ポケットエディション,M-빔 200 포켓 에디션,Emownik 200 „Wersja kieszonkowa”,«M-Beam 200-мини»,M-Beam 200便携版,Edição de Bolso M-Beam 200,M-Beam 200袖珍版,,Ready to Test
+ibeam_2v_1x10,M-Beam 200,Poutr-L 200,M-Beam 200,M-Beam 200,M-Beam 200,Mビーム 200,M-빔 200,Emownik 200,M-Beam 200,M-Beam 200,M-Beam 200,M-Beam 200,,Ready to Test
+ibeam_2v_2x3,M-Beam 650,Poutr-L 650,M-Beam 650,M-Beam 650,M-Beam 650,Mビーム 650,M-빔 650,Emownik 650,M-Beam 650,M-Beam 650,M-Beam 650,M-Beam 650,,Ready to Test
+intake_0v_circular,Small Circular Intake,Petite entrée d'air circulaire,Presa d'aria circolare piccola,Kleiner Rundeinlass,Toma de aire circular pequeña,小型サーキュラーインテーク,소형 원형 흡기구,Mały wlot okrągły,Маленький круглый воздухозаборник,小号环形进气道,Entrada Circular Pequena,小型圓形進氣口,,Ready to Test
+intake_1v_circular,Circular Intake,Entrée d'air circulaire,Presa d'aria circolare,Rundeinlass,Toma de aire circular,サーキュラーインテーク,원형 흡기구,Wlot okrągły,Круглый воздухозаборник,环形进气道,Entrada Circular,圓形進氣口,,Ready to Test
+intake_1v_m1_adjustable,Adjustable Ramp Intake,Rampe à air réglable,Presa d'aria configurabile,Variabler Schrägeinlass,Toma de aire con rampa ajustable,可変インテーク,적응형 램프 흡기구,Regulowany wlot prostokątny,Регулируемый воздухозаборник,可调节坡度进气道,Rampa de Entrada Ajustável,可調式斜道進氣口,,Ready to Test
+intake_1v_m1_nacelle_methane,Engine Nacelle,Nacelle de moteur,Gondola motore,Triebwerksgondel,Góndola de motor,エンジンナセル,엔진 나셀,Gondola silnikowa,Мотогондола,引擎吊舱,Nacele de Motores,引擎短艙,,Ready to Test
+intake_1v_m1_precooler_methane,Engine Pre-cooler,Prérefroidisseur de propulseur,Pre-raffreddatore per motori,Triebwerk-Vorkühler,Preenfriador de motor,エンジン・プリクーラー,엔진 프리쿨러,Chłodnica wstępna silnika,Предохладитель двигателя,引擎预冷器,Pré-Resfriador de Motores,引擎預冷器,,Ready to Test
+intake_1v_m1_shockcone,Shock Cone Intake,Entrée d'air conique de choc,Presa d'aria a cono,Einlass „Nasenstüber“,Toma de aire de núcleo cónico,ショックコーンインテーク,쇼크콘 흡기구,Wstrząsowy stożkowlot,Конусный воздухозаборник,锥形进气道,Entrada do Cone de Choque,震波錐進氣口,,Ready to Test
+intake_1v_m1_supersonic_diverterless,Mk1 Diverterless Supersonic Intake,Entrée d'air Supersonique sans Partiteur Mk1,Presa d'aria supersonica senza deviatore Mk1,Überschalleinlass ohne Umleiter (ÜoU) Mk1,Toma de aire supersónica sin derivador Mk1,Mk1 ダイバータレス超音速インテーク,Mk1 DSI 흡기구,Bezrozdzielaczowy wlot naddźwiękowy Mk1,Фиксированный сверхзвуковой воздухозаборник Mk1,Mk1无附面层隔道超音速进气道,Entrada Supersônica Indesviável Mk1,Mk1無偏向超音速進氣口,,Ready to Test
+intake_1v_radial,XM-G50 Radial Air Intake,Entrée d'air radiale XM-G50,Presa d'aria radiale XM-G50,Radiale Ansaugvorrichtung XM-G50,Toma de aire radial XM-G50,XM-G50 ラジアル型インテーク,XM-G50 방사형 흡기구,Obwodowy wlot powietrza XM-G50,Радиальный воздухозаборник XM-G50,XM-G50径向进气道,Entrada de Ar Radial XM-G50,XM-G50徑向空氣進氣口,,Ready to Test
+intake_1v_ramp_radial_adjustable,Adjustable Ramp Radial Intake,Rampe à air radiale réglable,Presa d'aria radiale configurabile,Variabler Schrägeinlass (Radial),Toma de aire radial con rampa ajustable,ラジアル型可変インテーク,방사형 적응형 램프 흡기구,Regulowany obwodowy wlot prostokątny,Регулируемый радиальный воздухозаборник,可调节坡度径向进气道,Entrada Radial de Rampa Ajustável,可調式斜道徑向進氣口,,Ready to Test
+interior_1v_m1_cockpit_crew,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Interiors has no description,Won't
+interior_1v_m1_cockpit_crew_inline,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Interiors has no description,Won't
+interior_1v_m1_pod_crew,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Interiors has no description,Won't
+interior_2v_m1_pod_crew,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Interiors has no description,Won't
+interior_2v_m2_cockpit_crew,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Interiors has no description,Won't
+interior_2v_m2_cockpit_crew_inline,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Interiors has no description,Won't
+interior_3v_m3_cockpit_crew,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Interiors has no description,Won't
+junction_0v_square,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,STJ-625,,Ready to Test
+junction_0v_square_0-31m,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,STJ-3125,,Ready to Test
+junction_1v_circular,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,CTJ-125,,Ready to Test
+junction_1v_square,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,STJ-125,,Ready to Test
+junction_2v_circular,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,CTJ-250,,Ready to Test
+junction_2v_square,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,STJ-250,,Ready to Test
+junction_3v_circular,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,CTJ-375,,Ready to Test
+junction_3v_square,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,STJ-375,,Ready to Test
+junction_4v_circular,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,CTJ-500,,Ready to Test
+junction_4v_square,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,STJ-500,,Ready to Test
+lab_2v_science_marine,"MEL-25 ""U-Dunk-It""","MEL-25 ""Plongeon""","MEL-25 ""Pan bagnato""",MEL-25 „U-Dunk-It“,"MEL-25 ""A remojo""","MEL-25 ""U-ダンク-イット""","MEL-25 ""유-덩크-잇""",MEL-25 „Nautilus”,MEL-25 «Погружатель»,MEL-25 “大灌篮”,"MEL-25 ""Hidratado""",MEL-25「把它浸在水裡」,,Ready to Test
+lab_2v_science_orbital,"OSL-25 ""Starlab""","OSL-25 ""Labo stellaire""","OSL-25 ""Starlab""",OSL-25 „Starlab“,"OSL-25 ""Estelaboratorio""","OSL-25 ""スターラボ""","OSL-25 ""스타랩""",OSL-25 „Gwiazdolab”,OSL-25 «Звездная лаборатория»,OSL-25“星辰实验室”,"OSL-25 ""Laboratório Estelar""",OSL-25「星際實驗室」,,Ready to Test
+ladder_0v_fixed_pegasus,"""Pegasus 1"" Advanced Mobility Enhancer",Intensificateur de mobilité avancé “Pégase 1”,"Intensificatore di mobilità avanzato ""Pegasus 1""",Fortgeschrittener Mobilitätsverbesserer „Pegasus 1“,"Potenciador de movilidad avanzada ""Pegaso 1""","""ペガサス1"" 高機能機動性向上装置","""페가수스 1"" 개선형 이동성 증강장치",Zaawansowany wspomagacz ruchu „Pegaz 1”,Улучшенный улучшитель мобильности «Пегас-1»,“飞马座1型”高级垂直机动增强设备,"Realçador de Mobilidade Avançado ""Pégaso 1""",「飛馬一號」高級移動增強器,,Ready to Test
+ladder_1v_telescoping_kelus,"""Kelus"" Telescopic Mobility Enhancer",Intensificateur de mobilité télescopique “Kelus”,"Intensificatore di mobilità telescopico ""Kelus""",Teleskopischer Mobilitätsverbesserer „Kelus“,"Potenciador de movilidad telescópica ""Kelus""","""ケラス"" テレスコピック式機動性向上装置","""켈러스"" 확장형 이동성 증강장치",Teleskopowy wspomagacz ruchu „Kelus”,Телескопический улучшитель мобильности «Келус»,“克鲁斯”伸缩式垂直机动增强设备,"Realçador de Mobilidade Avançado ""Kelus""",「青蛙王子」伸縮式移動增強器,,Ready to Test
+ladder_2v_telescoping_kelus,"""Kelus Long"" Telescopic Mobility Enhancer",Intensificateur de mobilité télescopique “Kelus long”,"Intensificatore di mobilità telescopico ""Kelus lungo""",Teleskopischer Mobilitätsverbesserer „Kelus Long“,"Potenciador de movilidad telescópica ""Kelus largo""","""ケラス・ロング"" テレスコピック式機動性向上装置","""켈러스롱"" 확장형 이동성 증강장치",Teleskopowy wspomagacz ruchu „Długokelus”,Телескопический улучшитель мобильности «Длинный Келус»,“克鲁斯加长款”伸缩式垂直机动增强设备,"Realçador de Mobilidade Telescópico ""Kelus Longus""",「青蛙國王」伸縮式移動增強器,,Ready to Test
+ladder_3v_telescoping_verylong,Bobus Extra Long Telescopic Mobility Enhancer,Intensificateur de mobilité télescopique ultra long “Bobus”,"Intensificatore di mobilità telescopico extra-lungo ""Bobus""",Extralanger teleskopischer Mobilitätsverbesserer „Bobus“,"Potenciador de movilidad telescópica extralargo ""Bobus""",ボブス 超ロング・テレスコピック式機動性向上装置,보부스 긴 확장형 이동성 증강장치,Bardzo długi teleskopowy wspomagacz ruchu „Bobuś”,Очень длинный телескопический улучшитель мобильности «Бобус»,波巴斯超长款伸缩式垂直机动增强设备,"Realçador de Mobilidade Telescópico Extra Longo ""Bobus""",「青蛙大帝」超長伸縮式移動增強器,,Ready to Test
+landinggear_0v_steerable,LY-05,LY-05,LY-05,LY-05,LY-05,LY-05,LY-05,LY-05,LY-05,LY-05,LY-05,LY-05,,Ready to Test
+landinggear_1v,LY-10,LY-10,LY-10,LY-10,LY-10,LY-10,LY-10,LY-10,LY-10,LY-10,LY-10,LY-10,,Ready to Test
+landinggear_1v_fixed,LY-01,LY-01,LY-01,LY-01,LY-01,LY-01,LY-01,LY-01,LY-01,LY-01,LY-01,LY-01,,Ready to Test
+landinggear_2v,LY-35,LY-35,LY-35,LY-35,LY-35,LY-35,LY-35,LY-35,LY-35,LY-35,LY-35,LY-35,,Ready to Test
+landinggear_3v,LY-60,LY-60,LY-60,LY-60,LY-60,LY-60,LY-60,LY-60,LY-60,LY-60,LY-60,LY-60,,Ready to Test
+landinggear_4v,LY-99,LY-99,LY-99,LY-99,LY-99,LY-99,LY-99,LY-99,LY-99,LY-99,LY-99,LY-99,,Ready to Test
+landingleg_0v,"LT-5 ""Bandicoot""",LT-5 “Bandicoot”,"LT-5 ""Bandicoot""",LT-05 „Bandicoot“,"LT-5 ""Bandicut""","LT-5 ""バンディクート""","LT-05 ""밴디쿠트""",LT-05 „Jamraj”,LT-05 «Бандикут»,LT-5“袋狼”,"LT-05 ""Bandicoot""",LT-05「袋狸」,,Ready to test
+landingleg_1v,"LT-1 ""Wallaroo""",LT-1 “Muraroo”,"LT-1 ""Canguro""",LT-1 „Wallaroo“,"LT-1 ""Walarú""","LT-1 ""ワラルー""","LT-1 ""왈라루""",LT-1 „Kangurnik”,LT-1 «Валлару,LT-1“大袋鼠”,"LT-1 ""Wallaru""",LT-1「袋鼠」,,Ready to Test
+landingleg_2v,"LT-2 ""Wombat""",LT-2 “Wombat”,"LT-2 ""Vombato""",LT-2 „Wombat“,"LT-2 ""Wombat""","LT-2 ""ウォンバット""","LT-2 ""웜벳""",LT-2 „Wombat”,LT-2 «Вомбат»,LT-2“袋熊”,"LT-2 ""Vombate""",LT-2「袋熊」,,Ready to Test
+landingleg_3v,"LT-3 ""Wallaby""",LT-3 “Wallaby”,"LT-3 ""Wallaby""",LT-3 „Wallaby“,"LT-3 ""Walabí""","LT-3 ""ワラビー""","LT-3 ""왈라비""",LT-3 „Walabia”,LT-3 «Валлаби»,LT-3“小袋鼠”,"LT-3 ""Wallaby""",LT-3「小袋鼠」,,Ready to Test
+launchclamp_3v_ground,TT18-A Launch Stability Enhancer,Intensificateur de stabilité au lancement TT18-A,Stabilizzatore da lancio TT18-A,Start-Stabilisierer TT18-A,Potenciador de estabilidad en lanzamiento TT18-A,TT18-A 発射台補強装置,TT18-A 발사 안정성 증진기,Startowy wzmacniacz stabilności TT18-A,Пусковая мачта TT18-A,TT18-A发射稳定性增强器,Realçador de Estabilidade TT18-A,TT18-A發射穩定性增強器,,Ready to Test
+light_0v_broad,Broad Range Photonic Generation System,Système de génération photonique à grande portée,Sistema di Produzione Fotonica ad Ampio Raggio,Breitband-Photonengenerator,Sistema de generación fotónica de amplio alcance,広レンジフォトニック生成システム,광역 광자 생성 시스템,Szerokopasmowy System Fotoniczny,Генератор фотонов дальнего диапазона,广域光子生成系统,Sistema de Geração Fotônica de Ampla Faixa,廣域光子生成系統,,Ready to Test
+light_0v_bulb,Advanced Photonic Generation System,Système de génération photonique avancé,Sistema di Produzione Fotonica Avanzato,Fortgeschrittener Photonengenerator,Sistema de generación fotónica avanzada,高機能フォトニック生成システム,고급 광자 생성 시스템,Zaawansowany System Fotoniczny,Улучшенный генератор фотонов,高级光子生成系统,Sistema de Geração Fotônica Avançado,高級光子生成系統,,Ready to Test
+light_0v_dome,Advanced Overhead Photonic Generation System,Système de génération photonique avancé en hauteur,Sistema di Produzione Fotonica Aerea Avanzato,Fortgeschrittener Überkopf-Photonengenerator,Sistema de generación fotónica cenital avanzada,高機能オーバーヘッドフォトニック生成システム,고급 스탠드형 광자 생성 시스템,Zaawansowany Odgórny System Fotoniczny,Улучшенный подвесной генератор фотонов,高级吸顶光子生成系统,Sistema de Geração Fotônica Suspenso Avançado,高級置頂光子生成系統,,Ready to Test
+light_0v_navigation,Advanced Photonic Navigation System,Système de navigation photonique avancé,Sistema di Navigazione Fotonica Avanzato,Fortgeschrittenes Photonen-Navigationssystem,Sistema de navegación fotónica avanzada,高機能フォトニックナビゲーションシステム,고급 광자 항법 보조시스템,Zaawansowany Nawigacyjny System Fotoniczny,Улучшенная фотонная навигационная система,高级光子导航系统,Sistema de Navegação Fotônica Avançado,高級光子導航系統,,Ready to Test
+light_0v_spot,Hi-Intensity Photonic Generation System,Système de génération photonique de haute intensité,Sistema di Produzione Fotonica ad Alta Intensità,Hochintensiver Photonengenerator,Sistema de generación fotónica de alta intensidad,高強度フォトニック生成システム,고휘도 광자 생성 시스템,Mocny System Fotoniczny,Высокоинтенсивный генератор фотонов,高强度光子生成系统,Sistema de Geração Fotônica de Alta Intensidade,高強度光子生成系統,,Ready to Test
+light_0v_spot_narrow,Focused Photonic Generation System,Système de génération photonique concentré,Sistema di Produzione Fotonica Concentrata,Konzentrierter Photonengenerator,Sistema de generación fotónica focalizada,集中型フォトニック生成システム,집중 광자 생성 시스템,Skupiony System Fotoniczny,Направленный генератор фотонов,焦点光子生成系统,Sistema de Geração Fotônica Concentrado,聚焦光子生成系統,,Ready to Test
+light_0v_strip,Two-Dimensional Photonic Generation System,Système de génération photonique à deux dimensions,Sistema di Produzione Fotonica Bidimensionale,Zweidimensionaler Photonengenerator,Sistema de generación fotónica bidimensional,二次元フォトニック生成システム,2차원 광자 생성 시스템,Dwuwymiarowy System Fotoniczny,Двусторонний генератор фотонов,二维光子生成系统,Sistema de Geração Fotônica Bidimensional,二維光子生成系統,,Ready to Test
+nosecone_0v,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,TNC-01,,Ready to Test
+nosecone_1v_advanced_conical,Mk3A Nose Cone,Coiffe Mk3A,Ogiva Mk3A,Bugnase Mk3A,Nariz cónica Mk3A,Mk3Aノーズコーン,Mk3A 노즈콘,Stożek dziobowy Mk3A,Носовой обтекатель Mk3A,Mk3A头锥,Cone Dianteiro Mk3A,Mk3A鼻錐,,Ready to Test
+nosecone_1v_advanced_rightcone,Mk3B Slanted Nose Cone,Coiffe oblique Mk3B,Ogiva inclinata Mk3B,Bugnase Mk3B (schräg),Nariz cónica inclinada Mk3B,Mk3B傾斜ノーズコーン,Mk3B 경사형 노즈콘,Ukośny stożek dziobowy Mk3B,Скошенный носовой обтекатель Mk3B,Mk3B斜头锥,Cone Dianteiro Inclinado Mk3B,Mk3B傾斜式鼻錐,,Ready to Test
+nosecone_1v_hemisphere,Mk5H Nose Cone,Coiffe Mk5H,Ogiva Mk5H,Bugnase Mk5H,Nariz cónica Mk5H,Mk5Hノーズコーン,Mk5H 노즈콘,Stożek dziobowy Mk5H,Носовой обтекатель Mk5H,Mk5H头锥,Cone Dianteiro Mk5H,Mk5H鼻錐,,Ready to Test
+nosecone_2v_m2,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,,Ready to Test
+nosecone_2v_mk2,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,Mk2-HNC,,Ready to test
+nosecone_2v_protective,Mk7A Nose Cone,Coiffe Mk7A,Ogiva Mk7A,Bugnase Mk7A,Nariz cónica Mk7A,Mk7Aノーズコーン,Mk7A 노즈콘,Stożek dziobowy Mk7A,Носовой обтекатель Mk7A,Mk7A头锥,Cone Dianteiro Mk7A,Mk7A鼻錐,,Ready to Test
+nosecone_3v,Mk12A Nose Cone,Coiffe Mk12A,Ogiva Mk12A,Bugnase Mk12A,Nariz cónica Mk12A,Mk12Aノーズコーン,Mk12A 노즈콘,Stożek dziobowy Mk12A,Носовой обтекатель Mk12A,Mk12A头锥,Cone Dianteiro Mk12A,Mk12A鼻錐,,Ready to Test
+nosecone_4v,Mk16A Nose Cone,Coiffe Mk16A,Ogiva Mk16A,Bugnase Mk16A,Nariz cónica Mk16A,Mk16Aノーズコーン,Mk16A 노즈콘,Stożek dziobowy Mk16A,Носовой обтекатель Mk16A,Mk16A头锥,Cone Dianteiro Mk16A,Mk16A鼻錐,,Ready to Test
+panel_0v_square,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,SP-S06,,Ready to Test
+panel_0v_triangle_equilateral,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,SP-T06,,Ready to Test
+panel_0v_triangle_right,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,SP-R06,,Ready to Test
+panel_1v_square,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,SP-S12,,Ready to Test
+panel_1v_triangle_equilateral,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,SP-T12,,Ready to Test
+panel_1v_triangle_right,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,SP-R12,,Ready to Test
+panel_2v_square,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,SP-S25,,Ready to Test
+panel_2v_triangle_equilateral,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,SP-T25,,Ready to Test
+panel_2v_triangle_right,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,SP-R25,,Ready to Test
+parachute_0v,Mk16,Mk16,Mk16,Mk16,Mk16,Mk16,Mk16,Mk16,Mk16,Mk16,Mk16,Mk16,,Ready to Test
+parachute_0v_radial_drogue,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,Mk12-R,,Ready to Test
+parachute_1v,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,Mk16-XL,,Ready to Test
+parachute_1v_drogue,Mk25,Mk25,Mk25,Mk25,Mk25,Mk25,Mk25,Mk25,Mk25,Mk25,Mk25,Mk25,,Ready to Test
+parachute_1v_radial,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,Mk16-R,,Ready to Test
+pod_1v_conical_crew,"Mk1 ""Tin Can""",“Conserve” Mk1,"""Lattina"" Mk1",Mk1 „Blechbüchse“,"Mk1 ""Lata""","Mk1 ""ブリキ缶""","Mk1 ""틴캔""",Mk1 „Puszka”,«Жестянка» Mk1,Mk1“锡罐”,"MK1 ""Enlatada""",Mk1「錫罐頭」,,Ready to Test
+pod_1v_lander_crew,"Mk1 ""Explorer""",“Voyageur” Mk1,"""Esploratore"" Mk1",Mk1 „Forscher“,"Mk1 ""Explorador""","Mk1 ""エクスプローラー""","Mk1 ""익스플로러""",Mk1 „Odkrywca”,«Исследователь» Mk1,Mk1“探险家”,"Mk1 ""Exploradora""",MK1「探索者」,,Ready to Test
+pod_2v_conical_crew,"Mk1-3 ""Gumball""",“Malabar” Mk1-3,"""Gumball"" Mk1-3",Mk1-3 „Kaugummikugel“,"Mk1-3 ""Bola de chicle""","Mk1-3 ""ガムボール""","Mk1-3 ""검볼""",Mk1-3 „Pączek”,«Жвачка» Mk1-3,Mk1-3“泡泡糖球”,"Mk1-3 ""Goma de Mascar""",MK1-3「泡泡糖」,,Ready to Test
+pod_2v_cupola_crew,"PPD-12 ""Sightseer""",“Touriste” PPD-12,"PPD-12 ""Turista""",PPD-12 „Tourist“,"PPD-12 ""Turista""","PPD-12 ""サイトシーア""","PPD-12 ""사이트시어""",PPD-12 „Obserwator”,PPD-12 «Турист»,PPD-12“观光客”,"PPD-12 ""Avistadora""",PPD-12「觀光客」,,Ready to Test
+pod_2v_lander_crew,"Mk2 ""Tuna Can""",“Boîte à sardines” Mk2,"""Scatoletta di tonno"" Mk2",Mk2 „Thunfischdose“,"Mk2 ""Lata de atún""","Mk2 ""ツナ缶""","Mk2 ""튜나캔""",Mk2 „Szprotki w puszce”,«Рыбные консервы» Mk2,Mk2“鲔鱼罐”,"Mk2 ""Lata de Atum""",MK2「鮪魚罐頭」,,Ready to Test
+pod_3v_conical_crew,Mk3-5 “Cockatoo”,“Cacatoès” Mk3-5,"""Cacatua"" Mk3-5",Mk3-5 „Cockatoo“,"Mk3-5 ""Cacatúa""","Mk3-5 ""コカトゥー""","Mk3-5 ""카커투""",Mk3-5 „Kakadu”,«Какаду» Mk3-5,Mk3-5“鹦鹉”,"MK3-5 ""Cacatua""",Mk3-5「鸚鵡」,,Ready to Test
+pod_3v_lander_crew,Mk3-L “Wanderer”,“Arpenteur” Mk3-L,"""Ramingo"" Mk3-L",Mk3-L „Wanderer“,"Mk3-L ""Nómada""","MK3-L ""ワンダラー""","Mk3-L ""원더러""",Mk3-L „Wędrowiec”,«Странник» Mk3-L,Mk3-L“漫游者”,"Mk3-L ""Andarilho""",Mk3-L「流浪者」,,Ready to Test
+probe_0v_hexagonal_electricity,HECS,HECS,HECS,HECS,HECS,HECS,HECS,HECS,ГЕКС,HECS,HECS,HECS,,Ready to Test
+probe_0v_octagonal_electricity_1x1,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,OKTO2,,Ready to Test
+probe_0v_octagonal_electricity_1x3,OKTO,OKTO,OKTO,OKTO,OKTO,OKTO,OKTO,OKTO,OKTO,OKTO,OKTO,OKTO,,Ready to Test
+probe_0v_rectangular_electricity,QBE,CuBi,QBE,QBE,QBE,QBE,QBE,QBE,КУБ,QBE,QBE,QBE,,Ready to Test
+probe_0v_spherical_electricity,"""Stayputnik""",“Spoutbrik”,"""Stayputnik""",„Bleiputnik“,"""Stayputnik""","""ステイプートニク""",스테이푸트니크,„Stójputnik”,«Сухопутник»,“斯特普尼克”,"""Stayputnik""",「駐地伴侶」,,Ready to Test
+probe_1v_disk_electricity,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,RC-001S,,Ready to Test
+probe_1v_hexagonal_electricity,HECS2,HECS2,HECS2,HECS2,HECS2,HECS2,HECS2,HECS2,HECS2,HECS2,HECS2,HECS2,,Ready to Test
+probe_1v_rover_electricity,"RC-R ""RoveMate""","""Vroumbo"" RC-R","""RoveMate"" RC-R","RC-R ""RoveMate""","RC-R ""Compañero de viaje""",RC-R「ローブメイト」,"RC-R ""로브메이트""",RC-R „Obieżyświat”,RC-R «Скиталец»,RC-R“漫游助手”,"""RoveMate"" RC-R",RC-R「漫遊助手」,,Ready to Test
+probe_2v_disk_electricity,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,RC-L01,,Ready to Test
+probe_2v_m2_electricity,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,Mk2-DC,,Ready to Test
+probe_3v_disk_electricity,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,RC-HL02,,Ready to Test
+probe_4v_disk_electricity,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,RC-XL01,,Ready to Test
+radiator_1v_deployable,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,RP-D-10,,Ready to Test
+radiator_1v_panel,RP-10,RP-10,RP-10,RP-10,RP-10,RP-10,RP-10,RP-10,RP-10,RP-10,RP-10,RP-10,,Ready to Test
+radiator_1v_paneledge,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,RP-E-10,,Ready to Test
+radiator_2v_deployable,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,RP-D-25,,Ready to Test
+radiator_2v_panel,RP-25,RP-25,RP-25,RP-25,RP-25,RP-25,RP-25,RP-25,RP-25,RP-25,RP-25,RP-25,,Ready to Test
+radiator_3v_deployable,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,RP-D-37,,Ready to Test
+rcs_0v_block_monoprop,RV-105,RV-105,RV-105,RV-105,RV-105,RV-105,RV-105,RV-105,RV-105,RV-105,RV-105,RV-105,,Ready to Test
+rcs_0v_linear_methalox,VR-N1ER Veer-Governor,VR-N1ER Veer-Governor,VR-N1ER Veer-Governor,VR-N1ER „Veer-Governor“,VR-N1ER Veer-Governor,VR-N1ER ヴィア・ガバナー,VR-N1ER 비어가버너,VR-N1ER Sterotron,VR-N1ER «Гуверньер»,VR-N1ER变轨总督,VR-N1ER Veer-Governor,VR-N1ER順轉調速器,,Ready to Test
+rcs_0v_linear_monoprop,Place-Anywhere 7,Place-Partout 7,Collocazione Libera #7,Place-Anywhere 7,Place-Anywhere 7,プレイスエニウェア7,자율부착 7,Przypnij-Gdzie-Chcesz 7,«Кудапопало-7»,“随便放”7型,Coloque-Onde-Quiser 7,無遠弗屆七代,,Ready to Test
+resizer_0v_square_0v-0v_0-31m,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,SRT-XS-XXS,,Ready to Test
+resizer_1v_square_1v-0v,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,SRT-S-XS,,Ready to Test
+resizer_2v_circular_2v-1v,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,CRT-M-S,,Ready to Test
+resizer_2v_square_2v-1v,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,SRT-M-S,,Ready to Test
+resizer_3v_circular_3v-2v,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,CRT-L-M,,Ready to Test
+resizer_3v_square_3v-2v,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,SRT-L-M,,Ready to Test
+resizer_4v_circular_4v-2v,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,CRT-XL-M,,Ready to Test
+resizer_4v_circular_4v-3v,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,CRT-XL-L,,Ready to Test
+resizer_4v_square_4v-2v,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,SRT-XL-M,,Ready to Test
+resizer_4v_square_4v-3v,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,SRT-XL-L,,Ready to Test
+seat_0v_external_crew,"EAS-1 ""Grumble Seat""",EAS-1 “Siège grondeur”,"EAS-1 ""Sedia delle lamentele""",EAS-1 „Grummelsitz“,"EAS-1 ""Asiento de las quejas""","EAS-1 ""グランブルシート""","EAS-1 ""그럼블 시트""",EAS-1 „Zrzędotron”,EAS-1 «Пыточное кресло»,EAS-1“隆隆椅”,"EAS-1 ""Poltrona Chiadora""",EAS-1「顧人怨」,,Ready to Test
+separator_0v_inline,TS-06,TS-06,TS-06,TS-06,TS-06,TS-06,TS-06,TS-06,TS-06,TS-06,TS-06,TS-06,,Ready to Test
+separator_1v_inline,TS-12,TS-12,TS-12,TS-12,TS-12,TS-12,TS-12,TS-12,TS-12,TS-12,TS-12,TS-12,,Ready to Test
+separator_2v_inline,TS-25,TS-25,TS-25,TS-25,TS-25,TS-25,TS-25,TS-25,TS-25,TS-25,TS-25,TS-25,,Ready to Test
+separator_3v_inline,TS-37,TS-37,TS-37,TS-37,TS-37,TS-37,TS-37,TS-37,TS-37,TS-37,TS-37,TS-37,,Ready to Test
+separator_4v_inline,TS-50,TS-50,TS-50,TS-50,TS-50,TS-50,TS-50,TS-50,TS-50,TS-50,TS-50,TS-50,,Ready to Test
+solararray_0v_flat,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,OX-STAT,,Ready to Test
+solararray_1v_1x6,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,OX-4L,,Ready to Test
+solararray_1v_3x2,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,OX-4W,,Ready to Test
+solararray_1v_circular,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,OX-10C,,Ready to Test
+solararray_1v_circular_shielded,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,SP-10C,,Ready to Test
+solararray_1v_flat,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,OX-STAT-XL,,Ready to Test
+solararray_1v_shielded_1x6,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,SP-4L,,Ready to Test
+solararray_1v_shielded_3x2,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,SP-4W,,Ready to Test
+solararray_2v_accordion,"SP-XL ""Gigantor""",SP-XL “Gigantor”,"SP-XL ""Gigantor""",SP-XL „Gigantor“,"SP-XL ""Gigantor""","SP-XL ""ジャイガンター""","SP-XL ""기간토르""",SP-XL „Gigantor”,SP-XL «Гигантор»,SP-XL“巨人”,"SP-XL ""Gigantor""",SP-XL「巨人」,,Ready to Test
+solararray_3v_large,"SP-XXL "" Colossus""",SP-XXL “Colosse”,"SP-XXL ""Colosso""",SP-XXL „Colossus“,"SP-XXL ""Coloso""","SP-XXL ""コロッサス""","SP-XXL ""콜로서스""",SP-XXL „Kolos”,SP-XXL «Колосс»,SP-XXL“巨像”,"SP-XXL ""Colosso""",SP-XXL「巨擘」,,Ready to Test
+stabilizer_0v_flybywire_aircraft,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,CH-J3,,Ready to Test
+stabilizer_0v_reactionwheel,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,TRW-0625,,Ready to Test
+stabilizer_1v_procedural_light,LPS-250 “Transform”,LPS-250 “Transformat”,"LPS-250 ""Trasformatore""",LPS-250 „Transform“,"LPS-250 ""Transformación""","LPS-250 ""トランスフォーム""","LPS-250 ""트랜스폼""",LPS-250 „Transformacja”,LPS-250 «Трансформер»,LPS-250“转换”,"LPS-250 ""Transformador""",LPS-250「蛻變者」,,Ready to Test
+stabilizer_1v_reactionwheel,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,SRW-125,,Ready to Test
+stabilizer_2v_procedural_heavy,MPS-500 “Transition”,MPS-500 “Transition”,"MPS-500 ""Transizione""",MPS-500 „Transition“,"MPS-500 ""Transición""","MPS-500 ""トランジション""",MPS-500 “트렌지션”,MPS-500 „Tranzycja”,MPS-500 «Переход»,MPS-500“变迁”,"MPS-500 ""Transição""",MPS-500「過渡者」,,Ready to Test
+stabilizer_2v_procedural_light,LPS-250 “Transform”,LPS-250 “Transformat”,"LPS-250 ""Trasformatore""",LPS-250 „Transform“,"LPS-250 ""Transformación""","LPS-250 ""トランスフォーム""","LPS-250 ""트랜스폼""",LPS-250 „Transformacja”,LPS-250 «Трансформер»,LPS-250“转换”,"LPS-250 ""Transformador""",LPS-250「蛻變者」,,Ready to Test
+stabilizer_2v_reactionwheel,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,MRW-250,,Ready to Test
+stabilizer_3v_procedural_heavy,MPS-500 “Transition”,MPS-500 “Transition”,"MPS-500 ""Transizione""",MPS-500 „Transition“,"MPS-500 ""Transición""","MPS-500 ""トランジション""",MPS-500 “트렌지션”,MPS-500 „Tranzycja”,MPS-500 «Переход»,MPS-500“变迁”,"MPS-500 ""Transição""",MPS-500「過渡者」,,Ready to Test
+stabilizer_3v_procedural_spaceplane,HPS-1000 “Progression”,HPS-1000 “Progression”,"HPS-1000 ""Progressione""",HPS-1000 „Progression“,"HPS-1000 ""Progresión""","HPS-1000 ""プログレッション""",HPS-1000 “프로그레션”,HPS-1000 „Postęp”,HPS-1000 «Прогресс»,HPS-1000“进展”,"HPS-1000 ""Progressão""",HPS-1000「進步者」,,Ready to Test
+stabilizer_3v_reactionwheel,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,LRW-375,,Ready to Test
+storage_0v_battery_electricity,Z-200,Z-200,Z-200,Z-200,Z-200,Z-200,Z-200,Z-200,Z-200,Z-200,Z-200,Z-200,,Ready to Test
+storage_0v_battery_electricity_radial,Z-100,Z-100,Z-100,Z-100,Z-100,Z-100,Z-100,Z-100,Z-100,Z-100,Z-100,Z-100,,Ready to Test
+storage_1v_battery_electricity,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,Z-1K,,Ready to Test
+storage_1v_battery_electricity_radial,Z-400,Z-400,Z-400,Z-400,Z-400,Z-400,Z-400,Z-400,Z-400,Z-400,Z-400,Z-400,,Ready to Test
+storage_2v_battery_electricity,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,Z-4K,,Ready to Test
+storage_3v_battery_electricity,Z-375,Z-375,Z-375,Z-375,Z-375,Z-375,Z-375,Z-375,Z-375,Z-375,Z-375,Z-375,,Ready to Test
+storage_4v_battery_electricity,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,ZX-10K,,Ready to Test
+strut_1v_extensible,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,EAS-4,,Ready to Test
+tailsection_1v_tapered_conical,Tail Connector A,Queue à empennage A,Connettore di coda A,Heckteil A,Conector de cola A,テールコネクターA,테일 커넥터 A,Łącznik ogonowy A,"Хвостовая балка, тип A",尾翼连接器A,Conector de Cauda A,A型尾翼連接器,,Ready to Test
+tailsection_1v_tapered_rightcone,Tail Connector B,Queue à empennage B,Connettore di coda B,Heckteil B,Conector de cola B,テールコネクターB,테일 커넥터 B,Łącznik ogonowy B,"Хвостовая балка, тип B",尾翼连接器B,Conector de Cauda B,B型尾翼連接器,,Ready to Test
+truss_0v_square_1x1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,ST-XS-1,,Ready to Test
+truss_0v_square_1x1_0-31m,ST-Micro-1,ST-Micro-1,ST-Micro-1,ST-Micro-1,ST-Micro-1,ST-マイクロ-1,ST-마이크로-1,ST-Micro-1,ST-Micro-1,ST-Micro-1,ST-Micro-1,ST-Micro-1,,Ready to Test
+truss_0v_square_1x4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,ST-XS-4,,Ready to Test
+truss_0v_square_1x4_0-31m,ST-Micro-4,ST-Micro-4,ST-Micro-4,ST-Micro-4,ST-Micro-4,ST-マイクロ-4,ST-마이크로-4,ST-Micro-4,ST-Micro-4,ST-Micro-4,ST-Micro-4,ST-Micro-4,,Ready to Test
+truss_1v_circular_1x1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,CT-S-1,,Ready to Test
+truss_1v_circular_1x4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,CT-S-4,,Ready to Test
+truss_1v_square_1x1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,ST-S-1,,Ready to Test
+truss_1v_square_1x4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,ST-S-4,,Ready to Test
+truss_2v_circular_1x1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,CT-M-1,,Ready to Test
+truss_2v_circular_1x4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,CT-M-4,,Ready to Test
+truss_2v_saddle_1x1,MST-S,MST-S,MST-S,MST-S,MST-S,MST-S,MST-S,MST-S,MST-S,MST-S,MST-S,MST-S,,Ready to Test
+truss_2v_saddle_1x4,MST-L,MST-L,MST-L,MST-L,MST-L,MST-L,MST-L,MST-L,MST-L,MST-L,MST-L,MST-L,,Ready to Test
+truss_2v_square_1x1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,ST-M-1,,Ready to test
+truss_2v_square_1x4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,ST-M-4,,Ready to Test
+truss_3v_circular_1x1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,CT-L-1,,Ready to Test
+truss_3v_circular_1x4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,CT-L-4,,Ready to Test
+truss_3v_saddle_1x1,LST-S,LST-S,LST-S,LST-S,LST-S,LST-S,LST-S,LST-S,LST-S,LST-S,LST-S,LST-S,,Ready to Test
+truss_3v_saddle_1x4,LST-L,LST-L,LST-L,LST-L,LST-L,LST-L,LST-L,LST-L,LST-L,LST-L,LST-L,LST-L,,Ready to Test
+truss_3v_square_1x1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,ST-L-1,,Ready to Test
+truss_3v_square_1x4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,ST-L-4,,Ready to Test
+truss_4v_circular_1x1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,CT-XL-1,,Ready to Test
+truss_4v_circular_1x4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,CT-XL-4,,Ready to Test
+truss_4v_saddle_1x1,HST-S,HST-S,HST-S,HST-S,HST-S,HST-S,HST-S,HST-S,HST-S,HST-S,HST-S,HST-S,,Ready to Test
+truss_4v_saddle_1x4,HST-L,HST-L,HST-L,HST-L,HST-L,HST-L,HST-L,HST-L,HST-L,HST-L,HST-L,HST-L,,Ready to Test
+truss_4v_square_1x1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,ST-XL-1,,Ready to Test
+truss_4v_square_1x4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,ST-XL-4,,Ready to Test
+tube_0v_procedural,TOOB-000,TUUB-000,TOOB-000,TOOB-000,TOOB-000,TOOB-000,TOOB-000,ROORA-000,TOOB-000,TOOB-000,TOOB-000,TOOB-000,,Ready to Test
+tube_1v_procedural,TOOB-125,TUUB-125,TOOB-125,TOOB-125,TOOB-125,TOOB-125,TOOB-125,ROORA-125,TOOB-125,TOOB-125,TOOB-125,TOOB-125,,Ready to Test
+tube_2v_procedural,TOOB-250,TUUB-250,TOOB-250,TOOB-250,TOOB-250,TOOB-250,TOOB-250,ROORA-250,TOOB-250,TOOB-250,TOOB-250,TOOB-250,,Ready to Test
+tube_3v_procedural,TOOB-375,TUUB-375,TOOB-375,TOOB-375,TOOB-375,TOOB-375,TOOB-375,ROORA-375,TOOB-375,TOOB-375,TOOB-375,TOOB-375,,Ready to Test
+tube_4v_procedural,TOOB-500,TUUB-500,TOOB-500,TOOB-500,TOOB-500,TOOB-500,TOOB-500,ROORA-500,TOOB-500,TOOB-500,TOOB-500,TOOB-500,,Ready to Test
+wheel_0v_rover,RoveMax S2,RoveMax S2,RoveMax S2,RoveMax S2,RoveMax S2,ローブマックス S2,로브맥스 S2,RoveMax S2,«Движ-S2»,极限漫游S2,RoveMax S2,極限漫遊S2,,Ready to Test
+wheel_1v_rover,RoveMax M1,RoveMax M1,RoveMax M1,RoveMax M1,RoveMax M1,ローブマックス M1,로브맥스 M1,RoveMax M1,«Движ-M1»,极限漫游M1,RoveMax M1,極限漫遊M1,,Ready to Test
+wheel_2v_rover_ruggedized,RoveMax TR-2L,RoveMax TR-2L,RoveMax TR-2L,RoveMax TR-2L,RoveMax TR-2L,ローブマックス TR-2L,로브맥스 TR-2L,RoveMax TR-2L,«Движ-TR-2L»,极限漫游TR-2L,RoveMax TR-2L,極限漫遊TR-2L,,Ready to Test
+wheel_2v_truck,RoveMax TR4,RoveMax TR4,RoveMax TR4,RoveMax TR4,RoveMax TR4,ローブマックス TR4,로브맥스 TR4,RoveMax TR4,«Движ-TR4»,极限漫游TR4,RoveMax TR4,極限漫遊TR4,,Ready to Test
+wheel_3v_rover,RoveMax XL3,RoveMax XL3,RoveMax XL3,RoveMax XL3,RoveMax XL3,ローブマックス XL3,로브맥스 XL3,RoveMax XL3,«Движ-XL3»,极限漫游XL3,RoveMax XL3,極限漫遊XL3,,Ready to Test
+wing_1v_procedural_light,LPW-250 “Flux”,LPW-250 “Flux”,"LPW-250 ""Flusso""",LPW-250 „Flux“,"LPW-250 ""Flujo""","LPW-250 ""フラックス”",LPW-250 “플럭스”,LPW-250 „Struga”,LPW-250 «Поток»,LPW-250“通量”,"LPW-250 ""Fluxo""",LPW-250「疾風」,,Ready to Test
+wing_2v_procedural_heavy,MPW-500 “Metamorph”,MPW-500 “Métamorphe”,"MPW-500 ""Metamorfo""",MPW-500 „Metamorph“,"MPW-500 ""Metamorfosis""","MPW-500 ""メタモルファ""",MPW-500 “메타모프”,MPW-500 „Metamorf”,MPW-500 «Метаморф»,MPW-500“蜕变”,"MPW-500 ""Metamorfo""",MPW-500「千變萬化」,,Ready to Test
+wing_2v_procedural_light,LPW-250 “Flux”,LPW-250 “Flux”,"LPW-250 ""Flusso""",LPW-250 „Flux“,"LPW-250 ""Flujo""","LPW-250 ""フラックス”",LPW-250 “플럭스”,LPW-250 „Struga”,LPW-250 «Поток»,LPW-250“通量”,"LPW-250 ""Fluxo""",LPW-250「疾風」,,Ready to Test
+wing_3v_procedural_heavy,MPW-500 “Metamorph”,MPW-500 “Métamorphe”,"MPW-500 ""Metamorfo""",MPW-500 „Metamorph“,"MPW-500 ""Metamorfosis""","MPW-500 ""メタモルファ""",MPW-500 “메타모프”,MPW-500 „Metamorf”,MPW-500 «Метаморф»,MPW-500“蜕变”,"MPW-500 ""Metamorfo""",MPW-500「千變萬化」,,Ready to Test
+wing_3v_procedural_spaceplane,HPW-1000 “Evolution”,HPW-1000 “Évolution”,"HPW-1000 ""Evoluzione""",HPW-1000 „Evolution“,"HPW-1000 ""Evolución""","HPW-1000 ""エヴォリューション""",HPW-1000 “에볼루션”,HPW-1000 „Ewolucja”,HPW-1000 «Эволюция»,HPW-1000“进化”,HPW-1000 “Evolução”,HPW-1000「進化者」,,Ready to Test
