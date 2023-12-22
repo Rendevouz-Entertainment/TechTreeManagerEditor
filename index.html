@@ -402,8 +402,16 @@ ${treeNodePart}`;
                     zipEntry.async("string")
                         .then(function success(content) {
                             console.log(content)
-                            var thisNode = JSON.parse(content)
-                            globalThis.TreeNodes[thisNode.ID] = thisNode
+                            if(zipEntry.name.includes(".json")){
+                                var thisNode = JSON.parse(content)
+                                globalThis.TreeNodes[thisNode.ID] = thisNode
+                            }
+                            if(zipEntry.name.includes(".csv")){
+                                var thisCSV = JSON.parse(csvJSON(content.replaceAll('"',"")))
+                                globalThis.default.loc = []
+                                globalThis.default.loc = thisCSV
+                            }
+                           
                         }, function error(e) {
                             console.log(e)
                         });
