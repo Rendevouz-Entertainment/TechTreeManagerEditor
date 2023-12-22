@@ -187,11 +187,13 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             }
         }
         window.onload = (event) => {
+            globalThis.UsedParts = []
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.default = { loc: JSON.parse(csvJSON(this.responseText)) }
                     globalThis.GetDefaultParts()
+                    setTimeout(()=>{globalThis.UpdatePartsButton()},500)
                 }
             });
 
@@ -204,6 +206,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.defaultTreeLocations = JSON.parse(this.responseText)
+                    
                     globalThis.defaultTreeLocations.treeNodes.forEach((treeNode) => {
                         globalThis.GetAndCreateTreeNodeHTTP(treeNode)
 
@@ -214,16 +217,25 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             xhr.open("Get", locations.default.tree);
             xhr.send();
         }
+        globalThis.UpdatePartsButton = function(){
+            var PartsListAdd = document.getElementById("PartsListAdd")
+            PartsListAdd.innerHTML = ""
+                    globalThis.parts.forEach((part)=>{
+                        if(globalThis.UsedParts.includes(part.Key)){
+
+                        }else{
+                            PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
+                            <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
+                        }
+                        
+                    })
+        }
         globalThis.GetDefaultParts = function () {
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.parts = JSON.parse(csvJSON(this.responseText))
-                    var PartsListAdd = document.getElementById("PartsListAdd")
-                    globalThis.parts.forEach((part)=>{
-                        PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
-                        <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
-                    })
+                    
                     globalThis.GetDefaultTree()
                 }
             });
@@ -289,6 +301,10 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
 
 
+            thisTree.UnlockedPartsIDs.forEach((partID)=>{
+                globalThis.UsedParts.push(partID)
+            })
+           
 
             contentArea.innerHTML = ` ${contentArea.innerHTML}
                     <div class="scienceNode" onclick='globalThis.SetSelectedNode("${thisTree.ID}")' id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + 800}px);">
@@ -336,10 +352,12 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             globalThis.default.loc[NameLocKeyID].English = NodeName.value
             globalThis.default.loc[DescriptionLocKeyID].English = NodeDescription.value
             contentArea.innerHTML = ""
+            globalThis.UsedParts = []
             Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
                 GetAndCreateTreeNode(treeNodeP)
 
             })
+            globalThis.UpdatePartsButton()
 
         }
 
@@ -418,11 +436,13 @@ ${treeNodePart}`;
 
                 });
             })
+            globalThis.UsedParts = []
             setTimeout(() => {
                 Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
                     GetAndCreateTreeNode(treeNodeP)
 
                 })
+                globalThis.UpdatePartsButton()
             }, 1000)
         }
         globalThis.ExportTree = function () {
@@ -495,11 +515,12 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
 
             
             contentArea.innerHTML = ""
-            
+            globalThis.UsedParts = []
             Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
                 GetAndCreateTreeNode(treeNodeP)
 
             })
+            globalThis.UpdatePartsButton()
             globalThis.SetSelectedNode(globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]])
         }
         globalThis.NewTechTree = function(){
@@ -507,10 +528,12 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             globalThis.TreeNodes = {}
             contentArea.innerHTML = ""
             globalThis.NewNode(false)
+            globalThis.UsedParts = []
             Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
                 GetAndCreateTreeNode(treeNodeP)
 
             })
+            globalThis.UpdatePartsButton()
             globalThis.SetSelectedNode(globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]])
         }
 
