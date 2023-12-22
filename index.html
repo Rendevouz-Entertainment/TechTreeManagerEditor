@@ -255,9 +255,9 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                         var line = document.getElementById(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID}`)
                         console.log(`${thisTree.ID}_line_${treeNodePd.ID}_${globalThis.tID} ${treeNodePd.TechTreePosition.x}`)
                         line.setAttribute('x1', thisTree.TechTreePosition.x);
-                        line.setAttribute('y1', -thisTree.TechTreePosition.y + + 900 + 50);
+                        line.setAttribute('y1', -thisTree.TechTreePosition.y + + 800 + 50);
                         line.setAttribute('x2', treeNodePd.TechTreePosition.x + 150);
-                        line.setAttribute('y2', -treeNodePd.TechTreePosition.y + + 900 + 50);
+                        line.setAttribute('y2', -treeNodePd.TechTreePosition.y + + 800 + 50);
                         globalThis.tID++
                     } catch (e) {
 
@@ -291,7 +291,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
 
 
             contentArea.innerHTML = ` ${contentArea.innerHTML}
-                    <div class="scienceNode" onclick='globalThis.SetSelectedNode("${thisTree.ID}")' id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + 900}px);">
+                    <div class="scienceNode" onclick='globalThis.SetSelectedNode("${thisTree.ID}")' id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + 800}px);">
                         <div class="scienceNodeTitle">
                             <div class="scienceNodeIcon"></div>
                             <div class="scienceNodeValue">${thisTree.RequiredSciencePoints}</div>
