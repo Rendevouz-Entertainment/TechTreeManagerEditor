@@ -170,27 +170,28 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
 
         //this converts CSV files to json 
-        function csvJSON(csv) {
+        function csvJSON(text, quoteChar = '"', delimiter = ',') {
+            var rows = text.split("\n");
+            var headers = rows[0].split(",");
 
-            var lines = csv.split("\n");
+            const regex = new RegExp(`\\s*(${quoteChar})?(.*?)\\1\\s*(?:${delimiter}|$)`, 'gs');
 
-            var result = [];
-            var headers = lines[0].split(",");
+            const match = line => [...line.matchAll(regex)]
+                .map(m => m[2])
+                .slice(0, -1);
 
-            for (var i = 1; i < lines.length; i++) {
+            var lines = text.split('\n');
+            const heads = headers ?? match(lines.shift());
+            lines = lines.slice(1);
 
-                var obj = {};
-                var currentline = lines[i].split(",");
-
-                for (var j = 0; j < headers.length; j++) {
-                    obj[headers[j]] = currentline[j];
-                }
-
-                result.push(obj);
-
-            }
-
-            return JSON.stringify(result);
+            return JSON.stringify( lines.map(line => {
+                return match(line).reduce((acc, cur, i) => {
+                    // replace blank matches with `null`
+                    const val = cur.length <= 0 ? null : Number(cur) || cur;
+                    const key = heads[i] ?? `{i}`;
+                    return { ...acc, [key]: val };
+                }, {});
+            }));
         }
         //this converts json to csv
         function JSONcsv(Json) {
