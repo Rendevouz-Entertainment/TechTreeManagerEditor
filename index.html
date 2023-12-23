@@ -21,10 +21,12 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         .contentArea {
             margin: 10px;
         }
+
         .dropdown-menu {
-    max-height: 280px;
-    overflow-y: auto;
-}
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
         .partList {}
 
         .treeArea {
@@ -39,6 +41,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
 
         .scienceNode {
+            user-select: none;
             position: absolute;
             width: 150px;
             height: 100px;
@@ -49,6 +52,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
 
         .scienceNodeTitle {
+            user-select: none;
             height: 25px;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
@@ -56,6 +60,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
 
         .scienceNodeContent {
+            user-select: none;
             font-size: 10px;
             height: 70px;
             padding: 10px;
@@ -65,6 +70,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
 
         .scienceNodeValue {
+            user-select: none;
             margin-top: 4px;
             border-radius: 5px;
             position: absolute;
@@ -77,12 +83,14 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
 
         .scienceNodeConnector {
+            user-select: none;
             position: absolute;
             width: 100%;
             height: 100%;
         }
 
         .scienceNodeConnectordataHolder {
+            user-select: none;
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -90,10 +98,17 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             height: 1000px;
         }
 
-        .InfoPanel {
+        .InfoPanel,
+        .InfoPanelData {
             width: 500px;
             height: 2000px;
-            background-color: rgba(43, 43, 43, 0.308);
+            background-color: rgb(36, 39, 41)
+        }
+
+        .InfoPanelData {
+            position: sticky;
+            left: 0px;
+            top: 30px;
         }
 
         .holder {
@@ -157,12 +172,12 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 header.join(','), // header row first
                 ...items.map(row => header.map(
                     (fieldName) => {
-                        if(fieldName == "Key"){
-                            return JSON.stringify(row[fieldName], replacer).replaceAll('"',"")
-                        }else{
+                        if (fieldName == "Key") {
+                            return JSON.stringify(row[fieldName], replacer).replaceAll('"', "")
+                        } else {
                             return JSON.stringify(row[fieldName], replacer)
                         }
-                        
+
                     }
                 ).join(','))
 
@@ -187,13 +202,35 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             }
         }
         window.onload = (event) => {
+            var isDown = false;
+            var startX;
+            var scrollLeft;
+
+            var contentArea = document.getElementById("contentArea")
+            contentArea.addEventListener('mousedown', (e) => {
+                isDown = true;
+                contentArea.classList.add('active');
+                startX = e.pageX;
+                scrollLeft = contentArea.scrollLeft;
+            });
+            
+            contentArea.addEventListener('mouseup', () => {
+                isDown = false;
+                contentArea.classList.remove('active');
+            });
+            contentArea.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+
+                var x = e.movementX * 100;
+                document.body.scrollLeft = document.body.scrollLeft - x;
+            });
             globalThis.UsedParts = []
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.default = { loc: JSON.parse(csvJSON(this.responseText)) }
                     globalThis.GetDefaultParts()
-                    setTimeout(()=>{globalThis.UpdatePartsButton()},500)
+                    setTimeout(() => { globalThis.UpdatePartsButton() }, 500)
                 }
             });
 
@@ -206,7 +243,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.defaultTreeLocations = JSON.parse(this.responseText)
-                    
+
                     globalThis.defaultTreeLocations.treeNodes.forEach((treeNode) => {
                         globalThis.GetAndCreateTreeNodeHTTP(treeNode)
 
@@ -217,25 +254,25 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             xhr.open("Get", locations.default.tree);
             xhr.send();
         }
-        globalThis.UpdatePartsButton = function(){
+        globalThis.UpdatePartsButton = function () {
             var PartsListAdd = document.getElementById("PartsListAdd")
             PartsListAdd.innerHTML = ""
-                    globalThis.parts.forEach((part)=>{
-                        if(globalThis.UsedParts.includes(part.Key)){
+            globalThis.parts.forEach((part) => {
+                if (globalThis.UsedParts.includes(part.Key)) {
 
-                        }else{
-                            PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
+                } else {
+                    PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
                             <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
-                        }
-                        
-                    })
+                }
+
+            })
         }
         globalThis.GetDefaultParts = function () {
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     globalThis.parts = JSON.parse(csvJSON(this.responseText))
-                    
+
                     globalThis.GetDefaultTree()
                 }
             });
@@ -304,10 +341,10 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
 
 
-            thisTree.UnlockedPartsIDs.forEach((partID)=>{
+            thisTree.UnlockedPartsIDs.forEach((partID) => {
                 globalThis.UsedParts.push(partID)
             })
-           
+
 
             contentArea.innerHTML = ` ${contentArea.innerHTML}
                     <div class="scienceNode" onclick='globalThis.SetSelectedNode("${thisTree.ID}")' id="${thisTree.ID}" style="transform: translate(${thisTree.TechTreePosition.x}px,${-thisTree.TechTreePosition.y + 800}px);">
@@ -352,19 +389,19 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
 
             var NameLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].NameLocKey })
             var DescriptionLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].DescriptionLocKey })
-            
+
             Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
                 console.log(globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs)
-                var IDPos = globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.indexOf(globalThis.TreeNodes[globalThis.selectedNode].ID )
-                    console.log(IDPos)
-                    console.log(globalThis.TreeNodes[globalThis.selectedNode].ID )
-                if(globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.includes(globalThis.selectedNode)){
-                    
+                var IDPos = globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.indexOf(globalThis.TreeNodes[globalThis.selectedNode].ID)
+                console.log(IDPos)
+                console.log(globalThis.TreeNodes[globalThis.selectedNode].ID)
+                if (globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.includes(globalThis.selectedNode)) {
+
                     //console.log(globalThis.TreeNodes[treeNodeP].UnlockedPartsIDs[IDPos])
                     globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.splice(IDPos, 1)
                     globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.push(NodeID.value)
                 }
-                
+
             })
 
             globalThis.TreeNodes[globalThis.selectedNode].ID = NodeID.value
@@ -377,11 +414,11 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             globalThis.TreeNodes[globalThis.selectedNode].DescriptionLocKey = `Science/TechNodes/Descriptions/${NodeID.value}`
             globalThis.TreeNodes[globalThis.selectedNode].NameLocKey = `Science/TechNodes/Names/${NodeID.value}`
 
-            if(NodeID.value != globalThis.selectedNode){
+            if (NodeID.value != globalThis.selectedNode) {
                 globalThis.TreeNodes[NodeID.value] = globalThis.TreeNodes[globalThis.selectedNode]
                 delete globalThis.TreeNodes[globalThis.selectedNode]
             }
-            
+
             globalThis.selectedNode = NodeID.value
             contentArea.innerHTML = ""
             globalThis.UsedParts = []
@@ -455,16 +492,16 @@ ${treeNodePart}`;
                     zipEntry.async("string")
                         .then(function success(content) {
                             console.log(content)
-                            if(zipEntry.name.includes(".json")){
+                            if (zipEntry.name.includes(".json")) {
                                 var thisNode = JSON.parse(content)
                                 globalThis.TreeNodes[thisNode.ID] = thisNode
                             }
-                            if(zipEntry.name.includes(".csv")){
-                                var thisCSV = JSON.parse(csvJSON(content.replaceAll('"',"")))
+                            if (zipEntry.name.includes(".csv")) {
+                                var thisCSV = JSON.parse(csvJSON(content.replaceAll('"', "")))
                                 globalThis.default.loc = []
                                 globalThis.default.loc = thisCSV
                             }
-                           
+
                         }, function error(e) {
                             console.log(e)
                         });
@@ -535,12 +572,12 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             globalThis.TreeNodes[node.ID] = node
             globalThis.default.loc.push(localdescription)
             globalThis.default.loc.push(localname)
-            if(updateNodesForced){
+            if (updateNodesForced) {
                 globalThis.UpdateNodes()
             }
-            
+
         }
-        globalThis.DeleteNode = function(){
+        globalThis.DeleteNode = function () {
             var NameLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].NameLocKey })
             globalThis.default.loc.splice(NameLocKeyID, 1);
             var DescriptionLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].DescriptionLocKey })
@@ -548,7 +585,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
 
             delete globalThis.TreeNodes[globalThis.selectedNode]
 
-            
+
             contentArea.innerHTML = ""
             globalThis.UsedParts = []
             Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
@@ -558,7 +595,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             globalThis.UpdatePartsButton()
             globalThis.SetSelectedNode(globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]])
         }
-        globalThis.NewTechTree = function(){
+        globalThis.NewTechTree = function () {
             globalThis.default.loc = []
             globalThis.TreeNodes = {}
             contentArea.innerHTML = ""
@@ -572,15 +609,15 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             globalThis.SetSelectedNode(globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]])
         }
 
-        globalThis.AddPartToNode = function(PartID){
+        globalThis.AddPartToNode = function (PartID) {
             globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs.push(PartID)
             var NodeParts = document.getElementById("NodeParts")
             if (NodeParts.value.length < 1) {
-                    NodeParts.value = `${PartID}`;
-                } else {
-                    NodeParts.value = `${NodeParts.value},
+                NodeParts.value = `${PartID}`;
+            } else {
+                NodeParts.value = `${NodeParts.value},
 ${PartID}`;
-                }
+            }
             globalThis.UpdateNodes()
         }
         //patch manager stuff
@@ -728,7 +765,7 @@ ${PartID}`;
                 return result;
             } else {
                 return "null";
-            }
+            } swivel
         }
         function json_to_pm(json, ruleset, name, is_new = false, constructor_args = []) {
             var pm = "";
@@ -765,33 +802,7 @@ ${PartID}`;
 
         //mouse scroll
 
-        const slider = document.getElementById('contentArea');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
 
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.classList.add('active');
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-        slider.addEventListener('mouseleave', () => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 3; //scroll-fast
-            slider.scrollLeft = scrollLeft - walk;
-            console.log(walk);
-        });
     </script>
 </head>
 
@@ -830,24 +841,27 @@ ${PartID}`;
                     </li>
                     <li class="nav-item">
                         <div class="dropdown" style="margin: 0px; padding: 0px;">
-                            <button type="button" style="margin-left: 10px;" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                              Add Part to node
+                            <button type="button" style="margin-left: 10px;" class="btn btn-primary dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                Add Part to node
                             </button>
-                            <div class="dropdown-menu p-4" id="PartsListAdd" style="margin: 0px; padding: 0px !important;">
+                            <div class="dropdown-menu p-4" id="PartsListAdd"
+                                style="margin: 0px; padding: 0px !important;">
                             </div>
-                          </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
 
     </nav>
-    <div class="holder">
-        <div class="InfoPanel">
+
+    <div class="holder" style="width: 1000%; z-index: -1;">
+        <div class="InfoPanelData" style="z-index: 2;">
             <label>Tech node Name</label>
             <input type="text" class="form-control" id="NodeName" onchange="globalThis.UpdateNodes()">
             <label>Tech node Description</label>
-            <textarea class="form-control" id="NodeDescription" rows="4" onchange="globalThis.UpdateNodes()" ></textarea>
+            <textarea class="form-control" id="NodeDescription" rows="4" onchange="globalThis.UpdateNodes()"></textarea>
             <label>Tech node Required nodes (Multi select)</label>
             <select class="form-select" id="NodeRequrements" size="8" multiple aria-label="Multiple select"
                 onchange="globalThis.UpdateNodes()">
@@ -866,25 +880,27 @@ ${PartID}`;
             </div>
             <div class="accordion" id="AdvancedOptions">
                 <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Advanced options
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#AdvancedOptions">
-                    <div class="accordion-body">
-                        <label>Tech node ID</label>
-                        <input type="text" class="form-control" id="NodeID" onchange="globalThis.UpdateNodes()">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Advanced options
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#AdvancedOptions">
+                        <div class="accordion-body">
+                            <label>Tech node ID</label>
+                            <input type="text" class="form-control" id="NodeID" onchange="globalThis.UpdateNodes()">
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
             <button type="button" class="btn btn-danger" onclick="globalThis.DeleteNode()">Delete Node</button>
         </div>
-        <div class="contentArea" id="contentArea">
+        <div class="contentArea" id="contentArea" style="z-index: 1; width: 100%; height: 5000px;background-color: transparent;">
 
         </div>
     </div>
+
     <input id="TreeImportFile" type="file" accept=".zip" name="name" style="display: none;"
         onchange="globalThis.ImportTreeFNC(event)" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
