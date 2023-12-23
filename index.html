@@ -14,6 +14,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
+            width: 1000%;
             margin: 0px;
             padding: 0px;
         }
@@ -39,7 +40,18 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             width: 200%;
             height: 100%;
         }
-
+        .tierlocations {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -100;
+            top:0;
+            left: 500px;
+        }
+        .tier{
+            width: 1000px;
+            height: 100%;
+        }
         .scienceNode {
             user-select: none;
             position: absolute;
@@ -110,7 +122,12 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             left: 0px;
             top: 30px;
         }
-
+        .navbar{
+            position: sticky;
+            left: 0px;
+            top: 0px;
+            width: 100vw;
+        }
         .holder {
             display: flex;
             flex-direction: row;
@@ -856,7 +873,7 @@ ${PartID}`;
 
     </nav>
 
-    <div class="holder" style="width: 1000%; z-index: -1;">
+    <div class="holder" style="width: 100%; z-index: -1;">
         <div class="InfoPanelData" style="z-index: 2;">
             <label>Tech node Name</label>
             <input type="text" class="form-control" id="NodeName" onchange="globalThis.UpdateNodes()">
@@ -899,6 +916,9 @@ ${PartID}`;
         <div class="contentArea" id="contentArea" style="z-index: 1; width: 100%; height: 5000px;background-color: transparent;">
 
         </div>
+    </div>
+    <div class="tierlocations">
+        <div class="tier"></div>
     </div>
 
     <input id="TreeImportFile" type="file" accept=".zip" name="name" style="display: none;"
