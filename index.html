@@ -298,6 +298,9 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var thisTree = globalThis.TreeNodes[ID]
             var contentArea = document.getElementById("contentArea")
             var scienceNodeConnectordataHolder = document.getElementById("scienceNodeConnectordataHolder")
+            console.log(globalThis.default.loc)
+            console.log(thisTree)
+            console.log(ID)
             var localData = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
 
 
@@ -330,6 +333,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var NodeParts = document.getElementById("NodeParts")
             var NodeDescription = document.getElementById("NodeDescription")
             var NodeName = document.getElementById("NodeName")
+            var NodeID = document.getElementById("NodeID")
 
             if (globalThis.selectedNode == null || globalThis.selectedNode == undefined) {
                 globalThis.selectedNode = globalThis.TreeNodes[Object.keys(globalThis.TreeNodes)[0]].ID
@@ -348,13 +352,42 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
 
             var NameLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].NameLocKey })
             var DescriptionLocKeyID = globalThis.default.loc.findIndex(obj => { return obj.Key === globalThis.TreeNodes[globalThis.selectedNode].DescriptionLocKey })
+            
+            Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
+                console.log(globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs)
+                var IDPos = globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.indexOf(globalThis.TreeNodes[globalThis.selectedNode].ID )
+                    console.log(IDPos)
+                    console.log(globalThis.TreeNodes[globalThis.selectedNode].ID )
+                if(globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.includes(globalThis.selectedNode)){
+                    
+                    //console.log(globalThis.TreeNodes[treeNodeP].UnlockedPartsIDs[IDPos])
+                    globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.splice(IDPos, 1)
+                    globalThis.TreeNodes[treeNodeP].RequiredTechNodeIDs.push(NodeID.value)
+                }
+                
+            })
 
+            globalThis.TreeNodes[globalThis.selectedNode].ID = NodeID.value
+            globalThis.default.loc[NameLocKeyID].Key = `Science/TechNodes/Names/${NodeID.value}`
             globalThis.default.loc[NameLocKeyID].English = NodeName.value
+            globalThis.default.loc[DescriptionLocKeyID].Key = `Science/TechNodes/Descriptions/${NodeID.value}`
             globalThis.default.loc[DescriptionLocKeyID].English = NodeDescription.value
+
+
+            globalThis.TreeNodes[globalThis.selectedNode].DescriptionLocKey = `Science/TechNodes/Descriptions/${NodeID.value}`
+            globalThis.TreeNodes[globalThis.selectedNode].NameLocKey = `Science/TechNodes/Names/${NodeID.value}`
+
+            if(NodeID.value != globalThis.selectedNode){
+                globalThis.TreeNodes[NodeID.value] = globalThis.TreeNodes[globalThis.selectedNode]
+                delete globalThis.TreeNodes[globalThis.selectedNode]
+            }
+            
+            globalThis.selectedNode = NodeID.value
             contentArea.innerHTML = ""
             globalThis.UsedParts = []
             Object.keys(globalThis.TreeNodes).forEach((treeNodeP) => {
                 GetAndCreateTreeNode(treeNodeP)
+
 
             })
             globalThis.UpdatePartsButton()
@@ -369,8 +402,10 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var NodePosition = document.getElementById("NodePosition")
             var NodeCost = document.getElementById("NodeCost")
             var NodeParts = document.getElementById("NodeParts")
+            var NodeID = document.getElementById("NodeID")
             var NameLocKey = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.NameLocKey })[0]
             var DescriptionLocKey = globalThis.default.loc.filter(obj => { return obj.Key === thisTree.DescriptionLocKey })[0]
+            NodeID.value = thisTree.ID
             console.log(DescriptionLocKey)
             globalThis.selectedNode = id
             NodeDescription.value = DescriptionLocKey.English.replace('"', "")
@@ -829,6 +864,21 @@ ${PartID}`;
             <div class="PartsList">
 
             </div>
+            <div class="accordion" id="AdvancedOptions">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Advanced options
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#AdvancedOptions">
+                    <div class="accordion-body">
+                        <label>Tech node ID</label>
+                        <input type="text" class="form-control" id="NodeID" onchange="globalThis.UpdateNodes()">
+                    </div>
+                  </div>
+                </div>
+              </div>
             <button type="button" class="btn btn-danger" onclick="globalThis.DeleteNode()">Delete Node</button>
         </div>
         <div class="contentArea" id="contentArea">
