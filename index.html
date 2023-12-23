@@ -41,7 +41,9 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             height: 100%;
         }
         .tierlocations {
-            width: 100%;
+            display: flex;
+            flex-direction: row;
+            width: 1000%;
             height: 100%;
             position: absolute;
             z-index: -100;
@@ -49,8 +51,13 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             left: 500px;
         }
         .tier{
-            width: 1000px;
-            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            width: 1500px;
+            height: 1000px;
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
         }
         .scienceNode {
             user-select: none;
@@ -934,6 +941,9 @@ ${PartID}`;
         </div>
     </div>
     <div class="tierlocations">
+        <div class="tier"></div>
+        <div class="tier"></div>
+        <div class="tier"></div>
         <div class="tier"></div>
     </div>
 
