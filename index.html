@@ -604,6 +604,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             }
             var node = new TechNode(nodeID)
             globalThis.TreeNodes[node.ID] = node
+            globalThis.selectedNode = node.ID
             globalThis.default.loc.push(localdescription)
             globalThis.default.loc.push(localname)
             if (updateNodesForced) {
