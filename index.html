@@ -187,7 +187,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             return JSON.stringify( lines.map(line => {
                 return match(line).reduce((acc, cur, i) => {
                     // replace blank matches with `null`
-                    const val = cur.length <= 0 ? null : Number(cur) || cur;
+                    const val = cur.length <= 0 ? "" : Number(cur) || cur;
                     const key = heads[i] ?? `{i}`;
                     return { ...acc, [key]: val };
                 }, {});
