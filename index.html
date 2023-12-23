@@ -504,6 +504,8 @@ ${treeNodePart}`;
             globalThis.selectedNode = null
             contentArea.innerHTML = ""
             console.log(event.target.files[0])
+            var TreeName = document.getElementById("TreeName")
+            TreeName.value = event.target.files[0].name.split(".")[0]
             JSZip.loadAsync(event.target.files[0]).then(function (zip) {
                 zip.forEach(function (relativePath, zipEntry) {
                     zipEntry.async("string")
@@ -551,7 +553,8 @@ ${treeNodePart}`;
 
             zip.generateAsync({ type: "blob" }).then(function (content) {
                 // see FileSaver.js
-                saveAs(content, "techtree.zip");
+                var TreeName = document.getElementById("TreeName")
+                saveAs(content, `${TreeName.value}.zip`);
             });
         }
         globalThis.ImportParts = function () {
@@ -569,7 +572,8 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
             zip.file(`localizations/local.csv`, JSONcsv(globalThis.default.loc));
             zip.generateAsync({ type: "blob" }).then(function (content) {
                 // see FileSaver.js
-                saveAs(content, "PM_techtree.zip");
+                var TreeName = document.getElementById("TreeName")
+                saveAs(content, `${TreeName.value}.zip`);
             });
         }
 
@@ -838,6 +842,10 @@ ${PartID}`;
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/docs">Docs</a>
                     </li>
+                    <li class="nav-item">
+                        <input type="text" class="form-control" id="TreeName" value="DefaultTechTree">
+                    </li>
+                    
                     <li class="nav-item">
                         <button type="button" class="btn btn-success" id="ImportTree" style="margin-left: 10px;"
                             onclick="globalThis.ImportTree()">Import tree</button>
