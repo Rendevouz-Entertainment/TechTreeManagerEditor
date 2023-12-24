@@ -560,6 +560,9 @@ ${treeNodePart}`;
         globalThis.ExportNodeupdate = function () {
             saveAs(JSON.stringify(globalThis.TreeNodes[globalThis.selectedNode]), `${globalThis.selectedNode}.nodeupdate`);
         }
+        globalThis.ExportNodeAdd= function () {
+            saveAs(JSON.stringify(globalThis.TreeNodes[globalThis.selectedNode]), `${globalThis.selectedNode}.nodeadd`);
+        }
         globalThis.ExportNodereduce = function () {
             saveAs(JSON.stringify(globalThis.TreeNodes[globalThis.selectedNode]), `${globalThis.selectedNode}.nodereduce`);
         }
@@ -958,11 +961,14 @@ ${PartID}`;
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-danger" onclick="globalThis.DeleteNode()">Delete Node</button>
-            <button type="button" class="btn btn-info" onclick="globalThis.ExportNodeupdate()">Export Node
-                Update</button>
-            <button type="button" class="btn btn-info" onclick="globalThis.ExportNodereduce()">Export Node
-                Reduce</button>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeupdate()">Export Node Update</button>
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodereduce()">Export Node Reduce</button>
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeAdd()">Export Node Add</button>
+              </div>
+            
+
+                <button type="button" class="btn btn-danger" onclick="globalThis.DeleteNode()">Delete Node</button>
         </div>
         <div class="contentArea" id="contentArea"
             style="z-index: 1; width: 100%; height: 5000px;background-color: transparent;">
