@@ -186,7 +186,6 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
 
             return JSON.stringify( lines.map(line => {
                 return match(line).reduce((acc, cur, i) => {
-                    // replace blank matches with `null`
                     const val = cur.length <= 0 ? "" : Number(cur) || cur;
                     const key = heads[i] ?? `{i}`;
                     return { ...acc, [key]: val };
@@ -286,13 +285,22 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
         globalThis.UpdatePartsButton = function () {
             var PartsListAdd = document.getElementById("PartsListAdd")
+            var PartsListAddSearch = document.getElementById("PartsListAddSearch")
             PartsListAdd.innerHTML = ""
             globalThis.parts.forEach((part) => {
                 if (globalThis.UsedParts.includes(part.Key)) {
 
                 } else {
-                    PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
+                    if(PartsListAddSearch.value == ""){
+                        PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
                             <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
+                    }else{
+                        if(part.Key.toLowerCase().includes(PartsListAddSearch.value.toLowerCase()) || part.English.toLowerCase().includes(PartsListAddSearch.value.toLowerCase())){
+                            PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
+                            <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
+                        }
+                    }
+                    
                 }
 
             })
@@ -896,8 +904,13 @@ ${PartID}`;
                                 data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 Add Part to node
                             </button>
-                            <div class="dropdown-menu p-4" id="PartsListAdd"
+                            
+                            <div class="dropdown-menu p-4"
                                 style="margin: 0px; padding: 0px !important;">
+                                <input type="text" class="form-control" id="PartsListAddSearch" placeholder="Part name or ID" onkeypress="globalThis.UpdatePartsButton()">
+                                <div id="PartsListAdd" style="margin: 0px; padding: 0px !important;">
+
+                                </div>
                             </div>
                         </div>
                     </li>
