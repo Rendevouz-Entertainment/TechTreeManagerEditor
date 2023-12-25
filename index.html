@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tech Tree Manager Editor 0.0.2</title>
+    <title>Tech Tree Manager Editor 0.0.3</title>
     <script src="
 https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js
 "></script>
@@ -48,7 +48,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             height: 100%;
             position: absolute;
             z-index: -100;
-            top: 0;
+            top: 86px;
             left: 500px;
         }
 
@@ -56,7 +56,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             margin: 0px;
             padding: 0px;
             width: 1500px;
-            height: 1000px;
+            height: 4500px;
             border-width: 2px;
             border-color: black;
             border-style: solid;
@@ -184,7 +184,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             const heads = headers ?? match(lines.shift());
             lines = lines.slice(1);
 
-            return JSON.stringify( lines.map(line => {
+            return JSON.stringify(lines.map(line => {
                 return match(line).reduce((acc, cur, i) => {
                     const val = cur.length <= 0 ? "" : Number(cur) || cur;
                     const key = heads[i] ?? `{i}`;
@@ -231,16 +231,22 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             }
         }
         window.onload = (event) => {
+            globalThis.getNodeDragMode = false;
+
             var isDown = false;
             var startX;
             var scrollLeft;
 
             var contentArea = document.getElementById("contentArea")
             contentArea.addEventListener('mousedown', (e) => {
-                isDown = true;
-                contentArea.classList.add('active');
-                startX = e.pageX;
-                scrollLeft = contentArea.scrollLeft;
+                if (globalThis.getNodeDragMode) return;
+
+                    isDown = true;
+                    contentArea.classList.add('active');
+                    startX = e.pageX;
+                    scrollLeft = contentArea.scrollLeft;
+                
+
             });
 
             contentArea.addEventListener('mouseup', () => {
@@ -248,7 +254,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 contentArea.classList.remove('active');
             });
             contentArea.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
+                if (!isDown || globalThis.getNodeDragMode) return;
 
                 var x = e.movementX * 100;
                 document.body.scrollLeft = document.body.scrollLeft - x;
@@ -291,16 +297,16 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 if (globalThis.UsedParts.includes(part.Key)) {
 
                 } else {
-                    if(PartsListAddSearch.value == ""){
+                    if (PartsListAddSearch.value == "") {
                         PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
                             <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
-                    }else{
-                        if(part.Key.toLowerCase().includes(PartsListAddSearch.value.toLowerCase()) || part.English.toLowerCase().includes(PartsListAddSearch.value.toLowerCase())){
+                    } else {
+                        if (part.Key.toLowerCase().includes(PartsListAddSearch.value.toLowerCase()) || part.English.toLowerCase().includes(PartsListAddSearch.value.toLowerCase())) {
                             PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
                             <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
                         }
                     }
-                    
+
                 }
 
             })
@@ -560,7 +566,7 @@ ${treeNodePart}`;
         globalThis.ExportNodeupdate = function () {
             saveAs(JSON.stringify(globalThis.TreeNodes[globalThis.selectedNode]), `${globalThis.selectedNode}.nodeupdate`);
         }
-        globalThis.ExportNodeAdd= function () {
+        globalThis.ExportNodeAdd = function () {
             saveAs(JSON.stringify(globalThis.TreeNodes[globalThis.selectedNode]), `${globalThis.selectedNode}.nodeadd`);
         }
         globalThis.ExportNodereduce = function () {
@@ -867,7 +873,7 @@ ${PartID}`;
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="z-index: 2;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Tech Tree Manager Editor<br>v0.0.2</a>
+            <a class="navbar-brand" href="/">Tech Tree Manager Editor<br>v0.0.3</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -907,10 +913,10 @@ ${PartID}`;
                                 data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 Add Part to node
                             </button>
-                            
-                            <div class="dropdown-menu p-4"
-                                style="margin: 0px; padding: 0px !important;">
-                                <input type="text" class="form-control" id="PartsListAddSearch" placeholder="Part name or ID" onkeypress="globalThis.UpdatePartsButton()">
+
+                            <div class="dropdown-menu p-4" style="margin: 0px; padding: 0px !important;">
+                                <input type="text" class="form-control" id="PartsListAddSearch"
+                                    placeholder="Part name or ID" onkeypress="globalThis.UpdatePartsButton()">
                                 <div id="PartsListAdd" style="margin: 0px; padding: 0px !important;">
 
                                 </div>
@@ -962,16 +968,19 @@ ${PartID}`;
                 </div>
             </div>
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeupdate()">Export Node Update</button>
-                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodereduce()">Export Node Reduce</button>
-                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeAdd()">Export Node Add</button>
-              </div>
-            
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeupdate()">Export Node
+                    Update</button>
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodereduce()">Export Node
+                    Reduce</button>
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeAdd()">Export Node
+                    Add</button>
+            </div>
 
-                <button type="button" class="btn btn-danger" onclick="globalThis.DeleteNode()">Delete Node</button>
+
+            <button type="button" class="btn btn-danger" onclick="globalThis.DeleteNode()">Delete Node</button>
         </div>
         <div class="contentArea" id="contentArea"
-            style="z-index: 1; width: 100%; height: 5000px;background-color: transparent;">
+            style="z-index: 1; width: 100%; height: 4500px;background-color: transparent;">
 
         </div>
     </div>
