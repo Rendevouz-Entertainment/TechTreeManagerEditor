@@ -201,10 +201,12 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 header.join(','), // header row first
                 ...items.map(row => header.map(
                     (fieldName) => {
-                        if (fieldName == "Key") {
-                            return JSON.stringify(row[fieldName], replacer).replaceAll('"', "")
+                        var strin = JSON.stringify(row[fieldName], replacer)
+                        console.log(typeof(strin))
+                        if (fieldName == "Key" && typeof(strin) == "string") {
+                            return strin.replaceAll('"',"")
                         } else {
-                            return JSON.stringify(row[fieldName], replacer)
+                            return strin
                         }
 
                     }
