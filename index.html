@@ -202,9 +202,9 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 ...items.map(row => header.map(
                     (fieldName) => {
                         var strin = JSON.stringify(row[fieldName], replacer)
-                        console.log(typeof(strin))
-                        if (fieldName == "Key" && typeof(strin) == "string") {
-                            return strin.replaceAll('"',"")
+                        console.log(typeof (strin))
+                        if (fieldName == "Key" && typeof (strin) == "string") {
+                            return strin.replaceAll('"', "")
                         } else {
                             return strin
                         }
@@ -244,11 +244,11 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             contentArea.addEventListener('mousedown', (e) => {
                 if (globalThis.getNodeDragMode) return;
 
-                    isDown = true;
-                    contentArea.classList.add('active');
-                    startX = e.pageX;
-                    scrollLeft = contentArea.scrollLeft;
-                
+                isDown = true;
+                contentArea.classList.add('active');
+                startX = e.pageX;
+                scrollLeft = contentArea.scrollLeft;
+
 
             });
 
@@ -268,7 +268,9 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 if (this.readyState === 4) {
                     globalThis.default = { loc: JSON.parse(csvJSON(this.responseText)) }
                     globalThis.GetDefaultParts()
-                    setTimeout(() => { globalThis.UpdatePartsButton() }, 500)
+                    setTimeout(() => {
+                        globalThis.UpdatePartsButton()
+                    }, 500)
                 }
             });
 
@@ -313,6 +315,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 }
 
             })
+
         }
         globalThis.GetDefaultParts = function () {
             var xhr = new XMLHttpRequest();
@@ -371,7 +374,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                     var thisTree = JSON.parse(this.responseText)
                     globalThis.TreeNodes[thisTree.ID] = thisTree
                     globalThis.GetAndCreateTreeNode(thisTree.ID)
-
+                    setTimeout(()=>{globalThis.TreeNodesOriginal = JSON.parse(JSON.stringify(globalThis.TreeNodes));},500)
                 }
             });
 
@@ -564,6 +567,7 @@ ${treeNodePart}`;
 
                 })
                 globalThis.UpdatePartsButton()
+                setTimeout(()=>{globalThis.TreeNodesOriginal = JSON.parse(JSON.stringify(globalThis.TreeNodes))},500)
             }, 1000)
         }
         globalThis.ExportNodeupdate = function () {
@@ -574,6 +578,24 @@ ${treeNodePart}`;
         }
         globalThis.ExportNodereduce = function () {
             saveAs(JSON.stringify(globalThis.TreeNodes[globalThis.selectedNode]), `${globalThis.selectedNode}.nodereduce`);
+        }
+        function selectParts(partlistone = [], partlisttwo = []) {
+            var parts = partlistone.filter(function (itm) {
+                return partlisttwo.indexOf(itm) == -1;
+            });
+            return parts
+        }
+        globalThis.ExportNodePM = function () {
+            var zip = new JSZip();
+            zip.file(`patches/${globalThis.selectedNode}.patch`, `:nodes #${globalThis.selectedNode} {
+  UnlockedPartsIDs +: [ "${selectParts(globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs,globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
+  UnlockedPartsIDs -: [ "${selectParts(globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs,globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
+}`);
+            zip.generateAsync({ type: "blob" }).then(function (content) {
+                // see FileSaver.js
+                var TreeName = document.getElementById("TreeName")
+                saveAs(content, `${TreeName.value}.zip`);
+            });
         }
         globalThis.ExportTree = function () {
             var zip = new JSZip();
@@ -971,12 +993,7 @@ ${PartID}`;
                 </div>
             </div>
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeupdate()">Export Node
-                    Update</button>
-                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodereduce()">Export Node
-                    Reduce</button>
-                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodeAdd()">Export Node
-                    Add</button>
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodePM()">PM Node Update</button>
             </div>
 
 
