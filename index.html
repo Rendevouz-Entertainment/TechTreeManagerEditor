@@ -587,7 +587,7 @@ ${treeNodePart}`;
         }
         globalThis.ExportNodePM = function () {
             var zip = new JSZip();
-            zip.file(`patches/${globalThis.selectedNode}.patch`, `:nodes #${globalThis.selectedNode} {
+            zip.file(`patches/${globalThis.selectedNode}.patch`, `:science #${globalThis.selectedNode} {
   UnlockedPartsIDs +: [ "${selectParts(globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs,globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
   UnlockedPartsIDs -: [ "${selectParts(globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs,globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
 }`);
