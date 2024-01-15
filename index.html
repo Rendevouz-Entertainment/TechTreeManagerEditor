@@ -233,9 +233,45 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 icons: "https://ttm.kerbal.wiki/ksp2/trees/default/icons.json"
             }
         }
+        globalThis.plugins = {
+            list: {
+                "plugin name": {
+                    start: function () {
+
+                    }
+                }
+            },
+            loadFromURL: function (url) {
+                var xhr = new XMLHttpRequest();
+                xhr.addEventListener("readystatechange", function () {
+                    if (this.readyState === 4) {
+                        var pluginInfo = JSON.parse(this.responseText)
+
+                        var xhrindexjs = new XMLHttpRequest();
+                        xhrindexjs.addEventListener("readystatechange", function () {
+                            if (this.readyState === 4) {
+                                globalThis.plugins.list[pluginInfo.name] = {
+                                    start: new Function(this.responseText)
+                                }
+                                globalThis.plugins.startPlugin(pluginInfo.name)
+                            }
+                        });
+                        xhrindexjs.open("Get", pluginInfo.indexjs);
+                        xhrindexjs.setRequestHeader
+                        xhrindexjs.send();
+                    }
+                });
+                xhr.open("Get", url);
+                xhr.send();
+            },
+            startPlugin: function(name){
+                globalThis.plugins.list[name].start();
+            }
+        }
+
         window.onload = (event) => {
             globalThis.getNodeDragMode = false;
-
+            globalThis.plugins.list = {}
             var isDown = false;
             var startX;
             var scrollLeft;
@@ -374,7 +410,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                     var thisTree = JSON.parse(this.responseText)
                     globalThis.TreeNodes[thisTree.ID] = thisTree
                     globalThis.GetAndCreateTreeNode(thisTree.ID)
-                    setTimeout(()=>{globalThis.TreeNodesOriginal = JSON.parse(JSON.stringify(globalThis.TreeNodes));},500)
+                    setTimeout(() => { globalThis.TreeNodesOriginal = JSON.parse(JSON.stringify(globalThis.TreeNodes)); }, 500)
                 }
             });
 
@@ -567,7 +603,7 @@ ${treeNodePart}`;
 
                 })
                 globalThis.UpdatePartsButton()
-                setTimeout(()=>{globalThis.TreeNodesOriginal = JSON.parse(JSON.stringify(globalThis.TreeNodes))},500)
+                setTimeout(() => { globalThis.TreeNodesOriginal = JSON.parse(JSON.stringify(globalThis.TreeNodes)) }, 500)
             }, 1000)
         }
         globalThis.ExportNodeupdate = function () {
@@ -588,8 +624,8 @@ ${treeNodePart}`;
         globalThis.ExportNodePM = function () {
             var zip = new JSZip();
             zip.file(`patches/${globalThis.selectedNode}.patch`, `:science #${globalThis.selectedNode} {
-  UnlockedPartsIDs +: [ "${selectParts(globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs,globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
-  UnlockedPartsIDs -: [ "${selectParts(globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs,globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
+  UnlockedPartsIDs +: [ "${selectParts(globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs, globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
+  UnlockedPartsIDs -: [ "${selectParts(globalThis.TreeNodesOriginal[globalThis.selectedNode].UnlockedPartsIDs, globalThis.TreeNodes[globalThis.selectedNode].UnlockedPartsIDs).join(`","`)}" ];
 }`);
             zip.generateAsync({ type: "blob" }).then(function (content) {
                 // see FileSaver.js
@@ -948,6 +984,11 @@ ${PartID}`;
                             </div>
                         </div>
                     </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pluginModal">
+                            Add Plugin
+                          </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -993,7 +1034,8 @@ ${PartID}`;
                 </div>
             </div>
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodePM()">PM Node Update</button>
+                <button type="button" class="btn btn-outline-info" onclick="globalThis.ExportNodePM()">PM Node
+                    Update</button>
             </div>
 
 
@@ -1010,7 +1052,24 @@ ${PartID}`;
         <div class="tier"></div>
         <div class="tier"></div>
     </div>
-
+<div class="modal fade" id="pluginModal" tabindex="-1" aria-labelledby="pluginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="pluginModalLabel">Add Plugin</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="pluginurl" class="col-form-label">Plugin URL</label>
+            <input type="text" class="form-control" id="pluginurl">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick='globalThis.plugins.loadFromURL(document.getElementById("pluginurl").value)'>Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <input id="TreeImportFile" type="file" accept=".zip" name="name" style="display: none;"
         onchange="globalThis.ImportTreeFNC(event)" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -1022,3 +1081,7 @@ ${PartID}`;
 </body>
 
 </html>
+
+
+  
+  
