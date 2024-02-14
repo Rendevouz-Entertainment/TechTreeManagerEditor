@@ -170,50 +170,88 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
 
         //this converts CSV files to json 
-        function csvJSON(text, quoteChar = '"', delimiter = ',') {
-            var rows = text.split("\n");
-            var headers = rows[0].split(",");
+        globalThis.csvJSON = function (text, quoteChar = '"', delimiter = ',') {
+            let parsedRows = []
+            let currentRow = ''
+            let insideQuotes = false
+            var csvData = text;
+            for (let currentChar of csvData) {
+                if (currentChar === '"' && !insideQuotes) {
+                    insideQuotes = true
+                    currentRow += currentChar
+                } else if (currentChar === '"' && insideQuotes) {
+                    if (currentRow[currentRow.length - 1] === '"') {
+                        currentRow = currentRow.slice(0, -1)
+                    } else {
+                        insideQuotes = false
+                    }
+                    currentRow += currentChar
+                } else if (currentChar === '\n' && !insideQuotes) {
+                    if (currentRow.trim() !== '') {
+                        parsedRows.push(currentRow)
+                    }
+                    currentRow = ''
+                } else {
+                    currentRow += currentChar
+                }
+            }
 
-            const regex = new RegExp(`\\s*(${quoteChar})?(.*?)\\1\\s*(?:${delimiter}|$)`, 'gs');
+            if (currentRow.trim() !== '') {
+                parsedRows.push(currentRow)
+            }
 
-            const match = line => [...line.matchAll(regex)]
-                .map(m => m[2])
-                .slice(0, -1);
+            const columnHeaders = parsedRows[0].split(',')
+            const rowData = parsedRows.slice(1).map(row => {
+                let parsedCells = []
+                let currentCell = ''
+                insideQuotes = false
 
-            var lines = text.split('\n');
-            const heads = headers ?? match(lines.shift());
-            lines = lines.slice(1);
+                for (let currentChar of row) {
+                    if (currentChar === '"' && !insideQuotes) {
+                        insideQuotes = true
+                        currentCell += currentChar
+                    } else if (currentChar === '"' && insideQuotes) {
+                        if (currentCell[currentCell.length - 1] === '"') {
+                            currentCell = currentCell.slice(0, -1)
+                        } else {
+                            insideQuotes = false
+                        }
+                        currentCell += currentChar
+                    } else if (currentChar === ',' && !insideQuotes) {
+                        parsedCells.push(currentCell)
+                        currentCell = ''
+                    } else {
+                        currentCell += currentChar
+                    }
+                }
 
-            return JSON.stringify(lines.map(line => {
-                return match(line).reduce((acc, cur, i) => {
-                    const val = cur.length <= 0 ? "" : Number(cur) || cur;
-                    const key = heads[i] ?? `{i}`;
-                    return { ...acc, [key]: val };
-                }, {});
-            }));
+                parsedCells.push(currentCell)
+                let rowObject = {}
+
+                columnHeaders.forEach((header, index) => {
+                    let cellValue = parsedCells[index]
+                    if (cellValue && cellValue.startsWith('"') && cellValue.endsWith('"')) {
+                        cellValue = cellValue.slice(1, -1).replace(/""/g, '"')
+                    }
+                    rowObject[header] = cellValue
+                })
+
+                return rowObject
+            })
+
+            return rowData
         }
         //this converts json to csv
-        function JSONcsv(Json) {
-            var items = Json
-            var replacer = (key, value) => value === null ? '' : value // specify how you want to handle null values here
-            var header = Object.keys(items[0])
-            var csv = [
-                header.join(','), // header row first
-                ...items.map(row => header.map(
-                    (fieldName) => {
-                        var strin = JSON.stringify(row[fieldName], replacer)
-                        console.log(typeof (strin))
-                        if (fieldName == "Key" && typeof (strin) == "string") {
-                            return strin.replaceAll('"', "")
-                        } else {
-                            return strin
-                        }
-
-                    }
-                ).join(','))
-
-            ].join('\r\n')
-            return csv
+        globalThis.JSONcsv = function (Json) {
+            const headers = Object.keys(Json[0])
+            const rows = Json.map(obj => headers.map(header => obj[header]))
+            const sanitizedRows = rows.map(row => row.map(cell => {
+                if (cell.includes(',') || cell.includes('\n') || cell.includes('"')) {
+                    return `"${cell.replace(/"/g, '""')}"`
+                }
+                return cell
+            }))
+            return [headers, ...sanitizedRows].map(row => row.join(',')).join('\n')
         }
         var S4 = function () {
             return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
@@ -264,7 +302,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 xhr.open("Get", url);
                 xhr.send();
             },
-            startPlugin: function(name){
+            startPlugin: function (name) {
                 globalThis.plugins.list[name].start();
             }
         }
@@ -302,7 +340,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
-                    globalThis.default = { loc: JSON.parse(csvJSON(this.responseText)) }
+                    console.log(globalThis.csvJSON(this.responseText))
+                    globalThis.default = { loc: globalThis.csvJSON(this.responseText) }
                     globalThis.GetDefaultParts()
                     setTimeout(() => {
                         globalThis.UpdatePartsButton()
@@ -357,7 +396,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
-                    globalThis.parts = JSON.parse(csvJSON(this.responseText))
+                    globalThis.parts = globalThis.csvJSON(this.responseText)
 
                     globalThis.GetDefaultTree()
                 }
@@ -585,7 +624,7 @@ ${treeNodePart}`;
                                 globalThis.TreeNodes[thisNode.ID] = thisNode
                             }
                             if (zipEntry.name.includes(".csv")) {
-                                var thisCSV = JSON.parse(csvJSON(content.replaceAll('"', "")))
+                                var thisCSV = JSON.parse(globalThis.csvJSON(content.replaceAll('"', "")))
                                 globalThis.default.loc = []
                                 globalThis.default.loc = thisCSV
                             }
@@ -640,7 +679,7 @@ ${treeNodePart}`;
                 zip.file(`assets/techtree/${TreeNode.ID}.json`, JSON.stringify(TreeNode));
             })
 
-            zip.file(`assets/techtree/english.csv`, JSONcsv(globalThis.default.loc));
+            zip.file(`assets/techtree/english.csv`, globalThis.JSONcsv(globalThis.default.loc));
 
             zip.generateAsync({ type: "blob" }).then(function (content) {
                 // see FileSaver.js
@@ -660,7 +699,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
 
             })
             zip.file(`patches/tech_tree.patch`, pm);
-            zip.file(`localizations/local.csv`, JSONcsv(globalThis.default.loc));
+            zip.file(`localizations/local.csv`, globalThis.JSONcsv(globalThis.default.loc));
             zip.generateAsync({ type: "blob" }).then(function (content) {
                 // see FileSaver.js
                 var TreeName = document.getElementById("TreeName")
@@ -985,9 +1024,10 @@ ${PartID}`;
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pluginModal">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#pluginModal">
                             Add Plugin
-                          </button>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -1052,24 +1092,25 @@ ${PartID}`;
         <div class="tier"></div>
         <div class="tier"></div>
     </div>
-<div class="modal fade" id="pluginModal" tabindex="-1" aria-labelledby="pluginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="pluginModalLabel">Add Plugin</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="pluginModal" tabindex="-1" aria-labelledby="pluginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pluginModalLabel">Add Plugin</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="pluginurl" class="col-form-label">Plugin URL</label>
+                    <input type="text" class="form-control" id="pluginurl">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        onclick='globalThis.plugins.loadFromURL(document.getElementById("pluginurl").value)'>Add</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <label for="pluginurl" class="col-form-label">Plugin URL</label>
-            <input type="text" class="form-control" id="pluginurl">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick='globalThis.plugins.loadFromURL(document.getElementById("pluginurl").value)'>Add</button>
-        </div>
-      </div>
     </div>
-  </div>
     <input id="TreeImportFile" type="file" accept=".zip" name="name" style="display: none;"
         onchange="globalThis.ImportTreeFNC(event)" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -1081,7 +1122,3 @@ ${PartID}`;
 </body>
 
 </html>
-
-
-  
-  
