@@ -246,15 +246,15 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             const headers = Object.keys(Json[0])
             const rows = Json.map(obj => headers.map(header => obj[header]))
             const sanitizedRows = rows.map(row => row.map(cell => {
-                try{
+                try {
                     if (cell.includes(',') || cell.includes('\n') || cell.includes('"')) {
                         return `"${cell.replace(/"/g, '""')}"`
                     }
                     return cell
-                }catch(e){
+                } catch (e) {
                     return ""
                 }
-                
+
             }))
             return [headers, ...sanitizedRows].map(row => row.join(',')).join('\n')
         }
@@ -315,6 +315,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         window.onload = (event) => {
             globalThis.getNodeDragMode = false;
             globalThis.plugins.list = {}
+            globalThis.CurrentLanguage = "English"
+            globalThis.Languages = ["English", "French", "Italian", "German", "Spanish", "Japanese", "Korean", "Polish", "Russian", "Chinese-Simplified [zh-CN]", "Portuguese-Brazil [pt-BR]", "Chinese-Traditional [zh-TW]"]
             var isDown = false;
             var startX;
             var scrollLeft;
@@ -377,6 +379,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         globalThis.UpdatePartsButton = function () {
             var PartsListAdd = document.getElementById("PartsListAdd")
             var PartsListAddSearch = document.getElementById("PartsListAddSearch")
+            var LanguageList = document.getElementById("LanguageList")
+            LanguageList.innerHTML = ""
             PartsListAdd.innerHTML = ""
             globalThis.parts.forEach((part) => {
                 if (globalThis.UsedParts.includes(part.Key)) {
@@ -384,18 +388,20 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 } else {
                     if (PartsListAddSearch.value == "") {
                         PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
-                            <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
+                            <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part[globalThis.CurrentLanguage]}</button>`
                     } else {
-                        if (part.Key.toLowerCase().includes(PartsListAddSearch.value.toLowerCase()) || part.English.toLowerCase().includes(PartsListAddSearch.value.toLowerCase())) {
+                        if (part.Key.toLowerCase().includes(PartsListAddSearch.value.toLowerCase()) || part[globalThis.CurrentLanguage].toLowerCase().includes(PartsListAddSearch.value.toLowerCase())) {
                             PartsListAdd.innerHTML = `${PartsListAdd.innerHTML}
-                            <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part.English}</button>`
+                            <button type="button" style="width:100%;" onclick='globalThis.AddPartToNode("${part.Key}")' class="btn btn-outline-light">${part[globalThis.CurrentLanguage]}</button>`
                         }
                     }
 
                 }
 
             })
-
+            globalThis.Languages.forEach(lang=>{
+                LanguageList.innerHTML = `${LanguageList.innerHTML}<button type="button" style="width:100%;" onclick='globalThis.CurrentLanguage = "${lang}"; globalThis.UpdateNodes();' class="btn btn-outline-light">${lang}</button>`
+            })
         }
         globalThis.GetDefaultParts = function () {
             var xhr = new XMLHttpRequest();
@@ -482,7 +488,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                             <div class="scienceNodeIcon"></div>
                             <div class="scienceNodeValue">${thisTree.RequiredSciencePoints}</div>
                         </div>
-                        <div class="scienceNodeContent">${localData.English}</div>
+                        <div class="scienceNodeContent">${localData[globalThis.CurrentLanguage]}</div>
                     </div>
                     `
             setTimeout(() => {
@@ -536,9 +542,9 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
 
             globalThis.TreeNodes[globalThis.selectedNode].ID = NodeID.value
             globalThis.default.loc[NameLocKeyID].Key = `Science/TechNodes/Names/${NodeID.value}`
-            globalThis.default.loc[NameLocKeyID].English = NodeName.value
+            globalThis.default.loc[NameLocKeyID][globalThis.CurrentLanguage] = NodeName.value
             globalThis.default.loc[DescriptionLocKeyID].Key = `Science/TechNodes/Descriptions/${NodeID.value}`
-            globalThis.default.loc[DescriptionLocKeyID].English = NodeDescription.value
+            globalThis.default.loc[DescriptionLocKeyID][globalThis.CurrentLanguage] = NodeDescription.value
 
 
             globalThis.TreeNodes[globalThis.selectedNode].DescriptionLocKey = `Science/TechNodes/Descriptions/${NodeID.value}`
@@ -575,8 +581,8 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             NodeID.value = thisTree.ID
             console.log(DescriptionLocKey)
             globalThis.selectedNode = id
-            NodeDescription.value = DescriptionLocKey.English.replace('"', "")
-            NodeName.value = NameLocKey.English
+            NodeDescription.value = DescriptionLocKey[globalThis.CurrentLanguage].replace('"', "")
+            NodeName.value = NameLocKey[globalThis.CurrentLanguage]
             NodeRequrements.innerHTML = ""
             var selectedsubnodes = []
             thisTree.RequiredTechNodeIDs.forEach((treeNodeP) => {
@@ -588,7 +594,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                 var SubnodeDescriptionLocKey = globalThis.default.loc.filter(obj => { return obj.Key === subtreenode.DescriptionLocKey })[0]
                 var opt = document.createElement('option');
                 opt.value = subtreenode.ID;
-                opt.innerHTML = SubnodeNameLocKey.English;
+                opt.innerHTML = SubnodeNameLocKey[globalThis.CurrentLanguage];
                 if (selectedsubnodes.includes(treeNodeP)) {
                     opt.selected = true;
                 } else {
@@ -722,6 +728,7 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
                 "$Context": "Tech Node Description",
                 "$Status": "Ready to Test"
             }
+
             var localname = {
                 "Key": `Science/TechNodes/Names/${nodeID}`,
                 "Type": "Text",
@@ -730,6 +737,10 @@ ${json_to_pm(globalThis.TreeNodes[treeNodeP], "science", globalThis.TreeNodes[tr
                 "$Context": "Tech Node Name",
                 "$Status": "Ready to Test"
             }
+            globalThis.Languages.forEach(lang => {
+                localdescription[lang] = `${lang}`
+                localname[lang] = `${lang}`
+            })
             var node = new TechNode(nodeID)
             globalThis.TreeNodes[node.ID] = node
             globalThis.default.loc.push(localdescription)
@@ -982,57 +993,68 @@ ${PartID}`;
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/docs">Docs</a>
+                        <a class="nav-link active" style="margin-top: 20px;" aria-current="page" href="/docs">Docs</a>
                     </li>
                     <li class="nav-item">
-                        <input type="text" class="form-control" id="TreeName" value="DefaultTechTree">
+                        <input style="margin-top: 20px;" type="text" class="form-control" id="TreeName" value="DefaultTechTree">
                     </li>
 
                     <li class="nav-item">
-                        <button type="button" class="btn btn-success" id="ImportTree" style="margin-left: 10px;"
-                            onclick="globalThis.ImportTree()">Import tree</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success" id="ExportTree" style="margin-left: 10px;"
-                            onclick="globalThis.ExportTree()">Export tree</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success" id="ExportTree" style="margin-left: 10px;"
-                            onclick="globalThis.ExportTreePM()">Export to Patch Manager</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success" id="ImportParts" style="margin-left: 10px;"
-                            onclick="globalThis.ImportParts()">Import parts</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success" id="NodeNew" style="margin-left: 10px;"
-                            onclick="globalThis.NewNode()">New Node</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success" id="NodeNew" style="margin-left: 10px;"
-                            onclick="globalThis.NewTechTree()">New Tech Tree</button>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown" style="margin: 0px; padding: 0px;">
-                            <button type="button" style="margin-left: 10px;" class="btn btn-primary dropdown-toggle"
-                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                Add Part to node
-                            </button>
+                        <div style="display: flex; flex-direction: column;">
+                            <div class="btn-group" role="group" aria-label="ToolBar" style="margin-left: 10px;">
+                                <button type="button" class="btn btn-outline-success" id="ImportTree"
+                                    onclick="globalThis.ImportTree()">Import tree</button>
+                                <button type="button" class="btn btn-outline-success" id="ExportTree"
+                                    onclick="globalThis.ExportTree()">Export tree</button>
 
-                            <div class="dropdown-menu p-4" style="margin: 0px; padding: 0px !important;">
-                                <input type="text" class="form-control" id="PartsListAddSearch"
-                                    placeholder="Part name or ID" onkeypress="globalThis.UpdatePartsButton()">
-                                <div id="PartsListAdd" style="margin: 0px; padding: 0px !important;">
+                                <button type="button" class="btn btn-outline-success" id="ExportTree"
+                                    onclick="globalThis.ExportTreePM()">Export to Patch Manager</button>
 
+                                <button type="button" class="btn btn-outline-success" id="ImportParts"
+                                    onclick="globalThis.ImportParts()">Import parts</button>
+
+                                <button type="button" class="btn btn-outline-success" id="NodeNew"
+                                    onclick="globalThis.NewNode()">New Node</button>
+
+                                <button type="button" class="btn btn-outline-success" id="NodeNew"
+                                    onclick="globalThis.NewTechTree()">New Tech Tree</button>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="ToolBar" style="margin-left: 10px;">
+                                <div class="dropdown" style="margin: 0px; padding: 0px; border-radius: 0px;">
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle"
+                                        style="border-radius: 0px;" data-bs-toggle="dropdown" aria-expanded="false"
+                                        data-bs-auto-close="outside">
+                                        Add Part to node
+                                    </button>
+
+                                    <div class="dropdown-menu p-4" style="margin: 0px; padding: 0px !important;">
+                                        <input type="text" class="form-control" id="PartsListAddSearch"
+                                            placeholder="Part name or ID" onkeypress="globalThis.UpdatePartsButton()">
+                                        <div id="PartsListAdd" style="margin: 0px; padding: 0px !important;">
+
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="dropdown" style="margin: 0px; padding: 0px; border-radius: 0px;">
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle"
+                                        style="border-radius: 0px;" data-bs-toggle="dropdown" aria-expanded="false"
+                                        data-bs-auto-close="outside">
+                                        Select Language
+                                    </button>
+
+                                    <div class="dropdown-menu p-4" style="margin: 0px; padding: 0px !important;">
+                                        <div id="LanguageList" style="margin: 0px; padding: 0px !important;">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#pluginModal">
+                                    Add Plugin
+                                </button>
+                                
                             </div>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#pluginModal">
-                            Add Plugin
-                        </button>
                     </li>
                 </ul>
             </div>
@@ -1098,7 +1120,7 @@ ${PartID}`;
         <div class="tier"></div>
     </div>
     <div class="modal fade" id="pluginModal" tabindex="-1" aria-labelledby="pluginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog" style="max-width: 800px;">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="pluginModalLabel">Add Plugin</h1>
@@ -1107,6 +1129,7 @@ ${PartID}`;
                 <div class="modal-body">
                     <label for="pluginurl" class="col-form-label">Plugin URL</label>
                     <input type="text" class="form-control" id="pluginurl">
+                    <label for="pluginurl" class="col-form-label">Plugins can be used to modify how this editor works, see the example plugin <a href="https://github.com/Bit-Studios/ttm-example-plugin">here</a><br>To import a plugin enter the url to the plugin.json file. <br><br>Example <mark>https://raw.githubusercontent.com/Bit-Studios/ttm-example-plugin/master/plugin.json</mark><br>this loads the example plugin </label>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
