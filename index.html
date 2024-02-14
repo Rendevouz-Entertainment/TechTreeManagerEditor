@@ -246,10 +246,15 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             const headers = Object.keys(Json[0])
             const rows = Json.map(obj => headers.map(header => obj[header]))
             const sanitizedRows = rows.map(row => row.map(cell => {
-                if (cell.includes(',') || cell.includes('\n') || cell.includes('"')) {
-                    return `"${cell.replace(/"/g, '""')}"`
+                try{
+                    if (cell.includes(',') || cell.includes('\n') || cell.includes('"')) {
+                        return `"${cell.replace(/"/g, '""')}"`
+                    }
+                    return cell
+                }catch(e){
+                    return ""
                 }
-                return cell
+                
             }))
             return [headers, ...sanitizedRows].map(row => row.join(',')).join('\n')
         }
